@@ -6,8 +6,10 @@ import { CheckCircle, Loader } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { markDelivered } from '../services/githubService';
 
-function formatDate(date) {
-    if (!date) return '—';
+function formatDate(dateValue) {
+    if (!dateValue) return '—';
+    const date = new Date(dateValue);
+    if (isNaN(date)) return '—';
     return new Intl.DateTimeFormat('ar-EG', {
         day: '2-digit',
         month: 'short',

@@ -16,10 +16,9 @@ import * as XLSX from 'xlsx';
 // ─────────────────────────────────────────────
 export function extractSubjectFromFilename(filename) {
     if (!filename) return 'Unknown Subject';
-    // Remove extension, then take everything before first underscore or dash
+    // Remove extension only
     const withoutExt = filename.replace(/\.[^/.]+$/, '');
-    const subject = withoutExt.split(/[_\-]/)[0].trim();
-    return subject || 'Unknown Subject';
+    return withoutExt.trim() || 'Unknown Subject';
 }
 
 // ─────────────────────────────────────────────

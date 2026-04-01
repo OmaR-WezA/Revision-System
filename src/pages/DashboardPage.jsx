@@ -2,22 +2,16 @@
 // 🖥️ Dashboard Page — Main delivery view
 // ─────────────────────────────────────────────
 import { useState } from 'react';
-import { useDeliveries, useSubjects } from '../hooks/useDeliveries';
+import { useDashboardData } from '../hooks/useDeliveries';
 import StatsCards from '../components/StatsCards';
 import FilterBar from '../components/FilterBar';
 import DeliveryTable from '../components/DeliveryTable';
 
 export default function DashboardPage() {
-    // Filters stored locally — when they change, the custom hook
-    // re-subscribes to Firestore with the new query constraints.
     const [filters, setFilters] = useState({ subjectName: '', status: '' });
 
-    const { deliveries, loading } = useDeliveries(filters);
-    const subjects = useSubjects();
-
-    // Stats are computed from ALL deliveries (no filter applied)
-    const [allFilters] = useState({ subjectName: '', status: '' });
-    const { deliveries: allDeliveries } = useDeliveries(allFilters);
+    // Single hook fetches everything once
+    const { deliveries, allDeliveries, subjects, loading } = useDashboardData(filters);
 
     return (
         <div>
