@@ -7,11 +7,32 @@
 import { Filter, Search, X } from 'lucide-react';
 
 export default function FilterBar({ subjects, filters, onChange }) {
-    const hasFilters = filters.subjectName || filters.status;
+    const hasFilters = filters.subjectName || filters.status || filters.searchId;
 
     return (
         <div className="filter-bar">
             <Filter size={18} style={{ color: 'var(--clr-text-2)', flexShrink: 0 }} />
+
+            {/* Search by ID filter */}
+            <div className="search-input-wrapper" style={{ position: 'relative', flex: 1, minWidth: '180px' }}>
+                <Search size={16} style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', color: 'var(--clr-text-3)' }} />
+                <input
+                    type="text"
+                    placeholder="بحث برقم الطالب..."
+                    value={filters.searchId || ''}
+                    onChange={(e) => onChange({ ...filters, searchId: e.target.value })}
+                    style={{
+                        padding: '10px 36px 10px 12px',
+                        border: '1px solid var(--clr-border)',
+                        borderRadius: 'var(--radius)',
+                        background: 'var(--clr-surface)',
+                        color: 'var(--clr-text-1)',
+                        width: '100%',
+                        outline: 'none',
+                        fontFamily: 'inherit'
+                    }}
+                />
+            </div>
 
             {/* Subject filter */}
             <select
@@ -42,7 +63,7 @@ export default function FilterBar({ subjects, filters, onChange }) {
             {hasFilters && (
                 <button
                     className="btn btn-ghost"
-                    onClick={() => onChange({ subjectName: '', status: '' })}
+                    onClick={() => onChange({ subjectName: '', status: '', searchId: '' })}
                     aria-label="مسح الفلاتر"
                 >
                     <X size={14} />

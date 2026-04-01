@@ -84,6 +84,7 @@ export async function uploadDeliveries(newRows, subjectName) {
     let skippedCount = 0;
 
     const updatedData = [...existingRows];
+    const batchId = Date.now(); // Track this specific upload batch
 
     for (const row of newRows) {
         const uid = String(row.universityId || '').trim();
@@ -105,7 +106,8 @@ export async function uploadDeliveries(newRows, subjectName) {
             subjectName,
             status: 'ready',
             createdAt: new Date().toISOString(),
-            deliveredAt: null
+            deliveredAt: null,
+            uploadBatch: batchId
         });
         newCount++;
     }
@@ -129,4 +131,79 @@ export async function markDelivered(docId) {
         data[index].deliveredAt = new Date().toISOString();
         await updateGitHubFile(data, `Mark ${data[index].studentName} as delivered`);
     }
+}
+
+// ─────────────────────────────────────────────
+// ⏪ Undo Delivery
+// ─────────────────────────────────────────────
+export async function undoDelivery(docId, password) {
+    const adminPassword = import.meta.env.VITE_ADMIN_PASSWORD;
+    if (password !== adminPassword) {
+        throw new Error('كلمة المرور غير صحيحة');
+    }
+
+    const data = await fetchDeliveries();
+    const index = data.findIndex(d => d.id === docId);
+
+    if (index !== -1) {
+        if (data[index].status !== 'delivered') return; // Already ready
+        data[index].status = 'ready';
+        data[index].deliveredAt = null;
+        await updateGitHubFile(data, `Undo delivery for ${data[index].studentName}`);
+    } else {
+        throw new Error('الطالب غير موجود');
+    }
+}
+
+// ─────────────────────────────────────────────
+// 🗑️ Delete Entire Subject
+// ─────────────────────────────────────────────
+export async function deleteSubject(subjectName, password) {
+    const adminPassword = import.meta.env.VITE_ADMIN_PASSWORD;
+    if (password !== adminPassword) {
+        throw new Error('كلمة المرور غير صحيحة');
+    }
+
+    const data = await fetchDeliveries();
+
+    // Filter out all students belonging to this subject
+    const updatedData = data.filter(d => d.subjectName !== subjectName);
+
+    if (data.length === updatedData.length) {
+        throw new Error('لم يتم العثور على المادة');
+    }
+
+    const deletedCount = data.length - updatedData.length;
+    await updateGitHubFile(updatedData, `Deleted subject: ${subjectName} (${deletedCount} records)`);
+    return deletedCount;
+}
+
+// ─────────────────────────────────────────────
+// 🗑️ Delete Last Uploaded Batch (Sheet)
+// ─────────────────────────────────────────────
+export async function deleteLastBatch(password) {
+    const adminPassword = import.meta.env.VITE_ADMIN_PASSWORD;
+    if (password !== adminPassword) {
+        throw new Error('كلمة المرور غير صحيحة');
+    }
+
+    const data = await fetchDeliveries();
+
+    // Find highest uploadBatch
+    let maxBatch = 0;
+    for (const d of data) {
+        if (d.uploadBatch && d.uploadBatch > maxBatch) {
+            maxBatch = d.uploadBatch;
+        }
+    }
+
+    if (maxBatch === 0) {
+        throw new Error('لا يوجد أي شيت حديث تم رفعه باستخدام النظام الجديد لدعمه بالحذف.');
+    }
+
+    const updatedData = data.filter(d => d.uploadBatch !== maxBatch);
+    const deletedCount = data.length - updatedData.length;
+
+    await updateGitHubFile(updatedData, `Deleted last uploaded batch (${deletedCount} records)`);
+    return deletedCount;
 }

@@ -8,7 +8,7 @@ import FilterBar from '../components/FilterBar';
 import DeliveryTable from '../components/DeliveryTable';
 
 export default function DashboardPage() {
-    const [filters, setFilters] = useState({ subjectName: '', status: '' });
+    const [filters, setFilters] = useState({ subjectName: '', status: '', searchId: '' });
 
     // Single hook fetches everything once
     const { deliveries, allDeliveries, subjects, loading } = useDashboardData(filters);

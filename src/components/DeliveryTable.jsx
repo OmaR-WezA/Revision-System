@@ -2,9 +2,9 @@
 // 📋 Delivery Table with "Mark as Delivered"
 // ─────────────────────────────────────────────
 import { useState } from 'react';
-import { CheckCircle, Loader } from 'lucide-react';
+import { CheckCircle, Loader, RotateCcw } from 'lucide-react';
 import toast from 'react-hot-toast';
-import { markDelivered } from '../services/githubService';
+import { markDelivered, undoDelivery } from '../services/githubService';
 
 function formatDate(dateValue) {
     if (!dateValue) return '—';
@@ -25,6 +25,13 @@ function StatusBadge({ status }) {
         : <span className="badge badge-ready">📦 جاهز للاستلام</span>;
 }
 
+function getBatchColor(batchId) {
+    if (!batchId) return 'transparent';
+    /* Generate a stable hue based on the batch timestamp */
+    const hue = (batchId % 360);
+    return `hsla(${hue}, 60%, 30%, 0.15)`;
+}
+
 function DeliveryRow({ delivery }) {
     const [loading, setLoading] = useState(false);
 
@@ -32,8 +39,6 @@ function DeliveryRow({ delivery }) {
         if (delivery.status === 'delivered') return;
         setLoading(true);
         try {
-            // WHY we pass delivery.id (the composite key)?
-            // Because that's the exact Firestore document ID.
             await markDelivered(delivery.id);
             toast.success(`✅ تم تسليم الكتاب لـ ${delivery.studentName}`);
         } catch (err) {
@@ -44,8 +49,23 @@ function DeliveryRow({ delivery }) {
         }
     }
 
+    async function handleUndoDelivery() {
+        const pass = window.prompt("أدخل الرقم السري لإلغاء التسليم:");
+        if (!pass) return;
+
+        setLoading(true);
+        try {
+            await undoDelivery(delivery.id, pass);
+            toast.success(`تم إلغاء التسليم لـ ${delivery.studentName}`);
+        } catch (err) {
+            toast.error(err.message || 'خطأ في إلغاء التسليم');
+        } finally {
+            setLoading(false);
+        }
+    }
+
     return (
-        <tr>
+        <tr style={{ backgroundColor: getBatchColor(delivery.uploadBatch) }}>
             <td style={{ fontFamily: 'monospace', color: 'var(--clr-info)', fontWeight: 600 }}>
                 {delivery.universityId}
             </td>
@@ -70,9 +90,20 @@ function DeliveryRow({ delivery }) {
                         }
                     </button>
                 ) : (
-                    <span style={{ color: 'var(--clr-text-3)', fontSize: '0.8rem' }}>
-                        {formatDate(delivery.deliveredAt)}
-                    </span>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', alignItems: 'center' }}>
+                        <span style={{ color: 'var(--clr-text-3)', fontSize: '0.8rem' }}>
+                            {formatDate(delivery.deliveredAt)}
+                        </span>
+                        <button
+                            className="btn btn-ghost"
+                            style={{ padding: '2px 8px', fontSize: '0.8rem', color: 'var(--clr-danger)' }}
+                            onClick={handleUndoDelivery}
+                            disabled={loading}
+                            title="إلغاء التسليم"
+                        >
+                            {loading ? <Loader size={12} className="spin" /> : <><RotateCcw size={12} /> تراجع</>}
+                        </button>
+                    </div>
                 )}
             </td>
         </tr>
