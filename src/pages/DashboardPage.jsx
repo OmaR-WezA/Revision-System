@@ -11,30 +11,28 @@ export default function DashboardPage() {
     const [filters, setFilters] = useState({ subjectName: '', status: '', searchId: '' });
 
     // Single hook fetches everything once
-    const { deliveries, allDeliveries, subjects, loading } = useDashboardData(filters);
+    const { deliveries, subjects, stats, loading, updateLocalDelivery } = useDashboardData(filters);
 
     return (
         <div>
             {/* ── Page Header ── */}
             <div className="page-header">
-                <h1 className="page-title">لوحة تتبع التسليم</h1>
-                <p className="page-subtitle">
-                    تتبع استلام الطلاب لكتبهم المطبوعة في الوقت الفعلي
-                </p>
+                <h1 className="page-title">لوحة التحكم</h1>
+                <p className="page-subtitle">نظرة عامة على حالة تسليم الملازم للطلاب</p>
             </div>
 
-            {/* ── Summary Numbers ── */}
-            <StatsCards deliveries={allDeliveries} />
+            {/* ── Stats Overview ── */}
+            <StatsCards stats={stats} />
 
-            {/* ── Filters ── */}
+            {/* ── Dynamic Filter Bar ── */}
             <FilterBar
                 subjects={subjects}
                 filters={filters}
                 onChange={setFilters}
             />
 
-            {/* ── Delivery Table ── */}
-            <DeliveryTable deliveries={deliveries} loading={loading} />
+            {/* ── Data Table ── */}
+            <DeliveryTable deliveries={deliveries} loading={loading} updateLocalDelivery={updateLocalDelivery} />
 
             {/* ── Result count ── */}
             {!loading && deliveries.length > 0 && (

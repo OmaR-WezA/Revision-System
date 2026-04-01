@@ -1,7 +1,7 @@
 // ─────────────────────────────────────────────
 // 📋 Delivery Table with "Mark as Delivered"
 // ─────────────────────────────────────────────
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { CheckCircle, Loader, RotateCcw } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { markDelivered, undoDelivery } from '../services/githubService';
@@ -41,19 +41,11 @@ function getBatchColor(batchId, subjectName) {
     return `hsla(${hue}, 65%, 35%, 0.25)`;
 }
 
-function DeliveryRow({ delivery, globalActionLoading, setGlobalActionLoading }) {
+function DeliveryRow({ delivery, globalActionLoading, setGlobalActionLoading, updateLocalDelivery }) {
     const [loading, setLoading] = useState(false);
-    const [localStatus, setLocalStatus] = useState(delivery.status);
-    const [localDeliveredAt, setLocalDeliveredAt] = useState(delivery.deliveredAt);
-
-    // Sync with parent data if it updates in background
-    useEffect(() => {
-        setLocalStatus(delivery.status);
-        setLocalDeliveredAt(delivery.deliveredAt);
-    }, [delivery.status, delivery.deliveredAt]);
 
     async function handleMarkDelivered() {
-        if (localStatus === 'delivered') return;
+        if (delivery.status === 'delivered') return;
         setLoading(true);
         setGlobalActionLoading(true);
         try {
@@ -62,8 +54,9 @@ function DeliveryRow({ delivery, globalActionLoading, setGlobalActionLoading }) 
             toast.success(`✅ تم تسليم الكتاب لـ ${delivery.studentName}`);
 
             // Immediate UI update!
-            setLocalStatus('delivered');
-            setLocalDeliveredAt(new Date().toISOString());
+            if (updateLocalDelivery) {
+                updateLocalDelivery(delivery.id, 'delivered');
+            }
         } catch (err) {
             toast.error('حدث خطأ، حاول مرة أخرى');
             console.error(err);
@@ -85,8 +78,9 @@ function DeliveryRow({ delivery, globalActionLoading, setGlobalActionLoading }) 
             toast.success(`تم إلغاء التسليم لـ ${delivery.studentName}`);
 
             // Immediate UI update!
-            setLocalStatus('ready');
-            setLocalDeliveredAt(null);
+            if (updateLocalDelivery) {
+                updateLocalDelivery(delivery.id, 'ready');
+            }
         } catch (err) {
             toast.error(err.message || 'خطأ في إلغاء التسليم');
         } finally {
@@ -96,7 +90,7 @@ function DeliveryRow({ delivery, globalActionLoading, setGlobalActionLoading }) 
     }
 
     // Color the row green if locally delivered to make it ultra obvious
-    const rowColor = localStatus === 'delivered'
+    const rowColor = delivery.status === 'delivered'
         ? 'rgba(34, 197, 94, 0.1)'
         : getBatchColor(delivery.uploadBatch, delivery.subjectName);
 
@@ -107,12 +101,12 @@ function DeliveryRow({ delivery, globalActionLoading, setGlobalActionLoading }) 
             </td>
             <td style={{ fontWeight: 600 }}>{delivery.studentName}</td>
             <td style={{ color: 'var(--clr-text-2)' }}>{delivery.subjectName}</td>
-            <td><StatusBadge status={localStatus} /></td>
+            <td><StatusBadge status={delivery.status} /></td>
             <td style={{ color: 'var(--clr-text-3)', fontSize: '0.8rem' }}>
                 {formatDate(delivery.createdAt)}
             </td>
             <td>
-                {localStatus === 'ready' ? (
+                {delivery.status === 'ready' ? (
                     <button
                         id={`deliver-${delivery.id}`}
                         className="btn btn-success"
@@ -129,7 +123,7 @@ function DeliveryRow({ delivery, globalActionLoading, setGlobalActionLoading }) 
                 ) : (
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', alignItems: 'center' }}>
                         <span style={{ color: 'var(--clr-text-3)', fontSize: '0.8rem' }}>
-                            {formatDate(localDeliveredAt)}
+                            {formatDate(delivery.deliveredAt)}
                         </span>
                         <button
                             className="btn btn-ghost"
@@ -147,7 +141,7 @@ function DeliveryRow({ delivery, globalActionLoading, setGlobalActionLoading }) 
     );
 }
 
-export default function DeliveryTable({ deliveries, loading }) {
+export default function DeliveryTable({ deliveries, loading, updateLocalDelivery }) {
     const [globalActionLoading, setGlobalActionLoading] = useState(false);
 
     if (loading) {
@@ -193,6 +187,7 @@ export default function DeliveryTable({ deliveries, loading }) {
                             delivery={d}
                             globalActionLoading={globalActionLoading}
                             setGlobalActionLoading={setGlobalActionLoading}
+                            updateLocalDelivery={updateLocalDelivery}
                         />
                     ))}
                 </tbody>

@@ -53,10 +53,34 @@ export function useDashboardData(filters) {
         return [...new Set(allData.map(d => d.subjectName))].filter(Boolean).sort();
     }, [allData]);
 
+    // 3. Derived stats
+    const stats = useMemo(() => {
+        const total = allData.length;
+        const delivered = allData.filter(d => d.status === 'delivered').length;
+        const pending = total - delivered;
+        return { total, delivered, pending };
+    }, [allData]);
+
+    // Optimistic Update Function
+    const updateLocalDelivery = useCallback((id, newStatus) => {
+        setAllData(prev => prev.map(d => {
+            if (d.id === id) {
+                return {
+                    ...d,
+                    status: newStatus,
+                    deliveredAt: newStatus === 'delivered' ? new Date().toISOString() : null
+                };
+            }
+            return d;
+        }));
+    }, []);
+
     return {
         deliveries: filteredDeliveries,
         allDeliveries: allData,
         subjects,
-        loading
+        stats,
+        loading,
+        updateLocalDelivery
     };
 }
