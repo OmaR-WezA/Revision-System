@@ -1,0 +1,16 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Deliveries collection:
+    // - Anyone can READ (delivery staff, no login needed for now)
+    // - Anyone can WRITE (for simplicity — add auth later)
+    //
+    // TO ADD AUTH LATER: replace "true" with:
+    //   request.auth != null
+    match /deliveries/{docId} {
+      allow read:  if true;
+      allow write: if true;
+    }
+  }
+}

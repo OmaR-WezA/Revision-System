@@ -1,0 +1,51 @@
+{
+    "indexes": [
+        {
+            "collectionGroup": "deliveries",
+            "queryScope": "COLLECTION",
+            "fields": [
+                {
+                    "fieldPath": "subjectName",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "createdAt",
+                    "order": "DESCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "deliveries",
+            "queryScope": "COLLECTION",
+            "fields": [
+                {
+                    "fieldPath": "status",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "createdAt",
+                    "order": "DESCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "deliveries",
+            "queryScope": "COLLECTION",
+            "fields": [
+                {
+                    "fieldPath": "subjectName",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "status",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "createdAt",
+                    "order": "DESCENDING"
+                }
+            ]
+        }
+    ],
+    "fieldOverrides": []
+}
