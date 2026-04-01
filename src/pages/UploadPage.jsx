@@ -5,7 +5,7 @@ import { useState, useCallback } from 'react';
 import { Upload, FileSpreadsheet, AlertCircle, CheckCircle2 } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { parseExcelFile, extractSubjectFromFilename } from '../utils/excelParser';
-import { uploadDeliveries } from '../services/deliveryService';
+import { uploadDeliveries } from '../services/githubService';
 
 // ─────────────────────────────────────────────
 // Upload result summary card

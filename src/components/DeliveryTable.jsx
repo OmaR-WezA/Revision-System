@@ -4,7 +4,7 @@
 import { useState } from 'react';
 import { CheckCircle, Loader } from 'lucide-react';
 import toast from 'react-hot-toast';
-import { markDelivered } from '../services/deliveryService';
+import { markDelivered } from '../services/githubService';
 
 function formatDate(date) {
     if (!date) return '—';
