@@ -45,20 +45,24 @@ function getBatchColor(batchId, subjectName) {
     return `hsla(${hue}, 65%, 35%, 0.25)`;
 }
 
-function DeliveryRow({ delivery }) {
+function DeliveryRow({ delivery, globalActionLoading, setGlobalActionLoading }) {
     const [loading, setLoading] = useState(false);
 
     async function handleMarkDelivered() {
         if (delivery.status === 'delivered') return;
         setLoading(true);
+        setGlobalActionLoading(true);
         try {
             await markDelivered(delivery.id);
+            // Artificial cooldown to prevent rapid-fire clicks breaking GitHub API
+            await new Promise((resolve) => setTimeout(resolve, 3500));
             toast.success(`✅ تم تسليم الكتاب لـ ${delivery.studentName}`);
         } catch (err) {
             toast.error('حدث خطأ، حاول مرة أخرى');
             console.error(err);
         } finally {
             setLoading(false);
+            setGlobalActionLoading(false);
         }
     }
 
@@ -67,13 +71,17 @@ function DeliveryRow({ delivery }) {
         if (!pass) return;
 
         setLoading(true);
+        setGlobalActionLoading(true);
         try {
             await undoDelivery(delivery.id, pass);
+            // Artificial cooldown
+            await new Promise((resolve) => setTimeout(resolve, 1500));
             toast.success(`تم إلغاء التسليم لـ ${delivery.studentName}`);
         } catch (err) {
             toast.error(err.message || 'خطأ في إلغاء التسليم');
         } finally {
             setLoading(false);
+            setGlobalActionLoading(false);
         }
     }
 
@@ -94,8 +102,9 @@ function DeliveryRow({ delivery }) {
                         id={`deliver-${delivery.id}`}
                         className="btn btn-success"
                         onClick={handleMarkDelivered}
-                        disabled={loading}
+                        disabled={globalActionLoading || loading}
                         aria-label={`تسليم كتاب ${delivery.studentName}`}
+                        style={{ cursor: globalActionLoading && !loading ? 'wait' : '' }}
                     >
                         {loading
                             ? <><Loader size={14} className="spin" /> جاري...</>
@@ -109,9 +118,9 @@ function DeliveryRow({ delivery }) {
                         </span>
                         <button
                             className="btn btn-ghost"
-                            style={{ padding: '2px 8px', fontSize: '0.8rem', color: 'var(--clr-danger)' }}
+                            style={{ padding: '2px 8px', fontSize: '0.8rem', color: 'var(--clr-danger)', cursor: globalActionLoading && !loading ? 'wait' : '' }}
                             onClick={handleUndoDelivery}
-                            disabled={loading}
+                            disabled={globalActionLoading || loading}
                             title="إلغاء التسليم"
                         >
                             {loading ? <Loader size={12} className="spin" /> : <><RotateCcw size={12} /> تراجع</>}
@@ -124,6 +133,8 @@ function DeliveryRow({ delivery }) {
 }
 
 export default function DeliveryTable({ deliveries, loading }) {
+    const [globalActionLoading, setGlobalActionLoading] = useState(false);
+
     if (loading) {
         return (
             <div className="table-wrapper">
@@ -162,7 +173,12 @@ export default function DeliveryTable({ deliveries, loading }) {
                 </thead>
                 <tbody>
                     {deliveries.map((d) => (
-                        <DeliveryRow key={d.id} delivery={d} />
+                        <DeliveryRow
+                            key={d.id}
+                            delivery={d}
+                            globalActionLoading={globalActionLoading}
+                            setGlobalActionLoading={setGlobalActionLoading}
+                        />
                     ))}
                 </tbody>
             </table>
