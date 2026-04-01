@@ -25,11 +25,24 @@ function StatusBadge({ status }) {
         : <span className="badge badge-ready">📦 جاهز للاستلام</span>;
 }
 
-function getBatchColor(batchId) {
-    if (!batchId) return 'transparent';
-    /* Generate a stable hue based on the batch timestamp */
-    const hue = (batchId % 360);
-    return `hsla(${hue}, 60%, 30%, 0.15)`;
+function getBatchColor(batchId, subjectName) {
+    let hue = 0;
+    if (batchId) {
+        // Generate hue from timestamp
+        hue = Math.floor(batchId % 360);
+    } else if (subjectName) {
+        // Fallback for old data: generate hue from subject name string
+        let hash = 0;
+        for (let i = 0; i < subjectName.length; i++) {
+            hash = subjectName.charCodeAt(i) + ((hash << 5) - hash);
+        }
+        hue = Math.abs(hash) % 360;
+    } else {
+        return 'transparent';
+    }
+
+    // Increased opacity from 0.15 to 0.25 so it's clearly visible
+    return `hsla(${hue}, 65%, 35%, 0.25)`;
 }
 
 function DeliveryRow({ delivery }) {
@@ -65,7 +78,7 @@ function DeliveryRow({ delivery }) {
     }
 
     return (
-        <tr style={{ backgroundColor: getBatchColor(delivery.uploadBatch) }}>
+        <tr style={{ backgroundColor: getBatchColor(delivery.uploadBatch, delivery.subjectName) }}>
             <td style={{ fontFamily: 'monospace', color: 'var(--clr-info)', fontWeight: 600 }}>
                 {delivery.universityId}
             </td>
