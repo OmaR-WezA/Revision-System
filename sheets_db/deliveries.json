@@ -9130,5 +9130,305 @@
     "createdAt": "2026-04-02T18:08:13.392Z",
     "deliveredAt": null,
     "uploadBatch": 1775153293391
+  },
+  {
+    "id": "240063_profession_ethics__",
+    "universityId": "240063",
+    "studentName": "اسراء احمد صبرى احمد",
+    "subjectName": "profession ethics - رعاية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:17:35.281Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153855281
+  },
+  {
+    "id": "240121_profession_ethics__",
+    "universityId": "240121",
+    "studentName": "اميرة محمد حافظ السيد علي",
+    "subjectName": "profession ethics - رعاية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:17:35.281Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153855281
+  },
+  {
+    "id": "240125_profession_ethics__",
+    "universityId": "240125",
+    "studentName": "امينة مصطفي عبد المنعم شحاته ابراهيم",
+    "subjectName": "profession ethics - رعاية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:17:35.281Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153855281
+  },
+  {
+    "id": "240132_profession_ethics__",
+    "universityId": "240132",
+    "studentName": "ايمان حسن حسن احمد",
+    "subjectName": "profession ethics - رعاية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:17:35.281Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153855281
+  },
+  {
+    "id": "240141_profession_ethics__",
+    "universityId": "240141",
+    "studentName": "ايمن هشام السيد ابو اليزيد",
+    "subjectName": "profession ethics - رعاية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:17:35.281Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153855281
+  },
+  {
+    "id": "240168_profession_ethics__",
+    "universityId": "240168",
+    "studentName": "بسملة عماد محمد مرسي عامر",
+    "subjectName": "profession ethics - رعاية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:17:35.281Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153855281
+  },
+  {
+    "id": "240174_profession_ethics__",
+    "universityId": "240174",
+    "studentName": "بسملة ياسر علي نصر علي",
+    "subjectName": "profession ethics - رعاية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:17:35.281Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153855281
+  },
+  {
+    "id": "240177_profession_ethics__",
+    "universityId": "240177",
+    "studentName": "بسيوني عادل عبد الفتاح بسيوني عطية",
+    "subjectName": "profession ethics - رعاية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:17:35.281Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153855281
+  },
+  {
+    "id": "240220_profession_ethics__",
+    "universityId": "240220",
+    "studentName": "حفصه وليد سمير محمد",
+    "subjectName": "profession ethics - رعاية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:17:35.281Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153855281
+  },
+  {
+    "id": "240227_profession_ethics__",
+    "universityId": "240227",
+    "studentName": "حنين رجب شعبان عبد الرحيم عثمان",
+    "subjectName": "profession ethics - رعاية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:17:35.281Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153855281
+  },
+  {
+    "id": "240234_profession_ethics__",
+    "universityId": "240234",
+    "studentName": "حنين محمد حسن عزيز الدين",
+    "subjectName": "profession ethics - رعاية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:17:35.281Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153855281
+  },
+  {
+    "id": "240235_profession_ethics__",
+    "universityId": "240235",
+    "studentName": "خالد السيد زكريا السيد",
+    "subjectName": "profession ethics - رعاية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:17:35.281Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153855281
+  },
+  {
+    "id": "240291_profession_ethics__",
+    "universityId": "240291",
+    "studentName": "زياد مصطفى على ابراهيم",
+    "subjectName": "profession ethics - رعاية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:17:35.281Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153855281
+  },
+  {
+    "id": "240311_profession_ethics__",
+    "universityId": "240311",
+    "studentName": "سلمى محمد سليم عبد الكريم سليم",
+    "subjectName": "profession ethics - رعاية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:17:35.281Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153855281
+  },
+  {
+    "id": "240326_profession_ethics__",
+    "universityId": "240326",
+    "studentName": "سندس ابراهيم عبدالحكيم ابراهيم",
+    "subjectName": "profession ethics - رعاية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:17:35.281Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153855281
+  },
+  {
+    "id": "240338_profession_ethics__",
+    "universityId": "240338",
+    "studentName": "شروق رمضان عبد اللطيف عبد الحميد",
+    "subjectName": "profession ethics - رعاية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:17:35.281Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153855281
+  },
+  {
+    "id": "240349_profession_ethics__",
+    "universityId": "240349",
+    "studentName": "شهد بدر حامد محمد عبد المجيد داغر",
+    "subjectName": "profession ethics - رعاية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:17:35.281Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153855281
+  },
+  {
+    "id": "240367_profession_ethics__",
+    "universityId": "240367",
+    "studentName": "صفاء محمد صابر متموج",
+    "subjectName": "profession ethics - رعاية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:17:35.281Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153855281
+  },
+  {
+    "id": "240409_profession_ethics__",
+    "universityId": "240409",
+    "studentName": "علاء مرضي ضيف عبد العزيز",
+    "subjectName": "profession ethics - رعاية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:17:35.281Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153855281
+  },
+  {
+    "id": "240417_profession_ethics__",
+    "universityId": "240417",
+    "studentName": "عماد محمد علي العدل سيد احمد",
+    "subjectName": "profession ethics - رعاية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:17:35.281Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153855281
+  },
+  {
+    "id": "240447_profession_ethics__",
+    "universityId": "240447",
+    "studentName": "فتحي محمد فتحي عبد الحفيظ",
+    "subjectName": "profession ethics - رعاية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:17:35.281Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153855281
+  },
+  {
+    "id": "240510_profession_ethics__",
+    "universityId": "240510",
+    "studentName": "محمد سعد الدين محمد سعد علي",
+    "subjectName": "profession ethics - رعاية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:17:35.281Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153855281
+  },
+  {
+    "id": "240558_profession_ethics__",
+    "universityId": "240558",
+    "studentName": "مريم خالد عبد المحسن محمد احمد",
+    "subjectName": "profession ethics - رعاية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:17:35.281Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153855281
+  },
+  {
+    "id": "240562_profession_ethics__",
+    "universityId": "240562",
+    "studentName": "مريم رضا عبد الحافظ عبد العظيم سيد احمد",
+    "subjectName": "profession ethics - رعاية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:17:35.281Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153855281
+  },
+  {
+    "id": "240596_profession_ethics__",
+    "universityId": "240596",
+    "studentName": "ملك محمد زغلول ابراهيم",
+    "subjectName": "profession ethics - رعاية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:17:35.281Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153855281
+  },
+  {
+    "id": "240613_profession_ethics__",
+    "universityId": "240613",
+    "studentName": "منة الله عبد المجيد عبد المجيد حسين",
+    "subjectName": "profession ethics - رعاية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:17:35.281Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153855281
+  },
+  {
+    "id": "240639_profession_ethics__",
+    "universityId": "240639",
+    "studentName": "مي منصور محمد مرزوق طيلون",
+    "subjectName": "profession ethics - رعاية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:17:35.281Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153855281
+  },
+  {
+    "id": "240664_profession_ethics__",
+    "universityId": "240664",
+    "studentName": "نور الهدي احمد حسين محمد",
+    "subjectName": "profession ethics - رعاية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:17:35.281Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153855281
+  },
+  {
+    "id": "240686_profession_ethics__",
+    "universityId": "240686",
+    "studentName": "هاجر ابراهيم فتحي ابراهيم صقر",
+    "subjectName": "profession ethics - رعاية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:17:35.281Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153855281
+  },
+  {
+    "id": "240687_profession_ethics__",
+    "universityId": "240687",
+    "studentName": "هاجر احمد السيد عماره",
+    "subjectName": "profession ethics - رعاية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:17:35.281Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153855281
   }
 ]
