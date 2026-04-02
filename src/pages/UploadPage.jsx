@@ -120,7 +120,7 @@ function UploadResult({ result }) {
                                     ))}
                                 </ul>
                             </div>
-                            
+
                         </>
                     )}
                 </div>
@@ -394,6 +394,10 @@ export default function UploadPage() {
                 </ol>
             </div>
 
+            <hr style={{ border: 'none', borderTop: '1px solid var(--clr-border)', margin: '32px 0' }} />
+            <RejectedLogSection />
+            <hr style={{ border: 'none', borderTop: '1px solid var(--clr-border)', margin: '32px 0' }} />
+
             {/* ── Danger Zone (Delete) ── */}
             <div className="card" style={{ marginTop: '32px', border: '1px solid var(--clr-danger)' }}>
                 <h3 style={{ marginBottom: '16px', fontSize: '1rem', color: 'var(--clr-danger)', display: 'flex', alignItems: 'center', gap: '8px' }}>
@@ -455,8 +459,7 @@ export default function UploadPage() {
                 </div>
             </div>
 
-            <hr style={{ border: 'none', borderTop: '1px solid var(--clr-border)', margin: '32px 0' }} />
-            <RejectedLogSection />
+
 
             {/* Custom Prompt Modal (Generic) */}
             {promptConfig && (
