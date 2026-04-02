@@ -7970,5 +7970,565 @@
     "createdAt": "2026-04-02T16:53:09.999Z",
     "deliveredAt": null,
     "uploadBatch": 1775148789998
+  },
+  {
+    "id": "250016_basic_electrical_engineering",
+    "universityId": "250016",
+    "studentName": "احمد حسن محمد علي",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250068_basic_electrical_engineering",
+    "universityId": "250068",
+    "studentName": "اسراء أشرف الصابر عبداللطيف",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250072_basic_electrical_engineering",
+    "universityId": "250072",
+    "studentName": "اسراء فرج سعيد عبد الفضيل",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250082_basic_electrical_engineering",
+    "universityId": "250082",
+    "studentName": "اسماء عاطف فرج  على عبد المجيد",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250102_basic_electrical_engineering",
+    "universityId": "250102",
+    "studentName": "الاء احمد محمد عبدالحليم شواطه",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250116_basic_electrical_engineering",
+    "universityId": "250116",
+    "studentName": "اماني عبد المعطي صيام عبد المعطي  محمود",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250140_basic_electrical_engineering",
+    "universityId": "250140",
+    "studentName": "اية عبدالحميد كامل عبدالحميد كامل",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250158_basic_electrical_engineering",
+    "universityId": "250158",
+    "studentName": "ايمان محمد خليفة أبو بكر",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250184_basic_electrical_engineering",
+    "universityId": "250184",
+    "studentName": "تسنيم بهاء الدين محمد حسين ابراهيم",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250188_basic_electrical_engineering",
+    "universityId": "250188",
+    "studentName": "تسنيم هاشم شعبان عبدالحميد علي",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250202_basic_electrical_engineering",
+    "universityId": "250202",
+    "studentName": "جنى حسن سيد اسماعيل",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250215_basic_electrical_engineering",
+    "universityId": "250215",
+    "studentName": "حبيبة باسم عبد العظيم",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250220_basic_electrical_engineering",
+    "universityId": "250220",
+    "studentName": "حبيبه ابراهيم الغريب احمد",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250249_basic_electrical_engineering",
+    "universityId": "250249",
+    "studentName": "حنين حمدي منير البحيري",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250255_basic_electrical_engineering",
+    "universityId": "250255",
+    "studentName": "حنين محمود أحمد أحمد حبيشي",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250283_basic_electrical_engineering",
+    "universityId": "250283",
+    "studentName": "رحمه الشامى عبد الفتاح عبد العزيز",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250305_basic_electrical_engineering",
+    "universityId": "250305",
+    "studentName": "روان حسين سعيد عبدالمجيد",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250309_basic_electrical_engineering",
+    "universityId": "250309",
+    "studentName": "روان عبدالمقصود علي عبد المقصود",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250330_basic_electrical_engineering",
+    "universityId": "250330",
+    "studentName": "ريهام رمضان حسين محمد",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250343_basic_electrical_engineering",
+    "universityId": "250343",
+    "studentName": "زياد محمود عبد العزيز احمد",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250377_basic_electrical_engineering",
+    "universityId": "250377",
+    "studentName": "سلمي شريف محمد عبد المنعم محمود",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250379_basic_electrical_engineering",
+    "universityId": "250379",
+    "studentName": "سلمي عبدالعظيم عبدالستار عبدالعظيم رشدان",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250391_basic_electrical_engineering",
+    "universityId": "250391",
+    "studentName": "سهيله عصام عبدالستار محمد",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250415_basic_electrical_engineering",
+    "universityId": "250415",
+    "studentName": "شهد شاكر حمزه علي جمعه",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250436_basic_electrical_engineering",
+    "universityId": "250436",
+    "studentName": "شيماء محمد عنتر محمد عطاالله غطاس",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250452_basic_electrical_engineering",
+    "universityId": "250452",
+    "studentName": "عبد الرحمن رجب محمد يوسف",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250465_basic_electrical_engineering",
+    "universityId": "250465",
+    "studentName": "عبدالرحمن محمد علي احمد",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250470_basic_electrical_engineering",
+    "universityId": "250470",
+    "studentName": "عبدالعزيز إسلام عبدالعزيز ابوسيف عبدالحميد عيسى",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250521_basic_electrical_engineering",
+    "universityId": "250521",
+    "studentName": "عمر زكريا زكريا عبد العال",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250526_basic_electrical_engineering",
+    "universityId": "250526",
+    "studentName": "عمر قناوي محمد قناوي",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250547_basic_electrical_engineering",
+    "universityId": "250547",
+    "studentName": "فارس عادل شعبان على",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250554_basic_electrical_engineering",
+    "universityId": "250554",
+    "studentName": "فاطمه احمد عبد المنعم ذيدان عبد المؤمن",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250568_basic_electrical_engineering",
+    "universityId": "250568",
+    "studentName": "كارولين سامي وهبه رزق نعمه الله",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250711_basic_electrical_engineering",
+    "universityId": "250711",
+    "studentName": "مريم باسم محمود عبد السيد ناصر",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250726_basic_electrical_engineering",
+    "universityId": "250726",
+    "studentName": "مريم ماهر عبد الرافع سند طالب",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250731_basic_electrical_engineering",
+    "universityId": "250731",
+    "studentName": "مريم محمد محمد مغازي الركايبي",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250747_basic_electrical_engineering",
+    "universityId": "250747",
+    "studentName": "معاذ جابر عبدالرزاق محمد علي",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250754_basic_electrical_engineering",
+    "universityId": "250754",
+    "studentName": "ملك أحمد عبدالرازق عبدالحميد عبيه",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250777_basic_electrical_engineering",
+    "universityId": "250777",
+    "studentName": "ملك وليد احمد علي حسين سلام",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250789_basic_electrical_engineering",
+    "universityId": "250789",
+    "studentName": "منة فتحي العليمى المرسي",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250801_basic_electrical_engineering",
+    "universityId": "250801",
+    "studentName": "منه الله محمد احمد محمد عبدالعال",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250814_basic_electrical_engineering",
+    "universityId": "250814",
+    "studentName": "مهرائيل سامح صبري بحبوح",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250825_basic_electrical_engineering",
+    "universityId": "250825",
+    "studentName": "مينا سامي زكي جاب الله",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250840_basic_electrical_engineering",
+    "universityId": "250840",
+    "studentName": "ندي مسعد انصاري صبح",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250852_basic_electrical_engineering",
+    "universityId": "250852",
+    "studentName": "نور محمد فرج محمد السيد",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250867_basic_electrical_engineering",
+    "universityId": "250867",
+    "studentName": "هاجر احمد محمد غازي",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250891_basic_electrical_engineering",
+    "universityId": "250891",
+    "studentName": "هناء اشرف محمد عبدالله النجار",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250892_basic_electrical_engineering",
+    "universityId": "250892",
+    "studentName": "هند محمد محمد حسن",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "250949_basic_electrical_engineering",
+    "universityId": "250949",
+    "studentName": "فاطمه فرج عبداللطيف علي معوض",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "2550108_basic_electrical_engineering",
+    "universityId": "2550108",
+    "studentName": "جنة أحمد محمد محمد سيد أحمد",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "2550391_basic_electrical_engineering",
+    "universityId": "2550391",
+    "studentName": "محمود ربيع محمود السيد",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "2550432_basic_electrical_engineering",
+    "universityId": "2550432",
+    "studentName": "ملك سامي عبد الجليل قطب",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "2550495_basic_electrical_engineering",
+    "universityId": "2550495",
+    "studentName": "ندى محمود رجب محمود محمد مسلم",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "2550498_basic_electrical_engineering",
+    "universityId": "2550498",
+    "studentName": "ندى محمد حسن عبد السلام إسماعيل",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "2550539_basic_electrical_engineering",
+    "universityId": "2550539",
+    "studentName": "هدى خميس عبد الكريم عبد الجليل",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
+  },
+  {
+    "id": "2560091_basic_electrical_engineering",
+    "universityId": "2560091",
+    "studentName": "رحمه حسين عوض سعد كاشيك",
+    "subjectName": "Basic Electrical Engineering",
+    "status": "ready",
+    "createdAt": "2026-04-02T17:25:56.342Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775150756341
   }
 ]
