@@ -9430,5 +9430,815 @@
     "createdAt": "2026-04-02T18:17:35.281Z",
     "deliveredAt": null,
     "uploadBatch": 1775153855281
+  },
+  {
+    "id": "240014_profession_ethics__",
+    "universityId": "240014",
+    "studentName": "احمد ايمن ابراهيم محمد",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.891Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240023_profession_ethics__",
+    "universityId": "240023",
+    "studentName": "احمد ربيع محمد عبد المجيد عياد",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.891Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240037_profession_ethics__",
+    "universityId": "240037",
+    "studentName": "احمد علي عبد السميع عطيه",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.891Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240038_profession_ethics__",
+    "universityId": "240038",
+    "studentName": "احمد علي عبد الله علي راضي",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.891Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240054_profession_ethics__",
+    "universityId": "240054",
+    "studentName": "اروى اشرف انور احمد شرف",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.891Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240065_profession_ethics__",
+    "universityId": "240065",
+    "studentName": "اسراء السعيد محمد عبد المطلب",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.891Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240069_profession_ethics__",
+    "universityId": "240069",
+    "studentName": "اسراء علي منير علي سوسو",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.891Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240071_profession_ethics__",
+    "universityId": "240071",
+    "studentName": "اسراء محمد لطفي مغازي حسن",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.891Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240075_profession_ethics__",
+    "universityId": "240075",
+    "studentName": "اسماء احمد مصطفى إبراهيم",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.891Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240079_profession_ethics__",
+    "universityId": "240079",
+    "studentName": "اسماء سعيد محمد نعيم",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.891Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240085_profession_ethics__",
+    "universityId": "240085",
+    "studentName": "اسماء لبيب عبد الوهاب لبيب الانصاري",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.891Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240087_profession_ethics__",
+    "universityId": "240087",
+    "studentName": "اسماء محمد عبد القادر ابراهيم عثمان",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.891Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240095_profession_ethics__",
+    "universityId": "240095",
+    "studentName": "الاء انور عبد الستار احمد مصطفي",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.891Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240106_profession_ethics__",
+    "universityId": "240106",
+    "studentName": "اماني الامير عبد الرؤوف كامل محمد",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.891Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240113_profession_ethics__",
+    "universityId": "240113",
+    "studentName": "امنية ابراهيم محمد عبدالحليم قاسم",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.891Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240129_profession_ethics__",
+    "universityId": "240129",
+    "studentName": "انس محمد محمود الشناوي",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.891Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240146_profession_ethics__",
+    "universityId": "240146",
+    "studentName": "آية بركات ابراهيم بركات شافع",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.891Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240153_profession_ethics__",
+    "universityId": "240153",
+    "studentName": "آية محمد عبد الشافي ابو الفضل",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.891Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240165_profession_ethics__",
+    "universityId": "240165",
+    "studentName": "بسملة رمزي رزق احمد عامر",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.891Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240171_profession_ethics__",
+    "universityId": "240171",
+    "studentName": "بسملة مدحت عبد المنعم على",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.891Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240197_profession_ethics__",
+    "universityId": "240197",
+    "studentName": "جودي محمد حسني عبد العزيز",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.891Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240201_profession_ethics__",
+    "universityId": "240201",
+    "studentName": "حبيبة الله عطية الحسيني عطيه جابر",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.891Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240237_profession_ethics__",
+    "universityId": "240237",
+    "studentName": "خلود خالد السيد محمد البسطويسي",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.891Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240242_profession_ethics__",
+    "universityId": "240242",
+    "studentName": "دينا انور احمد ابراهيم محمد سعد",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.891Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240261_profession_ethics__",
+    "universityId": "240261",
+    "studentName": "رنا احمد عبد السلام محمد قمح",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.891Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240265_profession_ethics__",
+    "universityId": "240265",
+    "studentName": "روان احمد عبد المنعم هنداوي ابو النضر",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.891Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240273_profession_ethics__",
+    "universityId": "240273",
+    "studentName": "روان محمد سعد عبدالمجيد علي",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240275_profession_ethics__",
+    "universityId": "240275",
+    "studentName": "روان وائل سمير بدر احمد",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240277_profession_ethics__",
+    "universityId": "240277",
+    "studentName": "رويده سعيد محمد عبد العال حسين",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240278_profession_ethics__",
+    "universityId": "240278",
+    "studentName": "ريتاج ابراهيم محمد السيد فرغلي",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240288_profession_ethics__",
+    "universityId": "240288",
+    "studentName": "زياد محمد ابو العنين السيد",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240293_profession_ethics__",
+    "universityId": "240293",
+    "studentName": "زينب عبد الله عبد السلام كامل",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240296_profession_ethics__",
+    "universityId": "240296",
+    "studentName": "سارة طارق خليفة سلطان عبد العزيز",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240305_profession_ethics__",
+    "universityId": "240305",
+    "studentName": "ساندي عادل فكري غالي",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240312_profession_ethics__",
+    "universityId": "240312",
+    "studentName": "سلمى محمد عبد العزيز جاد",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240314_profession_ethics__",
+    "universityId": "240314",
+    "studentName": "سلوى شمس محمد شمس الدين",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240332_profession_ethics__",
+    "universityId": "240332",
+    "studentName": "شادي مدحت عاطف حنين حنا",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240354_profession_ethics__",
+    "universityId": "240354",
+    "studentName": "شهد صبحي عبد العزيز محمد العباسي",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240371_profession_ethics__",
+    "universityId": "240371",
+    "studentName": "ضحى عبد الفتاح شعبان عثمان",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240402_profession_ethics__",
+    "universityId": "240402",
+    "studentName": "عزة محمد شعبان عثمان حسن",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240415_profession_ethics__",
+    "universityId": "240415",
+    "studentName": "علياء علي راضي علي راضي",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240422_profession_ethics__",
+    "universityId": "240422",
+    "studentName": "عمار ياسر ذكي علي مفروكة",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240427_profession_ethics__",
+    "universityId": "240427",
+    "studentName": "عمر محمد مصطفى احمد موسي",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240441_profession_ethics__",
+    "universityId": "240441",
+    "studentName": "فاطمة محمد السيد محمد طلبة",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240456_profession_ethics__",
+    "universityId": "240456",
+    "studentName": "فوزي محمد فوزي عبد السلام عبد الحليم",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240464_profession_ethics__",
+    "universityId": "240464",
+    "studentName": "كريمة محمد عبد العاطي محمد عيسي",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240465_profession_ethics__",
+    "universityId": "240465",
+    "studentName": "كيرلس عماد وجيه قاسم",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240471_profession_ethics__",
+    "universityId": "240471",
+    "studentName": "لينة توفيق توفيق احمد",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240477_profession_ethics__",
+    "universityId": "240477",
+    "studentName": "مارينا مهدي جميل توفيق",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240491_profession_ethics__",
+    "universityId": "240491",
+    "studentName": "محمد اشرف محمد ابراهيم بدر",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240498_profession_ethics__",
+    "universityId": "240498",
+    "studentName": "محمد بدر محمد السيد",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240505_profession_ethics__",
+    "universityId": "240505",
+    "studentName": "محمد حنفي حماده بكري السيد",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240508_profession_ethics__",
+    "universityId": "240508",
+    "studentName": "محمد رشاد عبد الجليل خليل البدوي",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240513_profession_ethics__",
+    "universityId": "240513",
+    "studentName": "محمد صابر عبد الوهاب الرفاعي",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240547_profession_ethics__",
+    "universityId": "240547",
+    "studentName": "محمود محمد عبد القادر فرج سعيد",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240554_profession_ethics__",
+    "universityId": "240554",
+    "studentName": "مريم السيد محمد احمد القسطاوي",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240556_profession_ethics__",
+    "universityId": "240556",
+    "studentName": "مريم جرجس عدلي ونس مسعد",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240559_profession_ethics__",
+    "universityId": "240559",
+    "studentName": "مريم رجب محمد محمد",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240564_profession_ethics__",
+    "universityId": "240564",
+    "studentName": "مريم سامح عبد اللطيف محمد",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240567_profession_ethics__",
+    "universityId": "240567",
+    "studentName": "مريم عبد المنعم محمود عبد الله",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240584_profession_ethics__",
+    "universityId": "240584",
+    "studentName": "معاذ احمد رجب عوض",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240603_profession_ethics__",
+    "universityId": "240603",
+    "studentName": "منة الرحمن يوسف عاطف يوسف",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240605_profession_ethics__",
+    "universityId": "240605",
+    "studentName": "منة الله ابو اليزيد محمد محمد واصل",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240612_profession_ethics__",
+    "universityId": "240612",
+    "studentName": "منة الله عادل ابراهيم عبد العزيز",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240621_profession_ethics__",
+    "universityId": "240621",
+    "studentName": "منة محمد السيد احمد احمد",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240631_profession_ethics__",
+    "universityId": "240631",
+    "studentName": "مؤمن اسلام حسن ابراهيم",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240638_profession_ethics__",
+    "universityId": "240638",
+    "studentName": "مي عزت حسن احمد هنو",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240649_profession_ethics__",
+    "universityId": "240649",
+    "studentName": "ندى جمال عبد القادر الدمرداش",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240676_profession_ethics__",
+    "universityId": "240676",
+    "studentName": "نورهان عزت محمد محمود عمار",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240680_profession_ethics__",
+    "universityId": "240680",
+    "studentName": "نورهان محمد احمد محمود",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240688_profession_ethics__",
+    "universityId": "240688",
+    "studentName": "هاجر احمد عبد الحميد عبد الحميد",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240690_profession_ethics__",
+    "universityId": "240690",
+    "studentName": "هاجر سامي فتحي محمد",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240691_profession_ethics__",
+    "universityId": "240691",
+    "studentName": "هاجر سعيد السيد محمود",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240694_profession_ethics__",
+    "universityId": "240694",
+    "studentName": "هاجر محمود جمعه عبد ربه",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240697_profession_ethics__",
+    "universityId": "240697",
+    "studentName": "هدير هاني قاسم محمد سليمان",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240698_profession_ethics__",
+    "universityId": "240698",
+    "studentName": "هشام ياسر عباس حجازي سعد",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240705_profession_ethics__",
+    "universityId": "240705",
+    "studentName": "هند محمد محمود محمود ابراهيم",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240709_profession_ethics__",
+    "universityId": "240709",
+    "studentName": "وفاء عسل محمد عبد الرحمن",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240718_profession_ethics__",
+    "universityId": "240718",
+    "studentName": "يوأنس عاطف وجيه قاسم",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "240733_profession_ethics__",
+    "universityId": "240733",
+    "studentName": "يوسف هشام عبدالعزيز بيومي",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
+  },
+  {
+    "id": "251500_profession_ethics__",
+    "universityId": "251500",
+    "studentName": "ريتاج سعد مختار  عبدالعال",
+    "subjectName": "profession ethics - ادوية",
+    "status": "ready",
+    "createdAt": "2026-04-02T18:19:32.892Z",
+    "deliveredAt": null,
+    "uploadBatch": 1775153972891
   }
 ]
