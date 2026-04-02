@@ -134,11 +134,36 @@ export async function markDelivered(docId) {
 }
 
 // ─────────────────────────────────────────────
+// 🤝 Assign to Section Delegate (Mass Assignment)
+// ─────────────────────────────────────────────
+export async function assignToDelegate(docIds, delegateCode) {
+    if (!docIds || docIds.length === 0) return 0;
+    const data = await fetchDeliveries();
+    let updated = 0;
+    const assignBatchId = Date.now();
+    const assignedAt = new Date().toISOString();
+
+    data.forEach(d => {
+        if (docIds.includes(d.id)) {
+            d.status = 'with_delegate';
+            d.delegateId = delegateCode;
+            d.assignBatchId = assignBatchId;
+            d.assignedAt = assignedAt;
+            updated++;
+        }
+    });
+
+    if (updated > 0) {
+        await updateGitHubFile(data, `Assigned ${updated} records to delegate ${delegateCode}`);
+    }
+    return updated;
+}
+
+// ─────────────────────────────────────────────
 // ⏪ Undo Delivery
 // ─────────────────────────────────────────────
 export async function undoDelivery(docId, password) {
-    const adminPassword = import.meta.env.VITE_ADMIN_PASSWORD;
-    if (password !== adminPassword) {
+    if (password !== 'leader') {
         throw new Error('كلمة المرور غير صحيحة');
     }
 
@@ -146,8 +171,14 @@ export async function undoDelivery(docId, password) {
     const index = data.findIndex(d => d.id === docId);
 
     if (index !== -1) {
-        if (data[index].status !== 'delivered') return; // Already ready
-        data[index].status = 'ready';
+        if (data[index].status === 'ready' || data[index].status === 'with_delegate') return;
+
+        if (data[index].delegateId) {
+            data[index].status = 'with_delegate';
+        } else {
+            data[index].status = 'ready';
+        }
+
         data[index].deliveredAt = null;
         await updateGitHubFile(data, `Undo delivery for ${data[index].studentName}`);
     } else {
@@ -156,11 +187,48 @@ export async function undoDelivery(docId, password) {
 }
 
 // ─────────────────────────────────────────────
+// ⏪ Undo Last Batch Assignment (Admin)
+// ─────────────────────────────────────────────
+export async function undoLastAssignmentBatch(password) {
+    if (password !== 'leader') {
+        throw new Error('كلمة المرور غير صحيحة');
+    }
+
+    const data = await fetchDeliveries();
+
+    let maxBatch = 0;
+    for (const d of data) {
+        if (d.status === 'with_delegate' && d.assignBatchId && d.assignBatchId > maxBatch) {
+            maxBatch = d.assignBatchId;
+        }
+    }
+
+    if (maxBatch === 0) {
+        throw new Error('لا توجد عملية تسليم حديثة يمكن التراجع عنها، أو كانت بطريقة قديمة.');
+    }
+
+    let reverted = 0;
+    data.forEach(d => {
+        if (d.status === 'with_delegate' && d.assignBatchId === maxBatch) {
+            d.status = 'ready';
+            d.delegateId = null;
+            d.assignedAt = null;
+            d.assignBatchId = null;
+            reverted++;
+        }
+    });
+
+    if (reverted > 0) {
+        await updateGitHubFile(data, `Undo delegate assignment batch (${reverted} records)`);
+    }
+    return reverted;
+}
+
+// ─────────────────────────────────────────────
 // 🗑️ Delete Entire Subject
 // ─────────────────────────────────────────────
 export async function deleteSubject(subjectName, password) {
-    const adminPassword = import.meta.env.VITE_ADMIN_PASSWORD;
-    if (password !== adminPassword) {
+    if (password !== '123mosa') {
         throw new Error('كلمة المرور غير صحيحة');
     }
 
@@ -182,8 +250,7 @@ export async function deleteSubject(subjectName, password) {
 // 🗑️ Delete Last Uploaded Batch (Sheet)
 // ─────────────────────────────────────────────
 export async function deleteLastBatch(password) {
-    const adminPassword = import.meta.env.VITE_ADMIN_PASSWORD;
-    if (password !== adminPassword) {
+    if (password !== '123mosa') {
         throw new Error('كلمة المرور غير صحيحة');
     }
 

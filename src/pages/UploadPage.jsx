@@ -40,6 +40,25 @@ export default function UploadPage() {
     const [deletePassword, setDeletePassword] = useState('');
     const [isDeleting, setIsDeleting] = useState(false);
 
+    // Custom Prompt State
+    const [promptConfig, setPromptConfig] = useState(null);
+    const showPrompt = (message, type = 'password') => {
+        return new Promise((resolve) => {
+            setPromptConfig({
+                message,
+                type,
+                onConfirm: (val) => {
+                    setPromptConfig(null);
+                    resolve(val);
+                },
+                onCancel: () => {
+                    setPromptConfig(null);
+                    resolve(null);
+                }
+            });
+        });
+    };
+
     // Get subjects list
     const { subjects } = useDashboardData();
 
@@ -80,6 +99,7 @@ export default function UploadPage() {
 
             setProgress(100);
             setResult({ subjectName, newCount, skippedCount });
+            setSelectedFile(null); // Reset the file picker to prevent accidental re-uploads
             toast.success(`تم رفع "${subjectName}" بنجاح — ${newCount} طالب جديد`);
 
         } catch (err) {
@@ -92,16 +112,31 @@ export default function UploadPage() {
     }, []);
 
     // ─── Drag and Drop handlers ───
+    const [selectedFile, setSelectedFile] = useState(null);
+
     const handleDrop = useCallback((e) => {
         e.preventDefault();
         setDragging(false);
         const file = e.dataTransfer.files[0];
-        processFile(file);
-    }, [processFile]);
+        if (file) setSelectedFile(file);
+    }, []);
 
     const handleDragOver = (e) => { e.preventDefault(); setDragging(true); };
     const handleDragLeave = () => setDragging(false);
-    const handleFileInput = (e) => processFile(e.target.files[0]);
+    const handleFileInput = (e) => {
+        const file = e.target.files[0];
+        if (file) setSelectedFile(file);
+    };
+
+    const handleStartUpload = async () => {
+        if (!selectedFile) return;
+        const pass = await showPrompt("أدخل الرقم السري لعملية الرصد والرفع:", 'password');
+        if (pass === '123mosa') {
+            processFile(selectedFile);
+        } else if (pass !== null) {
+            toast.error("الرقم السري غير صحيح");
+        }
+    };
 
     // ─── Delete handler ───
     const handleDeleteSubject = async () => {
@@ -114,9 +149,8 @@ export default function UploadPage() {
             return;
         }
 
-        if (!window.confirm(`هل أنت متأكد من مسح جميع بيانات "${deleteSubjectName}" بشكل نهائي ولا رجعة فيه؟`)) {
-            return;
-        }
+        const confirm1 = await showPrompt(`هل أنت متأكد من مسح جميع بيانات "${deleteSubjectName}" بشكل نهائي ولا رجعة فيه؟`, 'confirm');
+        if (!confirm1) return;
 
         setIsDeleting(true);
         try {
@@ -125,7 +159,7 @@ export default function UploadPage() {
             setDeleteSubjectName('');
             setDeletePassword('');
         } catch (err) {
-            toast.error(err.message || 'حدث خطأ أثناء החذف');
+            toast.error(err.message || 'حدث خطأ أثناء الحذف');
         } finally {
             setIsDeleting(false);
         }
@@ -133,7 +167,7 @@ export default function UploadPage() {
 
     // ─── Undo Last Batch handler ───
     const handleUndoBatch = async () => {
-        const pass = window.prompt("هذا الخيار سيحذف آخر شيت إكسيل قمت برفعه بالكامل. أدخل الرقم السري للتأكيد:");
+        const pass = await showPrompt("هذا الخيار سيحذف آخر شيت إكسيل قمت برفعه بالكامل. أدخل الرقم السري للتأكيد:", 'password');
         if (!pass) return;
 
         setIsDeleting(true);
@@ -179,6 +213,7 @@ export default function UploadPage() {
                 onDragLeave={handleDragLeave}
                 role="region"
                 aria-label="منطقة رفع الملف"
+                style={{ paddingBottom: selectedFile ? '24px' : '48px' }}
             >
                 <input
                     type="file"
@@ -192,7 +227,7 @@ export default function UploadPage() {
                 {uploading ? (
                     <>
                         <span className="upload-icon">⏳</span>
-                        <p className="upload-title">جاري المعالجة...</p>
+                        <p className="upload-title">جاري المعالجة والرفع...</p>
                         <div className="progress-bar" style={{ maxWidth: '320px', margin: '16px auto' }}>
                             <div className="progress-fill" style={{ width: `${progress}%` }} />
                         </div>
@@ -200,10 +235,34 @@ export default function UploadPage() {
                 ) : (
                     <>
                         <span className="upload-icon">
-                            <FileSpreadsheet size={48} color="var(--clr-primary)" />
+                            <FileSpreadsheet size={48} color={selectedFile ? '#22c55e' : 'var(--clr-primary)'} />
                         </span>
-                        <p className="upload-title">اسحب وأفلت ملف Excel هنا</p>
-                        <p className="upload-subtitle">أو انقر للاختيار يدوياً — .xlsx / .xls</p>
+
+                        {!selectedFile ? (
+                            <>
+                                <p className="upload-title">اسحب وأفلت ملف Excel هنا</p>
+                                <p className="upload-subtitle">أو انقر للاختيار يدوياً — .xlsx / .xls</p>
+                            </>
+                        ) : (
+                            <div style={{ marginTop: '16px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px', zIndex: 10, position: 'relative' }}>
+                                <p className="upload-title" style={{ color: '#22c55e', margin: 0 }}>تم اختيار الملف: {selectedFile.name}</p>
+                                <div style={{ display: 'flex', gap: '12px' }}>
+                                    <button
+                                        className="btn btn-primary"
+                                        onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleStartUpload(); }}
+                                        style={{ padding: '10px 32px', fontSize: '1.1rem', background: 'var(--grad-primary)' }}
+                                    >
+                                        رصد ورفع البيانات 🚀
+                                    </button>
+                                    <button
+                                        className="btn btn-ghost"
+                                        onClick={(e) => { e.preventDefault(); e.stopPropagation(); setSelectedFile(null); }}
+                                    >
+                                        إلغاء
+                                    </button>
+                                </div>
+                            </div>
+                        )}
                     </>
                 )}
             </div>
@@ -294,6 +353,35 @@ export default function UploadPage() {
                     </button>
                 </div>
             </div>
+
+            {/* Custom Prompt Modal (Generic) */}
+            {promptConfig && (
+                <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(0,0,0,0.7)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 9999, backdropFilter: 'blur(3px)' }}>
+                    <div className="card" style={{ width: '90%', maxWidth: '400px', padding: '24px', display: 'flex', flexDirection: 'column', gap: '20px', boxShadow: '0 10px 25px rgba(0,0,0,0.5)', border: '1px solid rgba(255,255,255,0.1)' }}>
+                        <h3 style={{ fontSize: '1.05rem', margin: 0, lineHeight: 1.5, color: promptConfig.type === 'confirm' ? 'var(--clr-danger)' : 'var(--clr-text-1)' }}>{promptConfig.message}</h3>
+
+                        {promptConfig.type !== 'confirm' && (
+                            <input
+                                type={promptConfig.type}
+                                className="input"
+                                autoFocus
+                                id="custom-prompt-input"
+                                onKeyDown={e => {
+                                    if (e.key === 'Enter') promptConfig.onConfirm(e.target.value);
+                                    if (e.key === 'Escape') promptConfig.onCancel();
+                                }}
+                                placeholder={promptConfig.type === 'password' ? 'الرقم السري' : 'إدخال القيمة'}
+                                style={{ padding: '12px', fontSize: '1.1rem' }}
+                            />
+                        )}
+
+                        <div style={{ display: 'flex', gap: '12px', justifyContent: 'flex-end', marginTop: '8px' }}>
+                            <button className="btn btn-ghost" onClick={promptConfig.onCancel}>إلغاء</button>
+                            <button className={promptConfig.type === 'confirm' ? "btn btn-danger" : "btn btn-primary"} onClick={() => promptConfig.onConfirm(promptConfig.type === 'confirm' ? true : document.getElementById('custom-prompt-input').value)}>تأكيد</button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

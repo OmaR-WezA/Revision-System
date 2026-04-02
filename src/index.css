@@ -284,7 +284,8 @@ a {
 }
 
 .filter-bar select,
-.filter-bar input {
+.filter-bar input,
+.input {
   background: var(--clr-bg-card);
   border: 1px solid var(--clr-border);
   border-radius: var(--radius-sm);
@@ -294,17 +295,24 @@ a {
   font-size: 0.9rem;
   outline: none;
   transition: border-color var(--tr-fast);
+  cursor: text;
+}
+
+.filter-bar select {
   cursor: pointer;
-  min-width: 180px;
 }
 
 .filter-bar select:focus,
-.filter-bar input:focus {
+.filter-bar input:focus,
+.input:focus {
   border-color: var(--clr-primary);
 }
 
-.filter-bar select option {
-  background: var(--clr-bg-card);
+.filter-bar select option,
+select option,
+.input option {
+  background-color: var(--clr-bg-card);
+  color: var(--clr-text-1);
 }
 
 /* ─── Table ──────────────────────────────────── */

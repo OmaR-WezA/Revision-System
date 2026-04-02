@@ -49,6 +49,23 @@ export function parseExcelFile(file) {
                     return;
                 }
 
+                // --- TEMPLATE VALIDATION ---
+                const headerRow = rawRows[0] || [];
+                const colA = String(headerRow[0] || '').trim().toLowerCase();
+                const colB = String(headerRow[1] || '').trim().toLowerCase();
+
+                if (!colA.includes('اسم') && !colA.includes('name')) {
+                    reject(new Error('قالب غير صالح: يجب أن يكون العمود الأول (A) يحتوي على كلمة "اسم" أو "Name"'));
+                    return;
+                }
+
+                // Allow empty B (if ID is empty sometimes) BUT the header must be logically "University ID".
+                // Actually some sheets might have 'رقم' or 'id'. Let's be flexible but check.
+                if (!colB.includes('رقم') && !colB.includes('id')) {
+                    reject(new Error('قالب غير صالح: يجب أن يكون العمود الثاني (B) يحتوي على كلمة "الرقم الجامعي" أو "ID"'));
+                    return;
+                }
+
                 // First row = headers → skip it
                 // Real sheet format: Column A = Student Name, Column B = Academic ID
                 const rows = rawRows

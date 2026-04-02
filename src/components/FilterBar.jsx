@@ -6,12 +6,16 @@
 // ─────────────────────────────────────────────
 import { Filter, Search, X } from 'lucide-react';
 
-export default function FilterBar({ subjects, filters, onChange }) {
-    const hasFilters = filters.subjectName || filters.status || filters.searchId;
+export default function FilterBar({ subjects, delegateCodes, isAdmin, filters, onChange, resultCount }) {
+    const hasFilters = filters.subjectName || filters.status || filters.searchId || filters.delegateId;
 
     return (
         <div className="filter-bar">
-            <Filter size={18} style={{ color: 'var(--clr-text-2)', flexShrink: 0 }} />
+            {resultCount !== undefined && (
+                <span style={{ fontWeight: 600, color: 'var(--clr-primary)', background: 'var(--clr-primary-dim)', padding: '4px 10px', borderRadius: '12px', fontSize: '0.85rem', flexShrink: 0 }}>
+                    متاح {resultCount} نتيجة
+                </span>
+            )}
 
             {/* Search by ID filter */}
             <div className="search-input-wrapper" style={{ position: 'relative', flex: 1, minWidth: '180px' }}>
@@ -55,9 +59,22 @@ export default function FilterBar({ subjects, filters, onChange }) {
                 aria-label="فلتر الحالة"
             >
                 <option value="">🔄 كل الحالات</option>
-                <option value="ready">📦 جاهز للاستلام</option>
+                <option value="ready">📦 جاهز للاستلام (مع الإدارة)</option>
+                <option value="with_delegate">🔄 مع المندوب</option>
                 <option value="delivered">✅ تم التسليم</option>
             </select>
+
+            {/* Delegate filter (Admin only) */}
+            {isAdmin && delegateCodes && delegateCodes.length > 0 && (
+                <select
+                    id="filter-delegate"
+                    value={filters.delegateId || ''}
+                    onChange={(e) => onChange({ ...filters, delegateId: e.target.value })}
+                >
+                    <option value="">👨‍💼 كل المناديب</option>
+                    {delegateCodes.map(c => <option key={c} value={c}>مندوب: {c}</option>)}
+                </select>
+            )}
 
             {/* Clear filters button */}
             {hasFilters && (
