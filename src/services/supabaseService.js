@@ -28,11 +28,12 @@ export async function fetchDeliveries() {
 // ─────────────────────────────────────────────
 export async function uploadDeliveries(newRows, subjectName) {
     try {
-        // 1. Fetch current IDs for this subject to prevent duplicates
+        // 1. Fetch ALL existing IDs that match this subject's unique slug
+        const subjectSlug = slugify(subjectName);
         const { data: existingIds, error: fetchError } = await supabase
             .from('deliveries')
             .select('id')
-            .eq('subjectName', subjectName);
+            .ilike('id', `%_${subjectSlug}`);
 
         if (fetchError) throw fetchError;
         const idSet = new Set(existingIds.map(d => d.id));
