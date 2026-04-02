@@ -2,10 +2,11 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, NavLink, Outlet, useLocation } from 'react-router-dom';
 import { Toaster, toast } from 'react-hot-toast';
 import { LayoutDashboard, Upload, BookOpen, Lock, Timer } from 'lucide-react';
-import DashboardPage from './pages/DashboardPage';
+import DashboardPage, { HistoryPage } from './pages/DashboardPage';
 import UploadPage from './pages/UploadPage';
+import { getSystemPass } from './services/supabaseService';
 
-function AdminGuard({ children, requiredPassword, authKey, title }) {
+function AdminGuard({ children, configKey, authKey, title }) {
   const [isAuthenticated, setIsAuthenticated] = useState(() => {
     const isAuth = sessionStorage.getItem(authKey) === 'true';
     const expiry = sessionStorage.getItem(`${authKey}_expiry`);
@@ -19,6 +20,7 @@ function AdminGuard({ children, requiredPassword, authKey, title }) {
   });
 
   const [password, setPassword] = useState('');
+  const [isLoggingIn, setIsLoggingIn] = useState(false);
   const [error, setError] = useState('');
 
   // Auto-logout timer
@@ -51,16 +53,24 @@ function AdminGuard({ children, requiredPassword, authKey, title }) {
     };
   }, [isAuthenticated, authKey]);
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    if (password === requiredPassword) {
-      const expiryTime = new Date().getTime() + 15 * 60 * 1000;
-      sessionStorage.setItem(authKey, 'true');
-      sessionStorage.setItem(`${authKey}_expiry`, expiryTime.toString());
-      setIsAuthenticated(true);
-      toast.success('تم تسجيل الدخول بنجاح');
-    } else {
-      setError('الرقم السري غير صحيح');
+    setIsLoggingIn(true);
+    try {
+      const requiredPassword = await getSystemPass(configKey);
+      if (password === requiredPassword) {
+        const expiryTime = new Date().getTime() + 15 * 60 * 1000;
+        sessionStorage.setItem(authKey, 'true');
+        sessionStorage.setItem(`${authKey}_expiry`, expiryTime.toString());
+        setIsAuthenticated(true);
+        toast.success('تم تسجيل الدخول بنجاح');
+      } else {
+        setError('الرقم السري غير صحيح');
+      }
+    } catch (err) {
+      setError('حدث خطأ في الاتصال بقاعدة البيانات');
+    } finally {
+      setIsLoggingIn(false);
     }
   };
 
@@ -68,6 +78,9 @@ function AdminGuard({ children, requiredPassword, authKey, title }) {
     return (
       <div className="login-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh', background: 'var(--clr-bg)' }}>
         <div className="card" style={{ padding: '32px', width: '100%', maxWidth: '400px', textAlign: 'center' }}>
+          <div style={{ marginBottom: '20px', color: 'var(--clr-primary)' }}>
+            <Lock size={48} />
+          </div>
           <h2>{title}</h2>
           <p style={{ color: 'var(--clr-text-2)', marginBottom: '24px' }}>الرجاء إدخال الرقم السري للوصول</p>
           <form onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
@@ -78,9 +91,12 @@ function AdminGuard({ children, requiredPassword, authKey, title }) {
               className="input"
               placeholder="الرقم السري"
               autoFocus
+              disabled={isLoggingIn}
             />
-            {error && <p style={{ color: 'var(--clr-danger)', fontSize: '0.9rem', margin: 0 }}>{error}</p>}
-            <button type="submit" className="btn btn-primary" style={{ height: '44px', justifyContent: 'center' }}>تسجيل الدخول</button>
+            {error && <p style={{ color: 'var(--clr-danger)', fontSize: '0.85rem', margin: 0 }}>{error}</p>}
+            <button type="submit" className="btn btn-primary" style={{ height: '44px', justifyContent: 'center' }} disabled={isLoggingIn}>
+              {isLoggingIn ? 'جاري التحقق...' : 'تسجيل الدخول'}
+            </button>
           </form>
         </div>
       </div>
@@ -92,7 +108,9 @@ function AdminGuard({ children, requiredPassword, authKey, title }) {
 
 function Sidebar() {
   const location = useLocation();
-  const isAdminPath = location.pathname.startsWith('/leader');
+  const isLeaderPath = location.pathname.startsWith('/leader');
+  const isUploadPath = location.pathname.startsWith('/admin');
+  const isAdminContext = isLeaderPath || isUploadPath;
 
   return (
     <aside className="sidebar">
@@ -104,13 +122,13 @@ function Sidebar() {
       <NavLink
         to="/"
         end
-        className={({ isActive }) => `nav-link ${isActive && !isAdminPath ? 'active' : ''}`}
+        className={({ isActive }) => `nav-link ${isActive && !isAdminContext ? 'active' : ''}`}
       >
         <LayoutDashboard size={18} />
         استعلام الطلاب
       </NavLink>
 
-      {isAdminPath && (
+      {isAdminContext && (
         <>
           <div style={{ margin: '16px 0 8px', fontSize: '0.75rem', fontWeight: 600, color: 'var(--clr-text-3)', paddingRight: '12px' }}>
             إدارة النظام
@@ -122,6 +140,14 @@ function Sidebar() {
           >
             <LayoutDashboard size={18} />
             لوحة الإدارة
+          </NavLink>
+          <NavLink
+            to="/admin"
+            end
+            className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+          >
+            <Upload size={18} />
+            لوحة الرفع
           </NavLink>
         </>
       )}
@@ -162,7 +188,7 @@ export default function App() {
             <Route
               path="/leader"
               element={
-                <AdminGuard requiredPassword="leader" authKey="authDash" title="لوحة الإدارة">
+                <AdminGuard configKey="leader_pass" authKey="authDash" title="لوحة الإدارة">
                   <DashboardPage isAdmin={true} />
                 </AdminGuard>
               }
@@ -170,8 +196,16 @@ export default function App() {
             <Route
               path="/admin"
               element={
-                <AdminGuard requiredPassword="123mosa" authKey="authUpload" title="لوحة الرفع">
+                <AdminGuard configKey="admin_pass" authKey="authUpload" title="لوحة الرفع">
                   <UploadPage />
+                </AdminGuard>
+              }
+            />
+            <Route
+              path="/leader/history"
+              element={
+                <AdminGuard configKey="leader_pass" authKey="authDash" title="سجل الدفعات">
+                  <HistoryPage />
                 </AdminGuard>
               }
             />

@@ -5,3 +5,4 @@ dist
 .env.*.local
 *.local
 /sheets_db/
+migrate.js

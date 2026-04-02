@@ -4,7 +4,7 @@
 import { useState } from 'react';
 import { CheckCircle, Loader, RotateCcw, Link, Undo2 } from 'lucide-react';
 import toast from 'react-hot-toast';
-import { markDelivered, undoDelivery, assignToDelegate, undoLastAssignmentBatch } from '../services/githubService';
+import { markDelivered, undoDelivery, assignToDelegate, undoLastAssignmentBatch, upsertDelegate } from '../services/supabaseService';
 
 function formatDate(dateValue) {
     if (!dateValue) return '—';
@@ -255,18 +255,28 @@ export default function DeliveryTable({ deliveries, loading, updateLocalDelivery
     const handleMassAssign = async () => {
         if (selectedIds.size === 0) return;
 
-        const delegateCode = await showPrompt(`أدخل "كود مندوب السيكشن" لتسليمه عدد ${selectedIds.size} ملزمة:`, 'text');
+        const delegateCode = await showPrompt(`أدخل "كود" المندوب لتسليمه عدد ${selectedIds.size} طالب:`, 'text');
         if (!delegateCode || !delegateCode.trim()) return;
+
+        const delegateName = await showPrompt(`أدخل "اسم المندوب" (لتسجيله في السيستم):`, 'text');
+        if (!delegateName || !delegateName.trim()) return;
 
         setAssigning(true);
         setGlobalActionLoading(true);
         try {
+            const code = delegateCode.trim();
+            const name = delegateName.trim();
+
+            // 1. Sync delegate info to 'delegates' table
+            await upsertDelegate(code, name);
+
+            // 2. Assign the students
             const arrIds = Array.from(selectedIds);
-            const count = await assignToDelegate(arrIds, delegateCode.trim());
-            toast.success(`تم استقطاع ${count} طالب وتسليمهم للمندوب: ${delegateCode}`);
+            const count = await assignToDelegate(arrIds, code);
+            toast.success(`تم التكليف بنجاح! ${count} طالب مع المندوب: ${name} (${code})`);
 
             if (massAssignLocalDeliveries) {
-                massAssignLocalDeliveries(arrIds, delegateCode.trim());
+                massAssignLocalDeliveries(arrIds, code);
             }
             setSelectedIds(new Set()); // clear selection
             setRangeResult(null);

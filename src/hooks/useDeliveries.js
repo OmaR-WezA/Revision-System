@@ -4,7 +4,7 @@
 //   → Handles subscription cleanup automatically (memory-safe).
 
 import { useEffect, useState, useMemo, useCallback } from 'react';
-import { fetchDeliveries } from '../services/githubService';
+import { fetchDeliveries } from '../services/supabaseService';
 
 export function useDashboardData(filters) {
     const [allData, setAllData] = useState([]);
@@ -58,7 +58,7 @@ export function useDashboardData(filters) {
 
     // Derived Delegate Codes
     const delegateCodes = useMemo(() => {
-        return [...new Set(allData.map(d => d.delegateId))].filter(Boolean).sort();
+        return [...new Set(allData.map(d => String(d.delegateId || '')))].filter(Boolean).sort();
     }, [allData]);
 
     // 3. Derived stats

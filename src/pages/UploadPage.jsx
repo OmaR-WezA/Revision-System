@@ -5,7 +5,7 @@ import { useState, useCallback } from 'react';
 import { Upload, FileSpreadsheet, AlertCircle, CheckCircle2, Trash2, Undo2 } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { parseExcelFile, extractSubjectFromFilename } from '../utils/excelParser';
-import { uploadDeliveries, deleteSubject, deleteLastBatch } from '../services/githubService';
+import { uploadDeliveries, deleteSubject, deleteLastBatch } from '../services/supabaseService';
 import { useDashboardData } from '../hooks/useDeliveries';
 
 // ─────────────────────────────────────────────
