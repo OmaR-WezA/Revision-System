@@ -4,3529 +4,4588 @@
     "universityId": "250060",
     "studentName": "احمد ياسر محمد عبد العال ابو زيد",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250069_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250069",
     "studentName": "اسراء رجب الصافي محمد",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250078_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250078",
     "studentName": "اسماء احمد عبد الله إبراهيم رجب",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250090_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250090",
     "studentName": "اسماء محمد سويد الشرنوبى الحنفى",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250094_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250094",
     "studentName": "اسماء ممدوح شعبان عبدالصادق خميس علي",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250095_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250095",
     "studentName": "اسماء هاني محمود إبراهيم",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250101_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250101",
     "studentName": "الاء احمد محمد احمد",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250103_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250103",
     "studentName": "الاء السيد فرج عبدالرحمن",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250107_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250107",
     "studentName": "الاء رضا السنوسي حسن ادريس",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250125_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250125",
     "studentName": "اميرة قطب محمود احمد زقزوق",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250126_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250126",
     "studentName": "انتصار إبراهيم عوض يونس عبد ربه",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250145_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250145",
     "studentName": "اية محروس عبدالباعث عبدالستار أبوشادي",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250155_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250155",
     "studentName": "ايمان زكي محمد زكي",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250170_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250170",
     "studentName": "بسمله اشرف محمود سعد النجار",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250175_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250175",
     "studentName": "بسمله عصام مصطفى محمود حجازي",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250178_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250178",
     "studentName": "بسمه محمد محمد حمده الحداد",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250204_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250204",
     "studentName": "جنى عمرو ابراهيم محمد البطاط",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250210_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250210",
     "studentName": "جويرية أحمد عبد الرسول علي أحمد",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250211_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250211",
     "studentName": "حازم ابراهيم محمد عطا السموخلي",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250216_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250216",
     "studentName": "حبيبة خالد محمد عباس",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250227_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250227",
     "studentName": "حبيبه ايمن احمد هاشم",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250244_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250244",
     "studentName": "حمدى خالد محمد حمدي",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250256_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250256",
     "studentName": "حنين وائل محمد محمد مدكور",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250257_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250257",
     "studentName": "حنين وليد السيد النحراوي",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250270_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250270",
     "studentName": "دنيا شحاته عبد الحى عبيد",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250293_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250293",
     "studentName": "رشا ممدوح سالم ابراهيم القط",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250302_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250302",
     "studentName": "روان احمد عسران السيسي",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250308_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250308",
     "studentName": "روان عبدالعزيز عبدالحميد حسين شريف",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250324_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250324",
     "studentName": "ريتاج محمود حسن غانم",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250333_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250333",
     "studentName": "ريهام يوسف يوسف حسان",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250341_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250341",
     "studentName": "زياد محمد فوزي فهمي عمارة",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250353_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250353",
     "studentName": "سارة محمود ابراهيم شاكر",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250356_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250356",
     "studentName": "ساره حسن عبدالحفيظ حسن",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250374_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250374",
     "studentName": "سلمى إبراهيم أحمد محمد الشربيني",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250375_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250375",
     "studentName": "سلمى رمضان احمد",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250399_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250399",
     "studentName": "شذي محمد احمد ابراهيم مصطفى",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250433_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250433",
     "studentName": "شيماء رمضان محمد رمضان إبراهيم",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250440_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250440",
     "studentName": "صفاء عابر رمزي اسماعيل حسان",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250468_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250468",
     "studentName": "عبدالرحمن هاني عبدالرحمن محمد",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250478_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250478",
     "studentName": "عبدالله عزت عبداللاه فتح الله ناصر",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250481_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250481",
     "studentName": "عبدالله محمد عبدالرحمن عبداللطيف",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250492_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250492",
     "studentName": "علا شحات احمد عبدالقوي",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250499_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250499",
     "studentName": "علي عمر علي عمر",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250510_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250510",
     "studentName": "عمار عبدالله احمد عبداللطيف",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250520_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250520",
     "studentName": "عمر رمضان احمد رمضان جاهين",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250559_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250559",
     "studentName": "فبرونيكا شحاته بشاي خليل بشاي",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250574_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250574",
     "studentName": "كلوج عاطف شوقي فايز",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250579_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250579",
     "studentName": "لجين محمد السيد على",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250586_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250586",
     "studentName": "مؤمن علاء السيد علي شحاته الفقي",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250597_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250597",
     "studentName": "ماسيو لطفى زكريا سيد",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250599_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250599",
     "studentName": "مايا حسين احمد عبد الجواد",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250615_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250615",
     "studentName": "محمد السيد محمد احمد الناظر",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250626_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250626",
     "studentName": "محمد حماده رحومه مصطفي الديب",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250637_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250637",
     "studentName": "محمد سامي محمد إبراهيم",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250647_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250647",
     "studentName": "محمد عبدالحميد طلب مجاور طلب",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250665_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250665",
     "studentName": "محمد محمود عبدالفتاح محمود",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250677_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250677",
     "studentName": "محمد وحيد عبد المجيد عثمان بصله",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250681_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250681",
     "studentName": "محمد يحيي فيصل عبدالسلام",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250701_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250701",
     "studentName": "مروان السيد أحمد أحمد",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250707_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250707",
     "studentName": "مريم ابراهيم احمد عبدالرحيم",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250718_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250718",
     "studentName": "مريم سامح احمد السيد",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250721_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250721",
     "studentName": "مريم عبد الوهاب السيد شعله",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250732_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250732",
     "studentName": "مريم محمد مرسي محمد",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250740_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250740",
     "studentName": "مصطفى محمد خميس احمد محمد علي ابو شبكه",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250751_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250751",
     "studentName": "ملاك احمد محمود عطيه",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250756_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250756",
     "studentName": "ملك احمد عبد الهادى عبد الجواد",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250764_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250764",
     "studentName": "ملك طارق ممدوح",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250776_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250776",
     "studentName": "ملك هشام محمود احمد عبدالله",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250796_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250796",
     "studentName": "منه الله حمدي رافت محمد",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250804_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250804",
     "studentName": "منه الله مكرم فرج توفيق",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250809_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250809",
     "studentName": "منه مسعد مختار مبروك النجار",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250811_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250811",
     "studentName": "منى مصطفى رمضان نصر محمد",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250823_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250823",
     "studentName": "ميرنا وائل ابراهيم ابراهيم عبد الوهاب",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250834_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250834",
     "studentName": "ندى محمود عبد الفتاح عبده إبراهيم النويشى",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250854_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250854",
     "studentName": "نوران حسني احمد علي عيسي",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250856_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250856",
     "studentName": "نوران علاء فهمي يس السيد فرج",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250866_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250866",
     "studentName": "هاجر أشرف فايز محمود مهيوب",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250880_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250880",
     "studentName": "هاله سامي عبدالقادر محمد عبدالقادر خليف",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250881_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250881",
     "studentName": "هايدي فتحي محمد محمود ابومره",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250899_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250899",
     "studentName": "ياسمين الامير عبدالرحمن عبدالرحيم خليفه",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250922_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250922",
     "studentName": "يوسف احمد محمد عبد السلام",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250928_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250928",
     "studentName": "يوسف صلاح فاروق علي علي الموافى",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250952_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250952",
     "studentName": "رحمه محمد محمد ابراهيم",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250953_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "250953",
     "studentName": "ايمان محمد فوزى مفتاح",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "2550205_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "2550205",
     "studentName": "روضه طاهر ياسين حسين ابراهيم",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "2550463_healthcare_information_technology_and_artificial_intelligence",
     "universityId": "2550463",
     "studentName": "منه لله عطاف عبد الكريم محمد",
     "subjectName": "Healthcare information technology and artificial intelligence",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:32.653Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131772653
+    "uploadBatch": 1775131772653,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250060_revision__his",
     "universityId": "250060",
     "studentName": "احمد ياسر محمد عبد العال ابو زيد",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250069_revision__his",
     "universityId": "250069",
     "studentName": "اسراء رجب الصافي محمد",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250090_revision__his",
     "universityId": "250090",
     "studentName": "اسماء محمد سويد الشرنوبى الحنفى",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250095_revision__his",
     "universityId": "250095",
     "studentName": "اسماء هاني محمود إبراهيم",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250101_revision__his",
     "universityId": "250101",
     "studentName": "الاء احمد محمد احمد",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250103_revision__his",
     "universityId": "250103",
     "studentName": "الاء السيد فرج عبدالرحمن",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250107_revision__his",
     "universityId": "250107",
     "studentName": "الاء رضا السنوسي حسن ادريس",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250125_revision__his",
     "universityId": "250125",
     "studentName": "اميرة قطب محمود احمد زقزوق",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250126_revision__his",
     "universityId": "250126",
     "studentName": "انتصار إبراهيم عوض يونس عبد ربه",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250145_revision__his",
     "universityId": "250145",
     "studentName": "اية محروس عبدالباعث عبدالستار أبوشادي",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250155_revision__his",
     "universityId": "250155",
     "studentName": "ايمان زكي محمد زكي",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250170_revision__his",
     "universityId": "250170",
     "studentName": "بسمله اشرف محمود سعد النجار",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250175_revision__his",
     "universityId": "250175",
     "studentName": "بسمله عصام مصطفى محمود حجازي",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250178_revision__his",
     "universityId": "250178",
     "studentName": "بسمه محمد محمد حمده الحداد",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250204_revision__his",
     "universityId": "250204",
     "studentName": "جنى عمرو ابراهيم محمد البطاط",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250210_revision__his",
     "universityId": "250210",
     "studentName": "جويرية أحمد عبد الرسول علي أحمد",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250216_revision__his",
     "universityId": "250216",
     "studentName": "حبيبة خالد محمد عباس",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250227_revision__his",
     "universityId": "250227",
     "studentName": "حبيبه ايمن احمد هاشم",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250256_revision__his",
     "universityId": "250256",
     "studentName": "حنين وائل محمد محمد مدكور",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250270_revision__his",
     "universityId": "250270",
     "studentName": "دنيا شحاته عبد الحى عبيد",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250284_revision__his",
     "universityId": "250284",
     "studentName": "رحمه سلامه ناجي سلامه ابراهيم",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250293_revision__his",
     "universityId": "250293",
     "studentName": "رشا ممدوح سالم ابراهيم القط",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250294_revision__his",
     "universityId": "250294",
     "studentName": "رضوى خيري محمد شعبان عبدلله",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250302_revision__his",
     "universityId": "250302",
     "studentName": "روان احمد عسران السيسي",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250308_revision__his",
     "universityId": "250308",
     "studentName": "روان عبدالعزيز عبدالحميد حسين شريف",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250321_revision__his",
     "universityId": "250321",
     "studentName": "روميساء احمد محمود محمد",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250324_revision__his",
     "universityId": "250324",
     "studentName": "ريتاج محمود حسن غانم",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250333_revision__his",
     "universityId": "250333",
     "studentName": "ريهام يوسف يوسف حسان",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250356_revision__his",
     "universityId": "250356",
     "studentName": "ساره حسن عبدالحفيظ حسن",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250375_revision__his",
     "universityId": "250375",
     "studentName": "سلمى رمضان احمد",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250399_revision__his",
     "universityId": "250399",
     "studentName": "شذي محمد احمد ابراهيم مصطفى",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250433_revision__his",
     "universityId": "250433",
     "studentName": "شيماء رمضان محمد رمضان إبراهيم",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250440_revision__his",
     "universityId": "250440",
     "studentName": "صفاء عابر رمزي اسماعيل حسان",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250468_revision__his",
     "universityId": "250468",
     "studentName": "عبدالرحمن هاني عبدالرحمن محمد",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250478_revision__his",
     "universityId": "250478",
     "studentName": "عبدالله عزت عبداللاه فتح الله ناصر",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250481_revision__his",
     "universityId": "250481",
     "studentName": "عبدالله محمد عبدالرحمن عبداللطيف",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250492_revision__his",
     "universityId": "250492",
     "studentName": "علا شحات احمد عبدالقوي",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250520_revision__his",
     "universityId": "250520",
     "studentName": "عمر رمضان احمد رمضان جاهين",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250533_revision__his",
     "universityId": "250533",
     "studentName": "عمرو احمد فاروق محمد ابراهيم",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250541_revision__his",
     "universityId": "250541",
     "studentName": "عمرو وليد عبد المنصف التراس",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250552_revision__his",
     "universityId": "250552",
     "studentName": "فاطمة سعيد السيد ابراهيم فايد",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250557_revision__his",
     "universityId": "250557",
     "studentName": "فاطمه رجب محمد محمد علي",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250559_revision__his",
     "universityId": "250559",
     "studentName": "فبرونيكا شحاته بشاي خليل بشاي",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250570_revision__his",
     "universityId": "250570",
     "studentName": "كريم عبدالباسط صبحي تكتك",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250579_revision__his",
     "universityId": "250579",
     "studentName": "لجين محمد السيد على",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250597_revision__his",
     "universityId": "250597",
     "studentName": "ماسيو لطفى زكريا سيد",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250599_revision__his",
     "universityId": "250599",
     "studentName": "مايا حسين احمد عبد الجواد",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250626_revision__his",
     "universityId": "250626",
     "studentName": "محمد حماده رحومه مصطفي الديب",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250637_revision__his",
     "universityId": "250637",
     "studentName": "محمد سامي محمد إبراهيم",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250665_revision__his",
     "universityId": "250665",
     "studentName": "محمد محمود عبدالفتاح محمود",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250677_revision__his",
     "universityId": "250677",
     "studentName": "محمد وحيد عبد المجيد عثمان بصله",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250681_revision__his",
     "universityId": "250681",
     "studentName": "محمد يحيي فيصل عبدالسلام",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250701_revision__his",
     "universityId": "250701",
     "studentName": "مروان السيد أحمد أحمد",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250707_revision__his",
     "universityId": "250707",
     "studentName": "مريم ابراهيم احمد عبدالرحيم",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250718_revision__his",
     "universityId": "250718",
     "studentName": "مريم سامح احمد السيد",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250721_revision__his",
     "universityId": "250721",
     "studentName": "مريم عبد الوهاب السيد شعله",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250732_revision__his",
     "universityId": "250732",
     "studentName": "مريم محمد مرسي محمد",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250740_revision__his",
     "universityId": "250740",
     "studentName": "مصطفى محمد خميس احمد محمد علي ابو شبكه",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250751_revision__his",
     "universityId": "250751",
     "studentName": "ملاك احمد محمود عطيه",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250764_revision__his",
     "universityId": "250764",
     "studentName": "ملك طارق ممدوح",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250776_revision__his",
     "universityId": "250776",
     "studentName": "ملك هشام محمود احمد عبدالله",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250796_revision__his",
     "universityId": "250796",
     "studentName": "منه الله حمدي رافت محمد",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250804_revision__his",
     "universityId": "250804",
     "studentName": "منه الله مكرم فرج توفيق",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250811_revision__his",
     "universityId": "250811",
     "studentName": "منى مصطفى رمضان نصر محمد",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250834_revision__his",
     "universityId": "250834",
     "studentName": "ندى محمود عبد الفتاح عبده إبراهيم النويشى",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250854_revision__his",
     "universityId": "250854",
     "studentName": "نوران حسني احمد علي عيسي",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250856_revision__his",
     "universityId": "250856",
     "studentName": "نوران علاء فهمي يس السيد فرج",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250866_revision__his",
     "universityId": "250866",
     "studentName": "هاجر أشرف فايز محمود مهيوب",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250922_revision__his",
     "universityId": "250922",
     "studentName": "يوسف احمد محمد عبد السلام",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250928_revision__his",
     "universityId": "250928",
     "studentName": "يوسف صلاح فاروق علي علي الموافى",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "2550205_revision__his",
     "universityId": "2550205",
     "studentName": "روضه طاهر ياسين حسين ابراهيم",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "2550463_revision__his",
     "universityId": "2550463",
     "studentName": "منه لله عطاف عبد الكريم محمد",
     "subjectName": "Revision _HIS",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:09:52.827Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131792827
+    "uploadBatch": 1775131792827,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250060_introduction_to_health_care_systems",
     "universityId": "250060",
     "studentName": "احمد ياسر محمد عبد العال ابو زيد",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250069_introduction_to_health_care_systems",
     "universityId": "250069",
     "studentName": "اسراء رجب الصافي محمد",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250090_introduction_to_health_care_systems",
     "universityId": "250090",
     "studentName": "اسماء محمد سويد الشرنوبى الحنفى",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250094_introduction_to_health_care_systems",
     "universityId": "250094",
     "studentName": "اسماء ممدوح شعبان عبدالصادق خميس علي",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250095_introduction_to_health_care_systems",
     "universityId": "250095",
     "studentName": "اسماء هاني محمود إبراهيم",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250101_introduction_to_health_care_systems",
     "universityId": "250101",
     "studentName": "الاء احمد محمد احمد",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250103_introduction_to_health_care_systems",
     "universityId": "250103",
     "studentName": "الاء السيد فرج عبدالرحمن",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250107_introduction_to_health_care_systems",
     "universityId": "250107",
     "studentName": "الاء رضا السنوسي حسن ادريس",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250125_introduction_to_health_care_systems",
     "universityId": "250125",
     "studentName": "اميرة قطب محمود احمد زقزوق",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250126_introduction_to_health_care_systems",
     "universityId": "250126",
     "studentName": "انتصار إبراهيم عوض يونس عبد ربه",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250145_introduction_to_health_care_systems",
     "universityId": "250145",
     "studentName": "اية محروس عبدالباعث عبدالستار أبوشادي",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250150_introduction_to_health_care_systems",
     "universityId": "250150",
     "studentName": "ايمان ابو زيد محمود محمد",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250155_introduction_to_health_care_systems",
     "universityId": "250155",
     "studentName": "ايمان زكي محمد زكي",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250170_introduction_to_health_care_systems",
     "universityId": "250170",
     "studentName": "بسمله اشرف محمود سعد النجار",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250175_introduction_to_health_care_systems",
     "universityId": "250175",
     "studentName": "بسمله عصام مصطفى محمود حجازي",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250178_introduction_to_health_care_systems",
     "universityId": "250178",
     "studentName": "بسمه محمد محمد حمده الحداد",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250204_introduction_to_health_care_systems",
     "universityId": "250204",
     "studentName": "جنى عمرو ابراهيم محمد البطاط",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250210_introduction_to_health_care_systems",
     "universityId": "250210",
     "studentName": "جويرية أحمد عبد الرسول علي أحمد",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250211_introduction_to_health_care_systems",
     "universityId": "250211",
     "studentName": "حازم ابراهيم محمد عطا السموخلي",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250216_introduction_to_health_care_systems",
     "universityId": "250216",
     "studentName": "حبيبة خالد محمد عباس",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250227_introduction_to_health_care_systems",
     "universityId": "250227",
     "studentName": "حبيبه ايمن احمد هاشم",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250256_introduction_to_health_care_systems",
     "universityId": "250256",
     "studentName": "حنين وائل محمد محمد مدكور",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250257_introduction_to_health_care_systems",
     "universityId": "250257",
     "studentName": "حنين وليد السيد النحراوي",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250270_introduction_to_health_care_systems",
     "universityId": "250270",
     "studentName": "دنيا شحاته عبد الحى عبيد",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250293_introduction_to_health_care_systems",
     "universityId": "250293",
     "studentName": "رشا ممدوح سالم ابراهيم القط",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250302_introduction_to_health_care_systems",
     "universityId": "250302",
     "studentName": "روان احمد عسران السيسي",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250308_introduction_to_health_care_systems",
     "universityId": "250308",
     "studentName": "روان عبدالعزيز عبدالحميد حسين شريف",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250321_introduction_to_health_care_systems",
     "universityId": "250321",
     "studentName": "روميساء احمد محمود محمد",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250324_introduction_to_health_care_systems",
     "universityId": "250324",
     "studentName": "ريتاج محمود حسن غانم",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250341_introduction_to_health_care_systems",
     "universityId": "250341",
     "studentName": "زياد محمد فوزي فهمي عمارة",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250348_introduction_to_health_care_systems",
     "universityId": "250348",
     "studentName": "زينب ايهاب محمد علي",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250356_introduction_to_health_care_systems",
     "universityId": "250356",
     "studentName": "ساره حسن عبدالحفيظ حسن",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250375_introduction_to_health_care_systems",
     "universityId": "250375",
     "studentName": "سلمى رمضان احمد",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250390_introduction_to_health_care_systems",
     "universityId": "250390",
     "studentName": "سهيله انور عبده عبدالسلام على عبدالله",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250399_introduction_to_health_care_systems",
     "universityId": "250399",
     "studentName": "شذي محمد احمد ابراهيم مصطفى",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250433_introduction_to_health_care_systems",
     "universityId": "250433",
     "studentName": "شيماء رمضان محمد رمضان إبراهيم",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250440_introduction_to_health_care_systems",
     "universityId": "250440",
     "studentName": "صفاء عابر رمزي اسماعيل حسان",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250468_introduction_to_health_care_systems",
     "universityId": "250468",
     "studentName": "عبدالرحمن هاني عبدالرحمن محمد",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250478_introduction_to_health_care_systems",
     "universityId": "250478",
     "studentName": "عبدالله عزت عبداللاه فتح الله ناصر",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250492_introduction_to_health_care_systems",
     "universityId": "250492",
     "studentName": "علا شحات احمد عبدالقوي",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250520_introduction_to_health_care_systems",
     "universityId": "250520",
     "studentName": "عمر رمضان احمد رمضان جاهين",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250541_introduction_to_health_care_systems",
     "universityId": "250541",
     "studentName": "عمرو وليد عبد المنصف التراس",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250557_introduction_to_health_care_systems",
     "universityId": "250557",
     "studentName": "فاطمه رجب محمد محمد علي",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250559_introduction_to_health_care_systems",
     "universityId": "250559",
     "studentName": "فبرونيكا شحاته بشاي خليل بشاي",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250570_introduction_to_health_care_systems",
     "universityId": "250570",
     "studentName": "كريم عبدالباسط صبحي تكتك",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250579_introduction_to_health_care_systems",
     "universityId": "250579",
     "studentName": "لجين محمد السيد على",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250586_introduction_to_health_care_systems",
     "universityId": "250586",
     "studentName": "مؤمن علاء السيد علي شحاته الفقي",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250597_introduction_to_health_care_systems",
     "universityId": "250597",
     "studentName": "ماسيو لطفى زكريا سيد",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250599_introduction_to_health_care_systems",
     "universityId": "250599",
     "studentName": "مايا حسين احمد عبد الجواد",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250615_introduction_to_health_care_systems",
     "universityId": "250615",
     "studentName": "محمد السيد محمد احمد الناظر",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250626_introduction_to_health_care_systems",
     "universityId": "250626",
     "studentName": "محمد حماده رحومه مصطفي الديب",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250637_introduction_to_health_care_systems",
     "universityId": "250637",
     "studentName": "محمد سامي محمد إبراهيم",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250677_introduction_to_health_care_systems",
     "universityId": "250677",
     "studentName": "محمد وحيد عبد المجيد عثمان بصله",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250681_introduction_to_health_care_systems",
     "universityId": "250681",
     "studentName": "محمد يحيي فيصل عبدالسلام",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250701_introduction_to_health_care_systems",
     "universityId": "250701",
     "studentName": "مروان السيد أحمد أحمد",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250707_introduction_to_health_care_systems",
     "universityId": "250707",
     "studentName": "مريم ابراهيم احمد عبدالرحيم",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250718_introduction_to_health_care_systems",
     "universityId": "250718",
     "studentName": "مريم سامح احمد السيد",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250721_introduction_to_health_care_systems",
     "universityId": "250721",
     "studentName": "مريم عبد الوهاب السيد شعله",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250732_introduction_to_health_care_systems",
     "universityId": "250732",
     "studentName": "مريم محمد مرسي محمد",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250740_introduction_to_health_care_systems",
     "universityId": "250740",
     "studentName": "مصطفى محمد خميس احمد محمد علي ابو شبكه",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250751_introduction_to_health_care_systems",
     "universityId": "250751",
     "studentName": "ملاك احمد محمود عطيه",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250764_introduction_to_health_care_systems",
     "universityId": "250764",
     "studentName": "ملك طارق ممدوح",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250804_introduction_to_health_care_systems",
     "universityId": "250804",
     "studentName": "منه الله مكرم فرج توفيق",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250811_introduction_to_health_care_systems",
     "universityId": "250811",
     "studentName": "منى مصطفى رمضان نصر محمد",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250834_introduction_to_health_care_systems",
     "universityId": "250834",
     "studentName": "ندى محمود عبد الفتاح عبده إبراهيم النويشى",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250854_introduction_to_health_care_systems",
     "universityId": "250854",
     "studentName": "نوران حسني احمد علي عيسي",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250856_introduction_to_health_care_systems",
     "universityId": "250856",
     "studentName": "نوران علاء فهمي يس السيد فرج",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250858_introduction_to_health_care_systems",
     "universityId": "250858",
     "studentName": "نورهان اشرف يوسف رمضان ربيع",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250866_introduction_to_health_care_systems",
     "universityId": "250866",
     "studentName": "هاجر أشرف فايز محمود مهيوب",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250881_introduction_to_health_care_systems",
     "universityId": "250881",
     "studentName": "هايدي فتحي محمد محمود ابومره",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250899_introduction_to_health_care_systems",
     "universityId": "250899",
     "studentName": "ياسمين الامير عبدالرحمن عبدالرحيم خليفه",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.253Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250928_introduction_to_health_care_systems",
     "universityId": "250928",
     "studentName": "يوسف صلاح فاروق علي علي الموافى",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.254Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "2550205_introduction_to_health_care_systems",
     "universityId": "2550205",
     "studentName": "روضه طاهر ياسين حسين ابراهيم",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.254Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "2550463_introduction_to_health_care_systems",
     "universityId": "2550463",
     "studentName": "منه لله عطاف عبد الكريم محمد",
     "subjectName": "Introduction to Health care systems",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:04.254Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131804253
+    "uploadBatch": 1775131804253,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250026_concept_of_health",
     "universityId": "250026",
     "studentName": "احمد طارق عبدالحميد نور موسى",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250027_concept_of_health",
     "universityId": "250027",
     "studentName": "احمد عادل محمد السيد",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250036_concept_of_health",
     "universityId": "250036",
     "studentName": "احمد فريد شوقي علي حاتم",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250043_concept_of_health",
     "universityId": "250043",
     "studentName": "احمد محمد السيد احمد علي",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250060_concept_of_health",
     "universityId": "250060",
     "studentName": "احمد ياسر محمد عبد العال ابو زيد",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250069_concept_of_health",
     "universityId": "250069",
     "studentName": "اسراء رجب الصافي محمد",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250071_concept_of_health",
     "universityId": "250071",
     "studentName": "اسراء عصام الدين محمد مصطفي محمد",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250075_concept_of_health",
     "universityId": "250075",
     "studentName": "اسلام جمعه محمد عبدالهادي",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250085_concept_of_health",
     "universityId": "250085",
     "studentName": "اسماء عبدالله محمد القروى",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250090_concept_of_health",
     "universityId": "250090",
     "studentName": "اسماء محمد سويد الشرنوبى الحنفى",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250093_concept_of_health",
     "universityId": "250093",
     "studentName": "اسماء مكرم السيد محمد محمد المنسي",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250095_concept_of_health",
     "universityId": "250095",
     "studentName": "اسماء هاني محمود إبراهيم",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250101_concept_of_health",
     "universityId": "250101",
     "studentName": "الاء احمد محمد احمد",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250103_concept_of_health",
     "universityId": "250103",
     "studentName": "الاء السيد فرج عبدالرحمن",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250107_concept_of_health",
     "universityId": "250107",
     "studentName": "الاء رضا السنوسي حسن ادريس",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250113_concept_of_health",
     "universityId": "250113",
     "studentName": "السيد محمود السيد احمد",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250126_concept_of_health",
     "universityId": "250126",
     "studentName": "انتصار إبراهيم عوض يونس عبد ربه",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250145_concept_of_health",
     "universityId": "250145",
     "studentName": "اية محروس عبدالباعث عبدالستار أبوشادي",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250148_concept_of_health",
     "universityId": "250148",
     "studentName": "ايثار وحيد سالم",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250150_concept_of_health",
     "universityId": "250150",
     "studentName": "ايمان ابو زيد محمود محمد",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250155_concept_of_health",
     "universityId": "250155",
     "studentName": "ايمان زكي محمد زكي",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250159_concept_of_health",
     "universityId": "250159",
     "studentName": "ايمان محمد على محمد",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250170_concept_of_health",
     "universityId": "250170",
     "studentName": "بسمله اشرف محمود سعد النجار",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250175_concept_of_health",
     "universityId": "250175",
     "studentName": "بسمله عصام مصطفى محمود حجازي",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250178_concept_of_health",
     "universityId": "250178",
     "studentName": "بسمه محمد محمد حمده الحداد",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250204_concept_of_health",
     "universityId": "250204",
     "studentName": "جنى عمرو ابراهيم محمد البطاط",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250210_concept_of_health",
     "universityId": "250210",
     "studentName": "جويرية أحمد عبد الرسول علي أحمد",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250216_concept_of_health",
     "universityId": "250216",
     "studentName": "حبيبة خالد محمد عباس",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250244_concept_of_health",
     "universityId": "250244",
     "studentName": "حمدى خالد محمد حمدي",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250256_concept_of_health",
     "universityId": "250256",
     "studentName": "حنين وائل محمد محمد مدكور",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250257_concept_of_health",
     "universityId": "250257",
     "studentName": "حنين وليد السيد النحراوي",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250261_concept_of_health",
     "universityId": "250261",
     "studentName": "خالد عبد الحميد خالد خالد أبو ذيد",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250270_concept_of_health",
     "universityId": "250270",
     "studentName": "دنيا شحاته عبد الحى عبيد",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250282_concept_of_health",
     "universityId": "250282",
     "studentName": "رحمه اكرامي محمد احمد الشاطر",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250284_concept_of_health",
     "universityId": "250284",
     "studentName": "رحمه سلامه ناجي سلامه ابراهيم",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250302_concept_of_health",
     "universityId": "250302",
     "studentName": "روان احمد عسران السيسي",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250308_concept_of_health",
     "universityId": "250308",
     "studentName": "روان عبدالعزيز عبدالحميد حسين شريف",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250316_concept_of_health",
     "universityId": "250316",
     "studentName": "روضه رضا علي محمد خاطر",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250319_concept_of_health",
     "universityId": "250319",
     "studentName": "روضه محمد حسن حسن",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250321_concept_of_health",
     "universityId": "250321",
     "studentName": "روميساء احمد محمود محمد",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250356_concept_of_health",
     "universityId": "250356",
     "studentName": "ساره حسن عبدالحفيظ حسن",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250358_concept_of_health",
     "universityId": "250358",
     "studentName": "ساره رافت موسليني",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250374_concept_of_health",
     "universityId": "250374",
     "studentName": "سلمى إبراهيم أحمد محمد الشربيني",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250375_concept_of_health",
     "universityId": "250375",
     "studentName": "سلمى رمضان احمد",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250390_concept_of_health",
     "universityId": "250390",
     "studentName": "سهيله انور عبده عبدالسلام على عبدالله",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250430_concept_of_health",
     "universityId": "250430",
     "studentName": "شهد وائل محمد حافظ عبدالعال",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250433_concept_of_health",
     "universityId": "250433",
     "studentName": "شيماء رمضان محمد رمضان إبراهيم",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250438_concept_of_health",
     "universityId": "250438",
     "studentName": "صفاء احمد السيد محجوب",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250440_concept_of_health",
     "universityId": "250440",
     "studentName": "صفاء عابر رمزي اسماعيل حسان",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250441_concept_of_health",
     "universityId": "250441",
     "studentName": "صفاء هاني نصحي بباوي اسعد",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250449_concept_of_health",
     "universityId": "250449",
     "studentName": "عامر عياد جبريل عامر",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250468_concept_of_health",
     "universityId": "250468",
     "studentName": "عبدالرحمن هاني عبدالرحمن محمد",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250478_concept_of_health",
     "universityId": "250478",
     "studentName": "عبدالله عزت عبداللاه فتح الله ناصر",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250480_concept_of_health",
     "universityId": "250480",
     "studentName": "عبدالله محمد زكي مؤمن",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250481_concept_of_health",
     "universityId": "250481",
     "studentName": "عبدالله محمد عبدالرحمن عبداللطيف",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250491_concept_of_health",
     "universityId": "250491",
     "studentName": "عفيفي عماد عفيفي ابراهيم",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250492_concept_of_health",
     "universityId": "250492",
     "studentName": "علا شحات احمد عبدالقوي",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250496_concept_of_health",
     "universityId": "250496",
     "studentName": "علي احمد حسين حسن",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250520_concept_of_health",
     "universityId": "250520",
     "studentName": "عمر رمضان احمد رمضان جاهين",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250533_concept_of_health",
     "universityId": "250533",
     "studentName": "عمرو احمد فاروق محمد ابراهيم",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250541_concept_of_health",
     "universityId": "250541",
     "studentName": "عمرو وليد عبد المنصف التراس",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250552_concept_of_health",
     "universityId": "250552",
     "studentName": "فاطمة سعيد السيد ابراهيم فايد",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250557_concept_of_health",
     "universityId": "250557",
     "studentName": "فاطمه رجب محمد محمد علي",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250559_concept_of_health",
     "universityId": "250559",
     "studentName": "فبرونيكا شحاته بشاي خليل بشاي",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250569_concept_of_health",
     "universityId": "250569",
     "studentName": "كريم السيد عبد السلام عبد العظيم",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250574_concept_of_health",
     "universityId": "250574",
     "studentName": "كلوج عاطف شوقي فايز",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250579_concept_of_health",
     "universityId": "250579",
     "studentName": "لجين محمد السيد على",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250597_concept_of_health",
     "universityId": "250597",
     "studentName": "ماسيو لطفى زكريا سيد",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250599_concept_of_health",
     "universityId": "250599",
     "studentName": "مايا حسين احمد عبد الجواد",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250610_concept_of_health",
     "universityId": "250610",
     "studentName": "محمد احمد عبدالوهاب احمد بيطح",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250618_concept_of_health",
     "universityId": "250618",
     "studentName": "محمد باسم فتح الله الزرقاني",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250622_concept_of_health",
     "universityId": "250622",
     "studentName": "محمد حسام عبد المنعم مرسي",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250630_concept_of_health",
     "universityId": "250630",
     "studentName": "محمد رؤوف سمير حسين عبد العال",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250637_concept_of_health",
     "universityId": "250637",
     "studentName": "محمد سامي محمد إبراهيم",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250647_concept_of_health",
     "universityId": "250647",
     "studentName": "محمد عبدالحميد طلب مجاور طلب",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250655_concept_of_health",
     "universityId": "250655",
     "studentName": "محمد علي الشحات علي",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250659_concept_of_health",
     "universityId": "250659",
     "studentName": "محمد عوض نبيوه محمد عبدالله ابو خطيب",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250664_concept_of_health",
     "universityId": "250664",
     "studentName": "محمد محمود عبدالغفار غازي",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250665_concept_of_health",
     "universityId": "250665",
     "studentName": "محمد محمود عبدالفتاح محمود",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250675_concept_of_health",
     "universityId": "250675",
     "studentName": "محمد هاني عبدالحكيم ذكي محمد",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250677_concept_of_health",
     "universityId": "250677",
     "studentName": "محمد وحيد عبد المجيد عثمان بصله",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250681_concept_of_health",
     "universityId": "250681",
     "studentName": "محمد يحيي فيصل عبدالسلام",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250701_concept_of_health",
     "universityId": "250701",
     "studentName": "مروان السيد أحمد أحمد",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250707_concept_of_health",
     "universityId": "250707",
     "studentName": "مريم ابراهيم احمد عبدالرحيم",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250712_concept_of_health",
     "universityId": "250712",
     "studentName": "مريم بسيوني محمد محمد القاضي",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250718_concept_of_health",
     "universityId": "250718",
     "studentName": "مريم سامح احمد السيد",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250719_concept_of_health",
     "universityId": "250719",
     "studentName": "مريم عبد الحميد عبد الحكيم علي نصير",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250732_concept_of_health",
     "universityId": "250732",
     "studentName": "مريم محمد مرسي محمد",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250741_concept_of_health",
     "universityId": "250741",
     "studentName": "مصطفى محمد محمود سيد احمد",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250743_concept_of_health",
     "universityId": "250743",
     "studentName": "مصطفى محمود السيد علي",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250751_concept_of_health",
     "universityId": "250751",
     "studentName": "ملاك احمد محمود عطيه",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250756_concept_of_health",
     "universityId": "250756",
     "studentName": "ملك احمد عبد الهادى عبد الجواد",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250764_concept_of_health",
     "universityId": "250764",
     "studentName": "ملك طارق ممدوح",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250770_concept_of_health",
     "universityId": "250770",
     "studentName": "ملك محمد عبد التواب عبد الحليم",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250776_concept_of_health",
     "universityId": "250776",
     "studentName": "ملك هشام محمود احمد عبدالله",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250780_concept_of_health",
     "universityId": "250780",
     "studentName": "منار حسني عبد الفتاح عبد الحميد",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250782_concept_of_health",
     "universityId": "250782",
     "studentName": "منار عاطف فضل الله عبد الغني",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250788_concept_of_health",
     "universityId": "250788",
     "studentName": "منة الله محمد محمد",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250796_concept_of_health",
     "universityId": "250796",
     "studentName": "منه الله حمدي رافت محمد",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250805_concept_of_health",
     "universityId": "250805",
     "studentName": "منه حسن سعيد السيد اسماعيل",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250809_concept_of_health",
     "universityId": "250809",
     "studentName": "منه مسعد مختار مبروك النجار",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250821_concept_of_health",
     "universityId": "250821",
     "studentName": "ميار محمد محمود عبد اللطيف",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250834_concept_of_health",
     "universityId": "250834",
     "studentName": "ندى محمود عبد الفتاح عبده إبراهيم النويشى",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250853_concept_of_health",
     "universityId": "250853",
     "studentName": "نورا مصطفى كمال السيد",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250854_concept_of_health",
     "universityId": "250854",
     "studentName": "نوران حسني احمد علي عيسي",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250856_concept_of_health",
     "universityId": "250856",
     "studentName": "نوران علاء فهمي يس السيد فرج",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250858_concept_of_health",
     "universityId": "250858",
     "studentName": "نورهان اشرف يوسف رمضان ربيع",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250866_concept_of_health",
     "universityId": "250866",
     "studentName": "هاجر أشرف فايز محمود مهيوب",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250880_concept_of_health",
     "universityId": "250880",
     "studentName": "هاله سامي عبدالقادر محمد عبدالقادر خليف",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250881_concept_of_health",
     "universityId": "250881",
     "studentName": "هايدي فتحي محمد محمود ابومره",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250889_concept_of_health",
     "universityId": "250889",
     "studentName": "هنا ممدوح محمد عبدالسلام حامد",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250899_concept_of_health",
     "universityId": "250899",
     "studentName": "ياسمين الامير عبدالرحمن عبدالرحيم خليفه",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250905_concept_of_health",
     "universityId": "250905",
     "studentName": "ياسمين عادل محمد حسين الخولي",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250921_concept_of_health",
     "universityId": "250921",
     "studentName": "يوسف احمد عيد محمد بسيوني",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250928_concept_of_health",
     "universityId": "250928",
     "studentName": "يوسف صلاح فاروق علي علي الموافى",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250938_concept_of_health",
     "universityId": "250938",
     "studentName": "يوسف محمد علام السيد",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250952_concept_of_health",
     "universityId": "250952",
     "studentName": "رحمه محمد محمد ابراهيم",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.150Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "250976_concept_of_health",
     "universityId": "250976",
     "studentName": "لين أحمد عبدالظاهر عزب أبورواش",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.151Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "2550193_concept_of_health",
     "universityId": "2550193",
     "studentName": "روان جمال",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.151Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "2550205_concept_of_health",
     "universityId": "2550205",
     "studentName": "روضه طاهر ياسين حسين ابراهيم",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.151Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   },
   {
     "id": "2550463_concept_of_health",
     "universityId": "2550463",
     "studentName": "منه لله عطاف عبد الكريم محمد",
     "subjectName": "concept of health",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T12:10:21.151Z",
     "deliveredAt": null,
-    "uploadBatch": 1775131821150
+    "uploadBatch": 1775131821150,
+    "delegateId": "123",
+    "assignBatchId": 1775131859311,
+    "assignedAt": "2026-04-02T12:10:59.311Z"
   }
 ]
