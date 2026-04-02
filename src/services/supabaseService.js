@@ -23,6 +23,21 @@ export async function fetchDeliveries() {
     }
 }
 
+export async function fetchRejectedDuplicates() {
+    try {
+        const { data, error } = await supabase
+            .from('rejected_duplicates')
+            .select('*')
+            .order('rejected_at', { ascending: false });
+
+        if (error) throw error;
+        return data || [];
+    } catch (err) {
+        console.error('Fetch Rejected Error:', err);
+        return [];
+    }
+}
+
 // ─────────────────────────────────────────────
 // 📤 Batch Upload (Excel)
 // ─────────────────────────────────────────────
@@ -35,6 +50,7 @@ export async function uploadDeliveries(newRows, subjectName) {
         let newCount = 0;
         const rowsToInsert = [];
         const seenInBatch = new Set(); // To prevent duplicates WITHIN the Excel sheet itself
+        const skippedList = []; // New: Details of students who were skipped
 
         // 1. Calculate all candidate IDs for this batch
         const candidateIds = newRows
@@ -62,6 +78,7 @@ export async function uploadDeliveries(newRows, subjectName) {
             // Skip if already in database OR if duplicate within the same Excel file
             if (idSet.has(id) || seenInBatch.has(id)) {
                 skippedCount++;
+                skippedList.push({ universityId: uid, studentName: name });
                 continue;
             }
 
@@ -87,7 +104,21 @@ export async function uploadDeliveries(newRows, subjectName) {
             if (insertError) throw insertError;
         }
 
-        return { newCount, skippedCount };
+        // 5. Log Rejected Duplicates to a separate table (Optional audit)
+        if (skippedList.length > 0) {
+            const rejectedRows = skippedList.map(s => ({
+                student_id: s.universityId,
+                student_name: s.studentName,
+                subject_name: subjectName,
+                rejected_at: new Date().toISOString(),
+                upload_batch: uploadBatch
+            }));
+
+            // We use .insert() and ignore any errors here to ensure the main flow continues
+            await supabase.from('rejected_duplicates').insert(rejectedRows);
+        }
+
+        return { newCount, skippedCount, skippedList };
     } catch (err) {
         console.error('Supabase Upload Error:', err);
         throw err;
@@ -219,6 +250,13 @@ export async function deleteSubject(subjectName, password) {
         .select('id');
 
     if (error) throw error;
+
+    // Also delete from rejected duplicates log
+    await supabase
+        .from('rejected_duplicates')
+        .delete()
+        .eq('subject_name', subjectName);
+
     return data?.length || 0;
 }
 
@@ -251,6 +289,13 @@ export async function deleteLastBatch(password) {
         .select('id');
 
     if (deleteError) throw deleteError;
+
+    // Also delete from rejected duplicates log (cascading undo)
+    await supabase
+        .from('rejected_duplicates')
+        .delete()
+        .eq('upload_batch', batchId);
+
     return data?.length || 0;
 }
 

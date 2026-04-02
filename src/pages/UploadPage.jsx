@@ -2,28 +2,129 @@
 // 📤 Upload Page — Excel file import
 // ─────────────────────────────────────────────
 import { useState, useCallback } from 'react';
-import { Upload, FileSpreadsheet, AlertCircle, CheckCircle2, Trash2, Undo2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Upload, FileSpreadsheet, AlertCircle, CheckCircle2, Trash2, Undo2, ExternalLink } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { parseExcelFile, extractSubjectFromFilename } from '../utils/excelParser';
-import { uploadDeliveries, deleteSubject, deleteLastBatch } from '../services/supabaseService';
+import { uploadDeliveries, deleteSubject, deleteLastBatch, fetchRejectedDuplicates } from '../services/supabaseService';
 import { useDashboardData } from '../hooks/useDeliveries';
+
+// ─────────────────────────────────────────────
+// 📜 Rejected Log Component (Embedded)
+// ─────────────────────────────────────────────
+function RejectedLogSection() {
+    const [list, setList] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [show, setShow] = useState(false);
+
+    const load = async () => {
+        if (show) { setShow(false); return; }
+        setLoading(true);
+        const data = await fetchRejectedDuplicates();
+        setList(data);
+        setLoading(false);
+        setShow(true);
+    };
+
+    return (
+        <div className="card" style={{ marginTop: '32px', border: '1px solid var(--clr-warning)' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <h3 style={{ marginBottom: 0, fontSize: '1rem', color: 'var(--clr-warning)', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <AlertCircle size={18} /> سجل المحاولات المرفوضة (المكررة)
+                </h3>
+                <button className="btn btn-ghost" onClick={load} disabled={loading} style={{ fontSize: '0.85rem' }}>
+                    {loading ? 'جاري التحميل...' : (show ? 'إخفاء السجل' : 'عرض السجل بالكامل')}
+                </button>
+            </div>
+
+            {show && (
+                <div style={{ marginTop: '20px', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '16px' }}>
+                    {list.length === 0 ? (
+                        <p style={{ textAlign: 'center', color: 'var(--clr-text-3)', padding: '20px' }}>لا توجد مرفوضات مسجلة حتى الآن.</p>
+                    ) : (
+                        <div style={{ maxHeight: '400px', overflowY: 'auto', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)' }}>
+                            <table className="delivery-table" style={{ fontSize: '0.85rem' }}>
+                                <thead style={{ position: 'sticky', top: 0, zIndex: 10 }}>
+                                    <tr>
+                                        <th>الاسم</th>
+                                        <th>الكود</th>
+                                        <th>المادة</th>
+                                        <th>الوقت</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {list.map((item) => (
+                                        <tr key={item.id}>
+                                            <td style={{ fontWeight: 600 }}>{item.student_name}</td>
+                                            <td><span className="badge badge-pending">{item.student_id}</span></td>
+                                            <td>{item.subject_name}</td>
+                                            <td style={{ fontSize: '0.75rem', color: 'var(--clr-text-3)', whiteSpace: 'nowrap' }}>
+                                                {new Date(item.rejected_at).toLocaleString('ar-EG')}
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    )}
+                </div>
+            )}
+        </div>
+    );
+}
 
 // ─────────────────────────────────────────────
 // Upload result summary card
 // ─────────────────────────────────────────────
 function UploadResult({ result }) {
+    const [showSkipped, setShowSkipped] = useState(false);
     if (!result) return null;
+
     return (
-        <div className={`alert ${result.newCount > 0 ? 'alert-success' : 'alert-info'}`}>
-            <CheckCircle2 size={18} />
-            <div>
-                <strong>اكتمل الرفع — مادة: {result.subjectName}</strong>
-                <br />
-                <span style={{ fontSize: '0.85rem' }}>
-                    ✅ {result.newCount} طالب جديد تمت إضافته
-                    {result.skippedCount > 0 && ` · ⏭️ ${result.skippedCount} تم تخطيه (موجود مسبقاً)`}
-                </span>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <div className={`alert ${result.newCount > 0 ? 'alert-success' : 'alert-info'}`}>
+                <CheckCircle2 size={18} />
+                <div>
+                    <strong>اكتمل الرفع — مادة: {result.subjectName}</strong>
+                    <br />
+                    <span style={{ fontSize: '0.85rem' }}>
+                        ✅ {result.newCount} طالب جديد تمت إضافته
+                        {result.skippedCount > 0 && ` · ⏭️ ${result.skippedCount} تم تخطيه (موجود مسبقاً)`}
+                    </span>
+                </div>
             </div>
+
+            {result.skippedList && result.skippedList.length > 0 && (
+                <div className="card" style={{ padding: '16px', border: '1px solid var(--clr-warning)', background: 'rgba(245, 158, 11, 0.03)' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: showSkipped ? '12px' : 0 }}>
+                        <h4 style={{ fontSize: '0.9rem', margin: 0, color: 'var(--clr-warning)', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                            <AlertCircle size={16} /> قائمة الطلاب الذين تم تخطيهم ({result.skippedList.length})
+                        </h4>
+                        <button
+                            className="btn-link"
+                            style={{ fontSize: '0.8rem', background: 'none', border: 'none', color: 'var(--clr-primary)', cursor: 'pointer', textDecoration: 'underline' }}
+                            onClick={() => setShowSkipped(!showSkipped)}
+                        >
+                            {showSkipped ? 'إخفاء القائمة' : 'عرض الأسماء'}
+                        </button>
+                    </div>
+                    {showSkipped && (
+                        <>
+                            <div style={{ maxHeight: '200px', overflowY: 'auto', paddingRight: '4px' }}>
+                                <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: '0.85rem', color: 'var(--clr-text-2)' }}>
+                                    {result.skippedList.map((s, idx) => (
+                                        <li key={idx} style={{ padding: '6px 0', borderBottom: '1px solid rgba(255,255,255,0.05)', display: 'flex', justifyContent: 'space-between' }}>
+                                            <span>{s.studentName}</span>
+                                            <code style={{ opacity: 0.7 }}>{s.universityId}</code>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                            
+                        </>
+                    )}
+                </div>
+            )}
         </div>
     );
 }
@@ -95,10 +196,10 @@ export default function UploadPage() {
             setProgress(60);
 
             // Step 3: Upload to Firestore (with duplicate prevention)
-            const { newCount, skippedCount } = await uploadDeliveries(rows, subjectName);
+            const { newCount, skippedCount, skippedList } = await uploadDeliveries(rows, subjectName);
 
             setProgress(100);
-            setResult({ subjectName, newCount, skippedCount });
+            setResult({ subjectName, newCount, skippedCount, skippedList });
             setSelectedFile(null); // Reset the file picker to prevent accidental re-uploads
             toast.success(`تم رفع "${subjectName}" بنجاح — ${newCount} طالب جديد`);
 
@@ -353,6 +454,9 @@ export default function UploadPage() {
                     </button>
                 </div>
             </div>
+
+            <hr style={{ border: 'none', borderTop: '1px solid var(--clr-border)', margin: '32px 0' }} />
+            <RejectedLogSection />
 
             {/* Custom Prompt Modal (Generic) */}
             {promptConfig && (

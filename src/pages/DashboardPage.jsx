@@ -17,7 +17,14 @@ function DelegateHistoryCard({ allDeliveries, delegateId, isAdmin, showAll = fal
             const date = new Date(d.assignedAt || d.createdAt).toLocaleDateString('ar-EG', { month: 'short', day: 'numeric' });
             const key = `${date}_${d.subjectName}_${d.assignBatchId}`;
             if (!history[key]) {
-                history[key] = { date, subjectName: d.subjectName, count: 0, minId: null, maxId: null };
+                history[key] = {
+                    date,
+                    subjectName: d.subjectName,
+                    count: 0,
+                    minId: null,
+                    maxId: null,
+                    timestamp: Number(d.assignBatchId || 0)
+                };
             }
             history[key].count++;
 
@@ -29,7 +36,7 @@ function DelegateHistoryCard({ allDeliveries, delegateId, isAdmin, showAll = fal
         }
     }
 
-    const allEntries = Object.values(history).reverse();
+    const allEntries = Object.values(history).sort((a, b) => b.timestamp - a.timestamp);
     const entries = (showAll || showAllLocal) ? allEntries : allEntries.slice(0, 2);
 
     if (allEntries.length === 0) return null;
@@ -78,7 +85,14 @@ function AdminHistoryCard({ allDeliveries, showAll = false }) {
             const date = new Date(d.createdAt).toLocaleDateString('ar-EG', { month: 'short', day: 'numeric' });
             const key = `${date}_${d.subjectName}_${d.uploadBatch || 'legacy'}`;
             if (!history[key]) {
-                history[key] = { date, subjectName: d.subjectName, count: 0, minId: null, maxId: null };
+                history[key] = {
+                    date,
+                    subjectName: d.subjectName,
+                    count: 0,
+                    minId: null,
+                    maxId: null,
+                    timestamp: d.uploadBatch ? Number(d.uploadBatch) : new Date(d.createdAt).getTime()
+                };
             }
             history[key].count++;
 
@@ -90,8 +104,8 @@ function AdminHistoryCard({ allDeliveries, showAll = false }) {
         }
     }
 
-    // Reverse and slice to show newest batches first
-    const allEntries = Object.values(history).reverse();
+    // Sort by timestamp descending so newest batches are always first
+    const allEntries = Object.values(history).sort((a, b) => b.timestamp - a.timestamp);
     const entries = showAll ? allEntries : allEntries.slice(0, 2);
 
     if (allEntries.length === 0) return null;
