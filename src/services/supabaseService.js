@@ -28,33 +28,44 @@ export async function fetchDeliveries() {
 // ─────────────────────────────────────────────
 export async function uploadDeliveries(newRows, subjectName) {
     try {
-        // 1. Fetch ALL existing IDs that match this subject's unique slug
         const subjectSlug = slugify(subjectName);
-        const { data: existingIds, error: fetchError } = await supabase
+        const uploadBatch = String(Date.now());
+
+        let skippedCount = 0;
+        let newCount = 0;
+        const rowsToInsert = [];
+        const seenInBatch = new Set(); // To prevent duplicates WITHIN the Excel sheet itself
+
+        // 1. Calculate all candidate IDs for this batch
+        const candidateIds = newRows
+            .map(row => `${String(row.universityId || '').trim()}_${subjectSlug}`)
+            .filter(id => id.split('_')[0].length > 0); // Skip empty UIDs
+
+        // 2. Fetch existing IDs from DB that match these candidates (Batch check)
+        // We use .in() for high performance and 100% accuracy
+        const { data: existingRecords, error: fetchError } = await supabase
             .from('deliveries')
             .select('id')
-            .ilike('id', `%_${subjectSlug}`);
+            .in('id', candidateIds);
 
         if (fetchError) throw fetchError;
-        const idSet = new Set(existingIds.map(d => d.id));
+        const idSet = new Set(existingRecords.map(r => r.id));
 
-        let newCount = 0;
-        let skippedCount = 0;
-        const uploadBatch = String(Date.now());
-        const rowsToInsert = [];
-
+        // 3. Loop and build the insert list, excluding DB duplicates and batch duplicates
         for (const row of newRows) {
             const uid = String(row.universityId || '').trim();
             const name = String(row.studentName || '').trim();
             if (!uid || !name) { skippedCount++; continue; }
 
-            const id = `${uid}_${slugify(subjectName)}`;
+            const id = `${uid}_${subjectSlug}`;
 
-            if (idSet.has(id)) {
+            // Skip if already in database OR if duplicate within the same Excel file
+            if (idSet.has(id) || seenInBatch.has(id)) {
                 skippedCount++;
                 continue;
             }
 
+            seenInBatch.add(id);
             rowsToInsert.push({
                 id,
                 universityId: uid,
@@ -67,6 +78,7 @@ export async function uploadDeliveries(newRows, subjectName) {
             newCount++;
         }
 
+        // 4. Batch Insert (Ignore existing by skipping above)
         if (rowsToInsert.length > 0) {
             const { error: insertError } = await supabase
                 .from('deliveries')
