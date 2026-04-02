@@ -194,340 +194,442 @@
     "universityId": "2550062",
     "studentName": "ايمان محمود ابراهيم السيد خليل",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T11:19:49.398Z",
     "deliveredAt": null,
-    "uploadBatch": 1775128789393
+    "uploadBatch": 1775128789393,
+    "delegateId": "123",
+    "assignBatchId": 1775131293007,
+    "assignedAt": "2026-04-02T12:01:33.008Z"
   },
   {
     "id": "2550063_c",
     "universityId": "2550063",
     "studentName": "ايمان محمود محمد محمد خالد",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T11:19:49.398Z",
     "deliveredAt": null,
-    "uploadBatch": 1775128789393
+    "uploadBatch": 1775128789393,
+    "delegateId": "123",
+    "assignBatchId": 1775131293007,
+    "assignedAt": "2026-04-02T12:01:33.008Z"
   },
   {
     "id": "2550067_c",
     "universityId": "2550067",
     "studentName": "ايه ايمن قطب قاسم قطب ابراهيم",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T11:19:49.398Z",
     "deliveredAt": null,
-    "uploadBatch": 1775128789393
+    "uploadBatch": 1775128789393,
+    "delegateId": "123",
+    "assignBatchId": 1775131293007,
+    "assignedAt": "2026-04-02T12:01:33.008Z"
   },
   {
     "id": "2550069_c",
     "universityId": "2550069",
     "studentName": "ايه سمير حامد احمد",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T11:19:49.398Z",
     "deliveredAt": null,
-    "uploadBatch": 1775128789393
+    "uploadBatch": 1775128789393,
+    "delegateId": "123",
+    "assignBatchId": 1775131293007,
+    "assignedAt": "2026-04-02T12:01:33.008Z"
   },
   {
     "id": "2550070_c",
     "universityId": "2550070",
     "studentName": "ايه شريف عبد الرازق الصافي",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T11:19:49.398Z",
     "deliveredAt": null,
-    "uploadBatch": 1775128789393
+    "uploadBatch": 1775128789393,
+    "delegateId": "123",
+    "assignBatchId": 1775131293007,
+    "assignedAt": "2026-04-02T12:01:33.008Z"
   },
   {
     "id": "2550073_c",
     "universityId": "2550073",
     "studentName": "ايه محمد توفيق",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T11:19:49.398Z",
     "deliveredAt": null,
-    "uploadBatch": 1775128789393
+    "uploadBatch": 1775128789393,
+    "delegateId": "123",
+    "assignBatchId": 1775131293007,
+    "assignedAt": "2026-04-02T12:01:33.008Z"
   },
   {
     "id": "2550075_c",
     "universityId": "2550075",
     "studentName": "ايه محمد فرج كامل",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T11:19:49.398Z",
     "deliveredAt": null,
-    "uploadBatch": 1775128789393
+    "uploadBatch": 1775128789393,
+    "delegateId": "123",
+    "assignBatchId": 1775131293007,
+    "assignedAt": "2026-04-02T12:01:33.008Z"
   },
   {
     "id": "2550076_c",
     "universityId": "2550076",
     "studentName": "ايه يحي بخيت محمد امام",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T11:19:49.398Z",
     "deliveredAt": null,
-    "uploadBatch": 1775128789393
+    "uploadBatch": 1775128789393,
+    "delegateId": "123",
+    "assignBatchId": 1775131293007,
+    "assignedAt": "2026-04-02T12:01:33.008Z"
   },
   {
     "id": "2550078_c",
     "universityId": "2550078",
     "studentName": "ايهاب نبيل ابراهيم احمد الشافعي",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T11:19:49.398Z",
     "deliveredAt": null,
-    "uploadBatch": 1775128789393
+    "uploadBatch": 1775128789393,
+    "delegateId": "123",
+    "assignBatchId": 1775131293007,
+    "assignedAt": "2026-04-02T12:01:33.008Z"
   },
   {
     "id": "2550079_c",
     "universityId": "2550079",
     "studentName": "باسل علي أحمد حسن الروبي",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T11:19:49.398Z",
     "deliveredAt": null,
-    "uploadBatch": 1775128789393
+    "uploadBatch": 1775128789393,
+    "delegateId": "123",
+    "assignBatchId": 1775131293007,
+    "assignedAt": "2026-04-02T12:01:33.008Z"
   },
   {
     "id": "2550080_c",
     "universityId": "2550080",
     "studentName": "برتا صبري زكي عبد الملاك",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T11:19:49.398Z",
     "deliveredAt": null,
-    "uploadBatch": 1775128789393
+    "uploadBatch": 1775128789393,
+    "delegateId": "123",
+    "assignBatchId": 1775131293007,
+    "assignedAt": "2026-04-02T12:01:33.008Z"
   },
   {
     "id": "2550081_c",
     "universityId": "2550081",
     "studentName": "بريهان عبد الرحيم سيد محمد",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T11:19:49.398Z",
     "deliveredAt": null,
-    "uploadBatch": 1775128789393
+    "uploadBatch": 1775128789393,
+    "delegateId": "123",
+    "assignBatchId": 1775131293007,
+    "assignedAt": "2026-04-02T12:01:33.008Z"
   },
   {
     "id": "2550082_c",
     "universityId": "2550082",
     "studentName": "بسمله أحمد السعيد الدسوقي أبو عاصي",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T11:19:49.398Z",
     "deliveredAt": null,
-    "uploadBatch": 1775128789393
+    "uploadBatch": 1775128789393,
+    "delegateId": "123",
+    "assignBatchId": 1775131293007,
+    "assignedAt": "2026-04-02T12:01:33.008Z"
   },
   {
     "id": "2550088_c",
     "universityId": "2550088",
     "studentName": "بسمله عبدالهادي مكايد",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T11:19:49.398Z",
     "deliveredAt": null,
-    "uploadBatch": 1775128789393
+    "uploadBatch": 1775128789393,
+    "delegateId": "123",
+    "assignBatchId": 1775131293007,
+    "assignedAt": "2026-04-02T12:01:33.008Z"
   },
   {
     "id": "2550091_c",
     "universityId": "2550091",
     "studentName": "بسمله وليد عبد العزيز",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T11:19:49.398Z",
     "deliveredAt": null,
-    "uploadBatch": 1775128789393
+    "uploadBatch": 1775128789393,
+    "delegateId": "123",
+    "assignBatchId": 1775131293007,
+    "assignedAt": "2026-04-02T12:01:33.008Z"
   },
   {
     "id": "2550098_c",
     "universityId": "2550098",
     "studentName": "بولا هاني فوزي شحاته عبد المسيح",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T11:19:49.398Z",
     "deliveredAt": null,
-    "uploadBatch": 1775128789393
+    "uploadBatch": 1775128789393,
+    "delegateId": "123",
+    "assignBatchId": 1775131293007,
+    "assignedAt": "2026-04-02T12:01:33.008Z"
   },
   {
     "id": "2550101_c",
     "universityId": "2550101",
     "studentName": "ثراء فوزي عبدالنبي",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T11:19:49.398Z",
     "deliveredAt": null,
-    "uploadBatch": 1775128789393
+    "uploadBatch": 1775128789393,
+    "delegateId": "123",
+    "assignBatchId": 1775131293007,
+    "assignedAt": "2026-04-02T12:01:33.008Z"
   },
   {
     "id": "2550105_c",
     "universityId": "2550105",
     "studentName": "جميله علي محمد عماد الدين محمد",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T11:19:49.398Z",
     "deliveredAt": null,
-    "uploadBatch": 1775128789393
+    "uploadBatch": 1775128789393,
+    "delegateId": "123",
+    "assignBatchId": 1775131293007,
+    "assignedAt": "2026-04-02T12:01:33.008Z"
   },
   {
     "id": "2550109_c",
     "universityId": "2550109",
     "studentName": "جنه محمد عزمي محمد محمد",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T11:19:49.398Z",
     "deliveredAt": null,
-    "uploadBatch": 1775128789393
+    "uploadBatch": 1775128789393,
+    "delegateId": "123",
+    "assignBatchId": 1775131293007,
+    "assignedAt": "2026-04-02T12:01:33.008Z"
   },
   {
     "id": "2550111_c",
     "universityId": "2550111",
     "studentName": "جنى تامر محمد عبدالغنى محمد",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T11:19:49.398Z",
     "deliveredAt": null,
-    "uploadBatch": 1775128789393
+    "uploadBatch": 1775128789393,
+    "delegateId": "123",
+    "assignBatchId": 1775131293007,
+    "assignedAt": "2026-04-02T12:01:33.008Z"
   },
   {
     "id": "2550113_c",
     "universityId": "2550113",
     "studentName": "جنى احمد محمد محمود جاب الله",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T11:19:49.398Z",
     "deliveredAt": null,
-    "uploadBatch": 1775128789393
+    "uploadBatch": 1775128789393,
+    "delegateId": "123",
+    "assignBatchId": 1775131293007,
+    "assignedAt": "2026-04-02T12:01:33.008Z"
   },
   {
     "id": "2550115_c",
     "universityId": "2550115",
     "studentName": "جنى قطب مسعد احمد الجمل",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T11:19:49.398Z",
     "deliveredAt": null,
-    "uploadBatch": 1775128789393
+    "uploadBatch": 1775128789393,
+    "delegateId": "123",
+    "assignBatchId": 1775131293007,
+    "assignedAt": "2026-04-02T12:01:33.008Z"
   },
   {
     "id": "2550116_c",
     "universityId": "2550116",
     "studentName": "جنى محمد جابر ابراهيم",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T11:19:49.398Z",
     "deliveredAt": null,
-    "uploadBatch": 1775128789393
+    "uploadBatch": 1775128789393,
+    "delegateId": "123",
+    "assignBatchId": 1775131293007,
+    "assignedAt": "2026-04-02T12:01:33.008Z"
   },
   {
     "id": "2550119_c",
     "universityId": "2550119",
     "studentName": "جودى احمد خميس السيد",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T11:19:49.398Z",
     "deliveredAt": null,
-    "uploadBatch": 1775128789393
+    "uploadBatch": 1775128789393,
+    "delegateId": "123",
+    "assignBatchId": 1775131293007,
+    "assignedAt": "2026-04-02T12:01:33.008Z"
   },
   {
     "id": "2550120_c",
     "universityId": "2550120",
     "studentName": "جودى حميدو فتحي حميدو محمد",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T11:19:49.398Z",
     "deliveredAt": null,
-    "uploadBatch": 1775128789393
+    "uploadBatch": 1775128789393,
+    "delegateId": "123",
+    "assignBatchId": 1775131293007,
+    "assignedAt": "2026-04-02T12:01:33.008Z"
   },
   {
     "id": "2550122_c",
     "universityId": "2550122",
     "studentName": "جومانه منصور بركات جلال",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T11:19:49.398Z",
     "deliveredAt": null,
-    "uploadBatch": 1775128789393
+    "uploadBatch": 1775128789393,
+    "delegateId": "123",
+    "assignBatchId": 1775131293007,
+    "assignedAt": "2026-04-02T12:01:33.008Z"
   },
   {
     "id": "2550123_c",
     "universityId": "2550123",
     "studentName": "جونير رأفت زكي",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T11:19:49.398Z",
     "deliveredAt": null,
-    "uploadBatch": 1775128789393
+    "uploadBatch": 1775128789393,
+    "delegateId": "123",
+    "assignBatchId": 1775131293007,
+    "assignedAt": "2026-04-02T12:01:33.008Z"
   },
   {
     "id": "2550127_c",
     "universityId": "2550127",
     "studentName": "حبيبه عاطف مصيلحى محمد",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T11:19:49.398Z",
     "deliveredAt": null,
-    "uploadBatch": 1775128789393
+    "uploadBatch": 1775128789393,
+    "delegateId": "123",
+    "assignBatchId": 1775131293007,
+    "assignedAt": "2026-04-02T12:01:33.008Z"
   },
   {
     "id": "2550129_c",
     "universityId": "2550129",
     "studentName": "حبيبه ابراهيم حسن عطا",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T11:19:49.398Z",
     "deliveredAt": null,
-    "uploadBatch": 1775128789393
+    "uploadBatch": 1775128789393,
+    "delegateId": "123",
+    "assignBatchId": 1775131293007,
+    "assignedAt": "2026-04-02T12:01:33.008Z"
   },
   {
     "id": "2550132_c",
     "universityId": "2550132",
     "studentName": "حبيبه السيد عبدالنبي عبدالمجيد مقلاش",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T11:19:49.398Z",
     "deliveredAt": null,
-    "uploadBatch": 1775128789393
+    "uploadBatch": 1775128789393,
+    "delegateId": "123",
+    "assignBatchId": 1775131293007,
+    "assignedAt": "2026-04-02T12:01:33.008Z"
   },
   {
     "id": "2550133_c",
     "universityId": "2550133",
     "studentName": "حبيبه العربي ابو الحسن حامد",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T11:19:49.398Z",
     "deliveredAt": null,
-    "uploadBatch": 1775128789393
+    "uploadBatch": 1775128789393,
+    "delegateId": "123",
+    "assignBatchId": 1775131293007,
+    "assignedAt": "2026-04-02T12:01:33.008Z"
   },
   {
     "id": "2550134_c",
     "universityId": "2550134",
     "studentName": "حبيبه الفاضلى سعد احمد النوسانى",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T11:19:49.398Z",
     "deliveredAt": null,
-    "uploadBatch": 1775128789393
+    "uploadBatch": 1775128789393,
+    "delegateId": "123",
+    "assignBatchId": 1775131293007,
+    "assignedAt": "2026-04-02T12:01:33.008Z"
   },
   {
     "id": "2550139_c",
     "universityId": "2550139",
     "studentName": "حبيبه سعيد الضبع يونس",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T11:19:49.398Z",
     "deliveredAt": null,
-    "uploadBatch": 1775128789393
+    "uploadBatch": 1775128789393,
+    "delegateId": "123",
+    "assignBatchId": 1775131293007,
+    "assignedAt": "2026-04-02T12:01:33.008Z"
   },
   {
     "id": "2550144_c",
     "universityId": "2550144",
     "studentName": "حبيبه محمد فوزي العمروسي",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T11:19:49.398Z",
     "deliveredAt": null,
-    "uploadBatch": 1775128789393
+    "uploadBatch": 1775128789393,
+    "delegateId": "123",
+    "assignBatchId": 1775131293007,
+    "assignedAt": "2026-04-02T12:01:33.008Z"
   },
   {
     "id": "2550148_c",
