@@ -764,140 +764,182 @@
     "universityId": "2550228",
     "studentName": "سارة حافظ ابراهيم عبداللطيف اسماعيل",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T09:01:02.962Z",
     "deliveredAt": null,
-    "uploadBatch": 1775120462961
+    "uploadBatch": 1775120462961,
+    "delegateId": "2520652",
+    "assignBatchId": 1775120489144,
+    "assignedAt": "2026-04-02T09:01:29.144Z"
   },
   {
     "id": "2550229_c",
     "universityId": "2550229",
     "studentName": "ساره احمد عبدالستار",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T09:01:02.962Z",
     "deliveredAt": null,
-    "uploadBatch": 1775120462961
+    "uploadBatch": 1775120462961,
+    "delegateId": "2520652",
+    "assignBatchId": 1775120489144,
+    "assignedAt": "2026-04-02T09:01:29.144Z"
   },
   {
     "id": "2550234_c",
     "universityId": "2550234",
     "studentName": "ساميه محمود عبدالرحمن محمود الرمسيسي",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T09:01:02.962Z",
     "deliveredAt": null,
-    "uploadBatch": 1775120462961
+    "uploadBatch": 1775120462961,
+    "delegateId": "2520652",
+    "assignBatchId": 1775120489144,
+    "assignedAt": "2026-04-02T09:01:29.144Z"
   },
   {
     "id": "2550237_c",
     "universityId": "2550237",
     "studentName": "ساندي هشام محمد حسن محمد داود",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T09:01:02.962Z",
     "deliveredAt": null,
-    "uploadBatch": 1775120462961
+    "uploadBatch": 1775120462961,
+    "delegateId": "2520652",
+    "assignBatchId": 1775120489144,
+    "assignedAt": "2026-04-02T09:01:29.144Z"
   },
   {
     "id": "2550238_c",
     "universityId": "2550238",
     "studentName": "سجده طارق عبد العزيز محمد",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T09:01:02.962Z",
     "deliveredAt": null,
-    "uploadBatch": 1775120462961
+    "uploadBatch": 1775120462961,
+    "delegateId": "2520652",
+    "assignBatchId": 1775120489144,
+    "assignedAt": "2026-04-02T09:01:29.144Z"
   },
   {
     "id": "2550239_c",
     "universityId": "2550239",
     "studentName": "سجي الدسوقي محمد الدسوقي",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T09:01:02.962Z",
     "deliveredAt": null,
-    "uploadBatch": 1775120462961
+    "uploadBatch": 1775120462961,
+    "delegateId": "2520652",
+    "assignBatchId": 1775120489144,
+    "assignedAt": "2026-04-02T09:01:29.144Z"
   },
   {
     "id": "2550241_c",
     "universityId": "2550241",
     "studentName": "سعد محمد سعد محمد ابوالليف",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T09:01:02.962Z",
     "deliveredAt": null,
-    "uploadBatch": 1775120462961
+    "uploadBatch": 1775120462961,
+    "delegateId": "2520652",
+    "assignBatchId": 1775120489144,
+    "assignedAt": "2026-04-02T09:01:29.144Z"
   },
   {
     "id": "2550244_c",
     "universityId": "2550244",
     "studentName": "سلمى إسماعيل محمد عمر",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T09:01:02.962Z",
     "deliveredAt": null,
-    "uploadBatch": 1775120462961
+    "uploadBatch": 1775120462961,
+    "delegateId": "2520652",
+    "assignBatchId": 1775120489144,
+    "assignedAt": "2026-04-02T09:01:29.144Z"
   },
   {
     "id": "2550246_c",
     "universityId": "2550246",
     "studentName": "سلمى عماد عبدالحميد ابراهيم",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T09:01:02.962Z",
     "deliveredAt": null,
-    "uploadBatch": 1775120462961
+    "uploadBatch": 1775120462961,
+    "delegateId": "2520652",
+    "assignBatchId": 1775120489144,
+    "assignedAt": "2026-04-02T09:01:29.144Z"
   },
   {
     "id": "2550249_c",
     "universityId": "2550249",
     "studentName": "سلمى محمود حميده",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T09:01:02.962Z",
     "deliveredAt": null,
-    "uploadBatch": 1775120462961
+    "uploadBatch": 1775120462961,
+    "delegateId": "2520652",
+    "assignBatchId": 1775120489144,
+    "assignedAt": "2026-04-02T09:01:29.144Z"
   },
   {
     "id": "2550253_c",
     "universityId": "2550253",
     "studentName": "سمر ايهاب محمد قطب بدور",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T09:01:02.962Z",
     "deliveredAt": null,
-    "uploadBatch": 1775120462961
+    "uploadBatch": 1775120462961,
+    "delegateId": "2520652",
+    "assignBatchId": 1775120489144,
+    "assignedAt": "2026-04-02T09:01:29.144Z"
   },
   {
     "id": "2550254_c",
     "universityId": "2550254",
     "studentName": "سندس احمد دمين",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T09:01:02.962Z",
     "deliveredAt": null,
-    "uploadBatch": 1775120462961
+    "uploadBatch": 1775120462961,
+    "delegateId": "2520652",
+    "assignBatchId": 1775120489144,
+    "assignedAt": "2026-04-02T09:01:29.144Z"
   },
   {
     "id": "2550255_c",
     "universityId": "2550255",
     "studentName": "سندس اشرف فتحى",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T09:01:02.962Z",
     "deliveredAt": null,
-    "uploadBatch": 1775120462961
+    "uploadBatch": 1775120462961,
+    "delegateId": "2520652",
+    "assignBatchId": 1775120489144,
+    "assignedAt": "2026-04-02T09:01:29.144Z"
   },
   {
     "id": "2550259_c",
     "universityId": "2550259",
     "studentName": "سندس علاء سمير عبد الفتاح",
     "subjectName": "c++",
-    "status": "ready",
+    "status": "with_delegate",
     "createdAt": "2026-04-02T09:01:02.962Z",
     "deliveredAt": null,
-    "uploadBatch": 1775120462961
+    "uploadBatch": 1775120462961,
+    "delegateId": "2520652",
+    "assignBatchId": 1775120489144,
+    "assignedAt": "2026-04-02T09:01:29.144Z"
   },
   {
     "id": "2550261_c",
