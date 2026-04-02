@@ -50,7 +50,7 @@ function DeliveryRow({ delivery, index, globalActionLoading, setGlobalActionLoad
         setGlobalActionLoading(true);
         try {
             await markDelivered(delivery.id);
-            await new Promise((resolve) => setTimeout(resolve, 3500));
+            await new Promise((resolve) => setTimeout(resolve, 1500));
             toast.success(`✅ تم تسليم الكتاب لـ ${delivery.studentName}`);
 
             // Immediate UI update!
