@@ -13,7 +13,8 @@ export async function fetchDeliveries() {
         const { data, error } = await supabase
             .from('deliveries')
             .select('*')
-            .order('createdAt', { ascending: false });
+            .order('createdAt', { ascending: false })
+            .limit(10000); // Increased limit to ensure all subjects are visible
 
         if (error) throw error;
         return data || [];
@@ -41,8 +42,9 @@ export async function fetchRejectedDuplicates() {
 // ─────────────────────────────────────────────
 // 📤 Batch Upload (Excel)
 // ─────────────────────────────────────────────
-export async function uploadDeliveries(newRows, subjectName) {
+export async function uploadDeliveries(newRows, subjectNameRaw) {
     try {
+        const subjectName = subjectNameRaw.trim();
         const subjectSlug = slugify(subjectName);
         const uploadBatch = String(Date.now());
 
@@ -60,7 +62,7 @@ export async function uploadDeliveries(newRows, subjectName) {
         const { data: existingForSubject, error: fetchError } = await supabase
             .from('deliveries')
             .select('id, status, delegateId, deliveredAt, assignedAt, assignBatchId')
-            .eq('subjectName', subjectName);
+            .ilike('subjectName', subjectName);
 
         if (fetchError) throw fetchError;
 
@@ -131,7 +133,7 @@ export async function uploadDeliveries(newRows, subjectName) {
             const { error: deleteError } = await supabase
                 .from('deliveries')
                 .delete()
-                .eq('subjectName', subjectName);
+                .ilike('subjectName', subjectName);
 
             if (deleteError) throw deleteError;
 
@@ -139,7 +141,7 @@ export async function uploadDeliveries(newRows, subjectName) {
             await supabase
                 .from('rejected_duplicates')
                 .delete()
-                .eq('subject_name', subjectName);
+                .ilike('subject_name', subjectName);
         }
 
         // ─────────────────────────────────────────────
