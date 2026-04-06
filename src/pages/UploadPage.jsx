@@ -25,8 +25,9 @@ function UploadResult({ result }) {
                     <strong>اكتمل الرفع — مادة: {result.subjectName}</strong>
                     <br />
                     <span style={{ fontSize: '0.85rem' }}>
-                        ✅ {result.newCount} طالب جديد تمت إضافته
-                        {result.skippedCount > 0 && ` · ⏭️ ${result.skippedCount} تم تخطيه (موجود مسبقاً)`}
+                        ✅ {result.addedCount} طالب جديد تمت إضافته
+                        {result.updatedCount > 0 && ` · 🔄 ${result.updatedCount} طالب تم تحديثه/دمجه`}
+                        {result.internalDuplicateCount > 0 && ` · ⏭️ ${result.internalDuplicateCount} مكرر في الشيت (تم تخطيه)`}
                     </span>
                 </div>
             </div>
@@ -35,7 +36,7 @@ function UploadResult({ result }) {
                 <div className="card" style={{ padding: '16px', border: '1px solid var(--clr-warning)', background: 'rgba(245, 158, 11, 0.03)' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: showSkipped ? '12px' : 0 }}>
                         <h4 style={{ fontSize: '0.9rem', margin: 0, color: 'var(--clr-warning)', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                            <AlertCircle size={16} /> قائمة الطلاب الذين تم تخطيهم ({result.skippedList.length})
+                            <AlertCircle size={16} /> طلاب مكررون داخل نفس الشيت ({result.internalDuplicateCount})
                         </h4>
                         <button
                             className="btn-link"
@@ -132,13 +133,13 @@ export default function UploadPage() {
 
             setProgress(60);
 
-            // Step 3: Upload to Firestore (with duplicate prevention)
-            const { newCount, skippedCount, skippedList } = await uploadDeliveries(rows, subjectName);
+            // Step 3: Upload to Supabase (with Smart Merge)
+            const { addedCount, updatedCount, internalDuplicateCount, skippedList } = await uploadDeliveries(rows, subjectName);
 
             setProgress(100);
-            setResult({ subjectName, newCount, skippedCount, skippedList });
-            setSelectedFile(null); // Reset the file picker to prevent accidental re-uploads
-            toast.success(`تم رفع "${subjectName}" بنجاح — ${newCount} طالب جديد`);
+            setResult({ subjectName, addedCount, updatedCount, internalDuplicateCount, skippedList });
+            setSelectedFile(null);
+            toast.success(`اكتمل الرفع: ${addedCount} جديد، ${updatedCount} تحديث`);
 
         } catch (err) {
             setError(err.message || 'حدث خطأ أثناء الرفع');

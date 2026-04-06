@@ -40,7 +40,7 @@ export function useDashboardData(filters) {
             filtered = filtered.filter(d => d.status === filters.status);
         }
         if (filters?.delegateId) {
-            filtered = filtered.filter(d => d.delegateId === filters.delegateId);
+            filtered = filtered.filter(d => String(d.delegateId || '').trim() === String(filters.delegateId).trim());
         }
         if (filters?.searchId) {
             const query = filters.searchId.toLowerCase().trim();
@@ -58,7 +58,7 @@ export function useDashboardData(filters) {
 
     // Derived Delegate Codes
     const delegateCodes = useMemo(() => {
-        return [...new Set(allData.map(d => String(d.delegateId || '')))].filter(Boolean).sort();
+        return [...new Set(allData.map(d => String(d.delegateId || '').trim()))].filter(Boolean).sort();
     }, [allData]);
 
     // 3. Derived stats
@@ -70,7 +70,7 @@ export function useDashboardData(filters) {
 
         let delegateTotal = 0, delegateDelivered = 0, delegatePending = 0;
         if (filters?.delegateId) {
-            const delData = allData.filter(d => d.delegateId === filters.delegateId);
+            const delData = allData.filter(d => String(d.delegateId || '').trim() === String(filters.delegateId).trim());
             delegateTotal = delData.length;
             delegateDelivered = delData.filter(d => d.status === 'delivered').length;
             delegatePending = delData.filter(d => d.status !== 'delivered').length;

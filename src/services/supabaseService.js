@@ -10,14 +10,39 @@ function slugify(text) {
 // ─────────────────────────────────────────────
 export async function fetchDeliveries() {
     try {
-        const { data, error } = await supabase
-            .from('deliveries')
-            .select('*')
-            .order('createdAt', { ascending: false })
-            .limit(10000); // Increased limit to ensure all subjects are visible
+        let allRecords = [];
+        let from = 0;
+        let to = 999;
+        let finished = false;
 
-        if (error) throw error;
-        return data || [];
+        // Recursive fetch to overcome Supabase's 1000-record limit
+        while (!finished) {
+            const { data, error } = await supabase
+                .from('deliveries')
+                .select('*')
+                .order('createdAt', { ascending: false })
+                .range(from, to);
+
+            if (error) throw error;
+
+            if (data && data.length > 0) {
+                allRecords = [...allRecords, ...data];
+                // If fewer than we asked for, it's the last page
+                if (data.length < 1000) {
+                    finished = true;
+                } else {
+                    from += 1000;
+                    to += 1000;
+                }
+            } else {
+                finished = true;
+            }
+
+            // Safety limit (e.g. 15,000 students should be plenty for this system)
+            if (allRecords.length >= 15000) break;
+        }
+
+        return allRecords;
     } catch (err) {
         console.error('Supabase Fetch Error:', err);
         return [];
@@ -48,8 +73,9 @@ export async function uploadDeliveries(newRows, subjectNameRaw) {
         const subjectSlug = slugify(subjectName);
         const uploadBatch = String(Date.now());
 
-        let skippedCount = 0;
-        let newCount = 0;
+        let internalDuplicateCount = 0;
+        let addedCount = 0;
+        let updatedCount = 0;
         const rowsToInsert = [];
         const seenInBatch = new Set(); // Track UIDs seen within this Excel file
         const skippedList = []; // Details of internal duplicates (sheet-level)
@@ -90,13 +116,13 @@ export async function uploadDeliveries(newRows, subjectNameRaw) {
         for (const row of newRows) {
             const uid = String(row.universityId || '').trim();
             const name = String(row.studentName || '').trim();
-            if (!uid || !name) { skippedCount++; continue; }
+            if (!uid || !name) { internalDuplicateCount++; continue; }
 
             const id = `${uid}_${subjectSlug}`;
 
             // If same UID appears twice in this Excel file → log second, keep first
             if (seenInBatch.has(id)) {
-                skippedCount++;
+                internalDuplicateCount++;
                 skippedList.push({ universityId: uid, studentName: name });
                 continue;
             }
@@ -104,23 +130,27 @@ export async function uploadDeliveries(newRows, subjectNameRaw) {
             seenInBatch.add(id);
 
             // PRESERVE STATE: If this student already had a status, keep it!
-            const oldState = stateMap[id] || {};
+            const oldState = stateMap[id];
+            if (oldState) {
+                updatedCount++;
+            } else {
+                addedCount++;
+            }
 
             rowsToInsert.push({
                 id,
                 universityId: uid,
                 studentName: name,
                 subjectName,
-                status: oldState.status || 'ready',
+                status: oldState?.status || 'ready',
                 createdAt: new Date().toISOString(),
                 uploadBatch,
                 // Preserved fields
-                delegateId: oldState.delegateId || null,
-                deliveredAt: oldState.deliveredAt || null,
-                assignedAt: oldState.assignedAt || null,
-                assignBatchId: oldState.assignBatchId || null
+                delegateId: oldState?.delegateId || null,
+                deliveredAt: oldState?.deliveredAt || null,
+                assignedAt: oldState?.assignedAt || null,
+                assignBatchId: oldState?.assignBatchId || null
             });
-            newCount++;
         }
 
         // ─────────────────────────────────────────────
@@ -162,7 +192,7 @@ export async function uploadDeliveries(newRows, subjectNameRaw) {
         }
         */
 
-        return { newCount, skippedCount, skippedList, isReupload };
+        return { addedCount, updatedCount, internalDuplicateCount, skippedList, isReupload };
     } catch (err) {
         console.error('Supabase Upload Error:', err);
         throw err;
