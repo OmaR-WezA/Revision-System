@@ -9,69 +9,6 @@ import { parseExcelFile, extractSubjectFromFilename } from '../utils/excelParser
 import { uploadDeliveries, deleteSubject, deleteLastBatch, fetchRejectedDuplicates } from '../services/supabaseService';
 import { useDashboardData } from '../hooks/useDeliveries';
 
-// ─────────────────────────────────────────────
-// 📜 Rejected Log Component (Embedded)
-// ─────────────────────────────────────────────
-function RejectedLogSection() {
-    const [list, setList] = useState([]);
-    const [loading, setLoading] = useState(false);
-    const [show, setShow] = useState(false);
-
-    const load = async () => {
-        if (show) { setShow(false); return; }
-        setLoading(true);
-        const data = await fetchRejectedDuplicates();
-        setList(data);
-        setLoading(false);
-        setShow(true);
-    };
-
-    return (
-        <div className="card" style={{ marginTop: '32px', border: '1px solid var(--clr-warning)' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <h3 style={{ marginBottom: 0, fontSize: '1rem', color: 'var(--clr-warning)', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <AlertCircle size={18} /> سجل المحاولات المرفوضة (المكررة)
-                </h3>
-                <button className="btn btn-ghost" onClick={load} disabled={loading} style={{ fontSize: '0.85rem' }}>
-                    {loading ? 'جاري التحميل...' : (show ? 'إخفاء السجل' : 'عرض السجل بالكامل')}
-                </button>
-            </div>
-
-            {show && (
-                <div style={{ marginTop: '20px', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '16px' }}>
-                    {list.length === 0 ? (
-                        <p style={{ textAlign: 'center', color: 'var(--clr-text-3)', padding: '20px' }}>لا توجد مرفوضات مسجلة حتى الآن.</p>
-                    ) : (
-                        <div style={{ maxHeight: '400px', overflowY: 'auto', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)' }}>
-                            <table className="delivery-table" style={{ fontSize: '0.85rem' }}>
-                                <thead style={{ position: 'sticky', top: 0, zIndex: 10 }}>
-                                    <tr>
-                                        <th>الاسم</th>
-                                        <th>الكود</th>
-                                        <th>المادة</th>
-                                        <th>الوقت</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {list.map((item) => (
-                                        <tr key={item.id}>
-                                            <td style={{ fontWeight: 600 }}>{item.student_name}</td>
-                                            <td><span className="badge badge-pending">{item.student_id}</span></td>
-                                            <td>{item.subject_name}</td>
-                                            <td style={{ fontSize: '0.75rem', color: 'var(--clr-text-3)', whiteSpace: 'nowrap' }}>
-                                                {new Date(item.rejected_at).toLocaleString('ar-EG')}
-                                            </td>
-                                        </tr>
-                                    ))}
-                                </tbody>
-                            </table>
-                        </div>
-                    )}
-                </div>
-            )}
-        </div>
-    );
-}
 
 // ─────────────────────────────────────────────
 // Upload result summary card
@@ -387,15 +324,15 @@ export default function UploadPage() {
                 <ol style={{ paddingRight: '20px', color: 'var(--clr-text-2)', fontSize: '0.9rem', lineHeight: 2 }}>
                     <li>يستخرج النظام اسم المادة من اسم الملف تلقائياً</li>
                     <li>يقرأ كل صف: الرقم الجامعي + الاسم</li>
-                    <li>لكل طالب، يتحقق: هل <strong style={{ color: 'var(--clr-text-1)' }}>رقمه الجامعي + المادة</strong> موجود في قاعدة البيانات؟</li>
-                    <li>إذا كان موجوداً → <span style={{ color: 'var(--clr-warning)' }}>يتخطاه (لا تكرار)</span></li>
-                    <li>إذا لم يكن موجوداً → <span style={{ color: 'var(--clr-success)' }}>يضيفه بحالة "جاهز للاستلام"</span></li>
-                    <li>الطلاب الذين سبق تسليمهم لن تتغير حالتهم أبداً</li>
+                    <li>يستخدم تقنية <strong style={{ color: 'var(--clr-success)' }}>"الدمج الذكي" (Smart Merge)</strong>:</li>
+                    <ul style={{ paddingRight: '20px', fontSize: '0.85rem' }}>
+                        <li>الطلاب الجدد ← يتم إضافتهم فوراً</li>
+                        <li>الطلاب الموجودين مسبقاً ← يتم تحديث بياناتهم مع <strong style={{ color: 'var(--clr-warning)' }}>الحفاظ على حالتهم (مستلم/مع مندوب)</strong> دون تغيير</li>
+                    </ul>
+                    <li>الطلاب المفقودون من الشيت الجديد ← <strong style={{ color: 'var(--clr-info)' }}>يبقون في قاعدة البيانات</strong> لضمان عدم ضياع أي تسليمات قديمة</li>
                 </ol>
             </div>
 
-            <hr style={{ border: 'none', borderTop: '1px solid var(--clr-border)', margin: '32px 0' }} />
-            <RejectedLogSection />
             <hr style={{ border: 'none', borderTop: '1px solid var(--clr-border)', margin: '32px 0' }} />
 
             {/* ── Danger Zone (Delete) ── */}

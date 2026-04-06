@@ -125,39 +125,31 @@ export async function uploadDeliveries(newRows, subjectNameRaw) {
 
         // ─────────────────────────────────────────────
         // STEP 3: Handle existing subject data
-        // If same subject was uploaded before → delete ALL old records first,
-        // then insert the new list as a clean replacement.
-        // If first time → just insert directly.
+        // We NO LONGER delete old records. We use UPSERT to merge.
+        // This ensures students who were NOT in the new Excel sheet but are in DB stay there.
         // ─────────────────────────────────────────────
+        /* 
+        // Logic removed to prevent data loss:
         if (isReupload) {
-            const { error: deleteError } = await supabase
-                .from('deliveries')
-                .delete()
-                .ilike('subjectName', subjectName);
-
-            if (deleteError) throw deleteError;
-
-            // Also clear old rejected log entries for this subject
-            await supabase
-                .from('rejected_duplicates')
-                .delete()
-                .ilike('subject_name', subjectName);
+           await supabase.from('deliveries').delete().ilike('subjectName', subjectName);
         }
+        */
 
         // ─────────────────────────────────────────────
-        // STEP 4: Insert all new rows
+        // STEP 4: Upsert all rows (Add new / Update existing)
         // ─────────────────────────────────────────────
         if (rowsToInsert.length > 0) {
             const { error: insertError } = await supabase
                 .from('deliveries')
-                .insert(rowsToInsert);
+                .upsert(rowsToInsert, { onConflict: 'id' });
 
             if (insertError) throw insertError;
         }
 
         // ─────────────────────────────────────────────
-        // STEP 5: Log internal (sheet-level) duplicates only
+        // STEP 5: Log internal (sheet-level) duplicates only (DISABLED per user request)
         // ─────────────────────────────────────────────
+        /*
         if (skippedList.length > 0) {
             const rejectedRows = skippedList.map(s => ({
                 student_id: s.universityId,
@@ -168,6 +160,7 @@ export async function uploadDeliveries(newRows, subjectNameRaw) {
             }));
             await supabase.from('rejected_duplicates').insert(rejectedRows);
         }
+        */
 
         return { newCount, skippedCount, skippedList, isReupload };
     } catch (err) {
