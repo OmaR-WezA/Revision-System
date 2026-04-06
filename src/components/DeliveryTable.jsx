@@ -4,7 +4,7 @@
 import { useState } from 'react';
 import { CheckCircle, Loader, RotateCcw, Link, Undo2 } from 'lucide-react';
 import toast from 'react-hot-toast';
-import { markDelivered, undoDelivery, assignToDelegate, undoLastAssignmentBatch, upsertDelegate } from '../services/supabaseService';
+import { markDelivered, undoDelivery, assignToDelegate, undoLastAssignmentBatch, upsertDelegate, fetchDelegates } from '../services/supabaseService';
 
 function formatDate(dateValue) {
     if (!dateValue) return '—';
@@ -174,11 +174,12 @@ export default function DeliveryTable({ deliveries, loading, updateLocalDelivery
 
     // Custom Prompt State
     const [promptConfig, setPromptConfig] = useState(null);
-    const showPrompt = (message, type = 'password') => {
+    const showPrompt = (message, type = 'password', options = null) => {
         return new Promise((resolve) => {
             setPromptConfig({
                 message,
                 type,
+                options,
                 onConfirm: (val) => {
                     setPromptConfig(null);
                     resolve(val);
@@ -255,22 +256,36 @@ export default function DeliveryTable({ deliveries, loading, updateLocalDelivery
     const handleMassAssign = async () => {
         if (selectedIds.size === 0) return;
 
-        const delegateCode = await showPrompt(`أدخل "كود" المندوب لتسليمه عدد ${selectedIds.size} طالب:`, 'text');
-        if (!delegateCode || !delegateCode.trim()) return;
+        // 1. Fetch available delegates
+        const delegates = await fetchDelegates();
+        const selection = await showPrompt(
+            `اختر المندوب لتسليمه عدد ${selectedIds.size} طالب:`,
+            'select',
+            delegates
+        );
 
-        const delegateName = await showPrompt(`أدخل "اسم المندوب" (لتسجيله في السيستم):`, 'text');
-        if (!delegateName || !delegateName.trim()) return;
+        if (!selection) return;
+
+        let code, name, dept;
+        if (selection === 'new') {
+            code = await showPrompt('أدخل كود المندوب الجديد:', 'text');
+            if (!code) return;
+            name = await showPrompt('أدخل اسم المندوب الجديد:', 'text');
+            if (!name) return;
+            dept = await showPrompt('أدخل القسم (اختياري):', 'text') || '';
+        } else {
+            code = selection.code;
+            name = selection.name;
+            dept = selection.department || '';
+        }
 
         setAssigning(true);
         setGlobalActionLoading(true);
         try {
-            const code = delegateCode.trim();
-            const name = delegateName.trim();
+            // 2. Sync delegate info
+            await upsertDelegate(code, name, dept);
 
-            // 1. Sync delegate info to 'delegates' table
-            await upsertDelegate(code, name);
-
-            // 2. Assign the students
+            // 3. Assign the students
             const arrIds = Array.from(selectedIds);
             const count = await assignToDelegate(arrIds, code);
             toast.success(`تم التكليف بنجاح! ${count} طالب مع المندوب: ${name} (${code})`);
@@ -469,26 +484,54 @@ export default function DeliveryTable({ deliveries, loading, updateLocalDelivery
                 </div>
             )}
 
-            {/* Custom Prompt Modal */}
             {promptConfig && (
                 <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(0,0,0,0.7)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 9999, backdropFilter: 'blur(3px)' }}>
                     <div className="card" style={{ width: '90%', maxWidth: '400px', padding: '24px', display: 'flex', flexDirection: 'column', gap: '20px', boxShadow: '0 10px 25px rgba(0,0,0,0.5)', border: '1px solid rgba(255,255,255,0.1)' }}>
                         <h3 style={{ fontSize: '1.05rem', margin: 0, lineHeight: 1.5 }}>{promptConfig.message}</h3>
-                        <input
-                            type={promptConfig.type}
-                            className="input"
-                            autoFocus
-                            id="custom-prompt-input"
-                            onKeyDown={e => {
-                                if (e.key === 'Enter') promptConfig.onConfirm(e.target.value);
-                                if (e.key === 'Escape') promptConfig.onCancel();
-                            }}
-                            placeholder={promptConfig.type === 'password' ? 'الرقم السري' : 'كود المندوب'}
-                            style={{ padding: '12px', fontSize: '1.1rem' }}
-                        />
+
+                        {promptConfig.type === 'select' ? (
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                                <select
+                                    className="input"
+                                    id="custom-prompt-select"
+                                    style={{ padding: '12px', fontSize: '1.1rem' }}
+                                    defaultValue=""
+                                >
+                                    <option value="" disabled>اختر مندوب...</option>
+                                    {promptConfig.options.map(d => (
+                                        <option key={d.code} value={JSON.stringify(d)}>
+                                            {d.name} ({d.code}) {d.department ? `- ${d.department}` : ''}
+                                        </option>
+                                    ))}
+                                    <option value="new" style={{ fontWeight: 'bold', color: 'var(--clr-primary)' }}>+ إضافة مندوب جديد غير موجود</option>
+                                </select>
+                            </div>
+                        ) : (
+                            <input
+                                type={promptConfig.type}
+                                className="input"
+                                autoFocus
+                                id="custom-prompt-input"
+                                onKeyDown={e => {
+                                    if (e.key === 'Enter') promptConfig.onConfirm(e.target.value);
+                                    if (e.key === 'Escape') promptConfig.onCancel();
+                                }}
+                                placeholder={promptConfig.type === 'password' ? 'الرقم السري' : 'أدخل البيانات هنا...'}
+                                style={{ padding: '12px', fontSize: '1.1rem' }}
+                            />
+                        )}
+
                         <div style={{ display: 'flex', gap: '12px', justifyContent: 'flex-end', marginTop: '8px' }}>
                             <button className="btn btn-ghost" onClick={promptConfig.onCancel}>إلغاء</button>
-                            <button className="btn btn-primary" onClick={() => promptConfig.onConfirm(document.getElementById('custom-prompt-input').value)}>تأكيد</button>
+                            <button className="btn btn-primary" onClick={() => {
+                                if (promptConfig.type === 'select') {
+                                    const val = document.getElementById('custom-prompt-select').value;
+                                    if (!val) { toast.error('يرجى الاختيار'); return; }
+                                    promptConfig.onConfirm(val === 'new' ? 'new' : JSON.parse(val));
+                                } else {
+                                    promptConfig.onConfirm(document.getElementById('custom-prompt-input').value);
+                                }
+                            }}>تأكيد</button>
                         </div>
                     </div>
                 </div>

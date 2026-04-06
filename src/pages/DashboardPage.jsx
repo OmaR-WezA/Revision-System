@@ -151,6 +151,118 @@ export function HistoryPage() {
     );
 }
 
+// ─────────────────────────────────────────────
+// 👤 Delegate Manager Component (Admin Only)
+// ─────────────────────────────────────────────
+function DelegateManager() {
+    const [code, setCode] = useState('');
+    const [name, setName] = useState('');
+    const [dept, setDept] = useState('');
+    const [foundDelegate, setFoundDelegate] = useState(null);
+    const [isSearching, setIsSearching] = useState(false);
+    const [isSaving, setIsSaving] = useState(false);
+
+    const handleSearch = async () => {
+        if (!code.trim()) return;
+        setIsSearching(true);
+        setFoundDelegate(null);
+        try {
+            const result = await validateDelegateCode(code.trim());
+            if (result) {
+                setFoundDelegate(result);
+                setName(result.name);
+                setDept(result.department || '');
+            } else {
+                setFoundDelegate('not_found');
+                setName('');
+                setDept('');
+            }
+        } catch (err) {
+            toast.error('خطأ في البحث');
+        } finally {
+            setIsSearching(false);
+        }
+    };
+
+    const handleSave = async () => {
+        if (!code.trim() || !name.trim()) {
+            toast.error('الرجاء إدخال الكود والاسم');
+            return;
+        }
+        setIsSaving(true);
+        try {
+            await upsertDelegate(code.trim(), name.trim(), dept.trim());
+            toast.success('تم حفظ بيانات المندوب بنجاح');
+            // Refresh search state
+            setFoundDelegate({ code: code.trim(), name: name.trim(), department: dept.trim() });
+        } catch (err) {
+            toast.error('خطأ أثناء الحفظ');
+        } finally {
+            setIsSaving(false);
+        }
+    };
+
+    return (
+        <div className="card" style={{ marginBottom: '24px', border: '1px solid var(--clr-primary)' }}>
+            <h3 style={{ fontSize: '1.1rem', marginBottom: '16px', color: 'var(--clr-primary)' }}>📇 إدارة مسؤولي العهد (المناديب)</h3>
+
+            <div style={{ display: 'flex', gap: '12px', marginBottom: '20px', alignItems: 'flex-end' }}>
+                <div style={{ flex: 1 }}>
+                    <label style={{ display: 'block', fontSize: '0.85rem', marginBottom: '6px', color: 'var(--clr-text-2)' }}>البحث بواسطة الكود:</label>
+                    <input
+                        type="text"
+                        className="input"
+                        placeholder="أدخل كود المندوب..."
+                        value={code}
+                        onChange={e => setCode(e.target.value)}
+                        onKeyDown={e => e.key === 'Enter' && handleSearch()}
+                    />
+                </div>
+                <button className="btn btn-primary" onClick={handleSearch} disabled={isSearching} style={{ height: '42px' }}>
+                    {isSearching ? 'جاري البحث...' : 'بحث'}
+                </button>
+            </div>
+
+            {foundDelegate === 'not_found' && (
+                <div className="card" style={{ background: 'rgba(239, 68, 68, 0.05)', border: '1px dashed var(--clr-danger)' }}>
+                    <p style={{ color: 'var(--clr-danger)', marginBottom: '12px', fontWeight: 600 }}>⚠️ هذا الكود غير مسجل! هل تريد إضافته؟</p>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+                        <input className="input" placeholder="اسم المندوب" value={name} onChange={e => setName(e.target.value)} />
+                        <input className="input" placeholder="القسم" value={dept} onChange={e => setDept(e.target.value)} />
+                    </div>
+                    <button className="btn btn-success" style={{ marginTop: '12px', width: '100%' }} onClick={handleSave} disabled={isSaving}>
+                        إضافة مندوب جديد
+                    </button>
+                </div>
+            )}
+
+            {foundDelegate && foundDelegate !== 'not_found' && (
+                <div className="card" style={{ background: 'rgba(34, 197, 94, 0.05)', border: '1px solid var(--clr-success)' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                        <div>
+                            <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--clr-text-3)' }}>بيانات المندوب المسجلة:</p>
+                            <h4 style={{ margin: '4px 0', fontSize: '1.2rem', color: 'var(--clr-success)' }}>{foundDelegate.name}</h4>
+                            <p style={{ margin: 0, fontWeight: 600 }}>القسم: {foundDelegate.department || '—'}</p>
+                        </div>
+                        <div style={{ textAlign: 'left' }}>
+                            <span className="badge badge-success" style={{ fontSize: '1rem' }}>{foundDelegate.code}</span>
+                        </div>
+                    </div>
+                    <hr style={{ border: 'none', borderTop: '1px solid rgba(255,255,255,0.05)', margin: '16px 0' }} />
+                    <p style={{ fontSize: '0.85rem', marginBottom: '8px' }}>تعديل البيانات:</p>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+                        <input className="input" placeholder="تعديل الاسم" value={name} onChange={e => setName(e.target.value)} />
+                        <input className="input" placeholder="تعديل القسم" value={dept} onChange={e => setDept(e.target.value)} />
+                    </div>
+                    <button className="btn btn-ghost" style={{ marginTop: '12px', width: '100%', borderColor: 'var(--clr-success)' }} onClick={handleSave} disabled={isSaving}>
+                        تحديث البيانات
+                    </button>
+                </div>
+            )}
+        </div>
+    );
+}
+
 export default function DashboardPage({ isAdmin }) {
     const [filters, setFilters] = useState({
         subjectName: '',
@@ -176,9 +288,9 @@ export default function DashboardPage({ isAdmin }) {
         setIsVerifying(true);
         try {
             // 1. Validate if delegate exists in the 'delegates' table
-            const delegateName = await validateDelegateCode(code);
+            const delegateData = await validateDelegateCode(code);
 
-            if (!delegateName) {
+            if (!delegateData) {
                 toast.error('كود المندوب غير صحيح أو غير مسجل في النظام.');
                 return;
             }
@@ -188,7 +300,7 @@ export default function DashboardPage({ isAdmin }) {
                 toast.error(`تنبيه: الكود صحيح ولكن لا توجد ملازم مخصصة لك حالياً في الجدول.`);
             }
 
-            toast.success(`مرحباً مندوب سيكشن: ${delegateName}`);
+            toast.success(`مرحباً مندوب سيكشن: ${delegateData.name}`);
             if (!isAdmin) {
                 localStorage.setItem('delegateLogin', code);
             }
@@ -263,6 +375,7 @@ export default function DashboardPage({ isAdmin }) {
 
                     <StatsCards stats={stats} isAdmin={isAdmin} delegateCodesCount={delegateCodes?.length || 0} />
 
+                    {isAdmin && !filters.delegateId && <DelegateManager />}
                     {isAdmin && !filters.delegateId && <AdminHistoryCard allDeliveries={allDeliveries} />}
                     {filters.delegateId && <DelegateHistoryCard allDeliveries={allDeliveries} delegateId={filters.delegateId} isAdmin={isAdmin} />}
 

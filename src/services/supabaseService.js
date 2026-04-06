@@ -49,25 +49,42 @@ export async function uploadDeliveries(newRows, subjectName) {
         let skippedCount = 0;
         let newCount = 0;
         const rowsToInsert = [];
-        const seenInBatch = new Set(); // To prevent duplicates WITHIN the Excel sheet itself
-        const skippedList = []; // New: Details of students who were skipped
+        const seenInBatch = new Set(); // Track UIDs seen within this Excel file
+        const skippedList = []; // Details of internal duplicates (sheet-level)
 
-        // 1. Calculate all candidate IDs for this batch
-        const candidateIds = newRows
-            .map(row => `${String(row.universityId || '').trim()}_${subjectSlug}`)
-            .filter(id => id.split('_')[0].length > 0); // Skip empty UIDs
-
-        // 2. Fetch existing IDs from DB that match these candidates (Batch check)
-        // We use .in() for high performance and 100% accuracy
-        const { data: existingRecords, error: fetchError } = await supabase
+        // ─────────────────────────────────────────────
+        // STEP 1: Full DB fetch for this SUBJECT
+        // Fetches ALL existing records for this subject.
+        // We select status and delegate info to PRESERVE it.
+        // ─────────────────────────────────────────────
+        const { data: existingForSubject, error: fetchError } = await supabase
             .from('deliveries')
-            .select('id')
-            .in('id', candidateIds);
+            .select('id, status, delegateId, deliveredAt, assignedAt, assignBatchId')
+            .eq('subjectName', subjectName);
 
         if (fetchError) throw fetchError;
-        const idSet = new Set(existingRecords.map(r => r.id));
 
-        // 3. Loop and build the insert list, excluding DB duplicates and batch duplicates
+        // Create a map of existing states to preserve them
+        const stateMap = {};
+        if (existingForSubject) {
+            existingForSubject.forEach(r => {
+                stateMap[r.id] = {
+                    status: r.status,
+                    delegateId: r.delegateId,
+                    deliveredAt: r.deliveredAt,
+                    assignedAt: r.assignedAt,
+                    assignBatchId: r.assignBatchId
+                };
+            });
+        }
+
+        const isReupload = existingForSubject && existingForSubject.length > 0;
+
+        // ─────────────────────────────────────────────
+        // STEP 2: Deduplicate the incoming Excel rows
+        // Keep the FIRST occurrence of each UID.
+        // Log subsequent ones as internal sheet duplicates.
+        // ─────────────────────────────────────────────
         for (const row of newRows) {
             const uid = String(row.universityId || '').trim();
             const name = String(row.studentName || '').trim();
@@ -75,27 +92,59 @@ export async function uploadDeliveries(newRows, subjectName) {
 
             const id = `${uid}_${subjectSlug}`;
 
-            // Skip if already in database OR if duplicate within the same Excel file
-            if (idSet.has(id) || seenInBatch.has(id)) {
+            // If same UID appears twice in this Excel file → log second, keep first
+            if (seenInBatch.has(id)) {
                 skippedCount++;
                 skippedList.push({ universityId: uid, studentName: name });
                 continue;
             }
 
             seenInBatch.add(id);
+
+            // PRESERVE STATE: If this student already had a status, keep it!
+            const oldState = stateMap[id] || {};
+
             rowsToInsert.push({
                 id,
                 universityId: uid,
                 studentName: name,
                 subjectName,
-                status: 'ready',
+                status: oldState.status || 'ready',
                 createdAt: new Date().toISOString(),
-                uploadBatch
+                uploadBatch,
+                // Preserved fields
+                delegateId: oldState.delegateId || null,
+                deliveredAt: oldState.deliveredAt || null,
+                assignedAt: oldState.assignedAt || null,
+                assignBatchId: oldState.assignBatchId || null
             });
             newCount++;
         }
 
-        // 4. Batch Insert (Ignore existing by skipping above)
+        // ─────────────────────────────────────────────
+        // STEP 3: Handle existing subject data
+        // If same subject was uploaded before → delete ALL old records first,
+        // then insert the new list as a clean replacement.
+        // If first time → just insert directly.
+        // ─────────────────────────────────────────────
+        if (isReupload) {
+            const { error: deleteError } = await supabase
+                .from('deliveries')
+                .delete()
+                .eq('subjectName', subjectName);
+
+            if (deleteError) throw deleteError;
+
+            // Also clear old rejected log entries for this subject
+            await supabase
+                .from('rejected_duplicates')
+                .delete()
+                .eq('subject_name', subjectName);
+        }
+
+        // ─────────────────────────────────────────────
+        // STEP 4: Insert all new rows
+        // ─────────────────────────────────────────────
         if (rowsToInsert.length > 0) {
             const { error: insertError } = await supabase
                 .from('deliveries')
@@ -104,7 +153,9 @@ export async function uploadDeliveries(newRows, subjectName) {
             if (insertError) throw insertError;
         }
 
-        // 5. Log Rejected Duplicates to a separate table (Optional audit)
+        // ─────────────────────────────────────────────
+        // STEP 5: Log internal (sheet-level) duplicates only
+        // ─────────────────────────────────────────────
         if (skippedList.length > 0) {
             const rejectedRows = skippedList.map(s => ({
                 student_id: s.universityId,
@@ -113,12 +164,10 @@ export async function uploadDeliveries(newRows, subjectName) {
                 rejected_at: new Date().toISOString(),
                 upload_batch: uploadBatch
             }));
-
-            // We use .insert() and ignore any errors here to ensure the main flow continues
             await supabase.from('rejected_duplicates').insert(rejectedRows);
         }
 
-        return { newCount, skippedCount, skippedList };
+        return { newCount, skippedCount, skippedList, isReupload };
     } catch (err) {
         console.error('Supabase Upload Error:', err);
         throw err;
@@ -302,23 +351,38 @@ export async function deleteLastBatch(password) {
 // ─────────────────────────────────────────────
 // 🔑 Auth & Config Helpers
 // ─────────────────────────────────────────────
+export async function fetchDelegates() {
+    try {
+        const { data, error } = await supabase
+            .from('delegates')
+            .select('*')
+            .order('name', { ascending: true });
+
+        if (error) throw error;
+        return data || [];
+    } catch (err) {
+        console.error('Fetch Delegates Error:', err);
+        return [];
+    }
+}
+
 export async function validateDelegateCode(code) {
     if (!code) return null;
     const { data, error } = await supabase
         .from('delegates')
-        .select('name')
+        .select('*')
         .eq('code', code)
         .single();
 
     if (error || !data) return null;
-    return data.name;
+    return data; // Returns { name, department, code }
 }
 
-export async function upsertDelegate(code, name) {
+export async function upsertDelegate(code, name, department = '') {
     if (!code || !name) return;
     const { error } = await supabase
         .from('delegates')
-        .upsert({ code, name }, { onConflict: 'code' });
+        .upsert({ code, name, department }, { onConflict: 'code' });
 
     if (error) throw error;
 }
