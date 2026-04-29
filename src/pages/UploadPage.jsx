@@ -101,8 +101,10 @@ export default function UploadPage() {
     // Get subjects list
     const { subjects } = useDashboardData();
 
+    const [isIT1, setIsIT1] = useState(false);
+
     // ─── Process the dropped/selected file ───
-    const processFile = useCallback(async (file) => {
+    const processFile = useCallback(async (file, itMode = false) => {
         if (!file) return;
 
         // Validate file type
@@ -134,11 +136,12 @@ export default function UploadPage() {
             setProgress(60);
 
             // Step 3: Upload to Supabase (with Smart Merge)
-            const { addedCount, updatedCount, internalDuplicateCount, skippedList } = await uploadDeliveries(rows, subjectName);
+            const { addedCount, updatedCount, internalDuplicateCount, skippedList } = await uploadDeliveries(rows, subjectName, itMode);
 
             setProgress(100);
-            setResult({ subjectName, addedCount, updatedCount, internalDuplicateCount, skippedList });
+            setResult({ subjectName: itMode ? (subjectName + ' (IT-1)') : subjectName, addedCount, updatedCount, internalDuplicateCount, skippedList });
             setSelectedFile(null);
+            setIsIT1(false); // Reset
             toast.success(`اكتمل الرفع: ${addedCount} جديد، ${updatedCount} تحديث`);
 
         } catch (err) {
@@ -171,7 +174,7 @@ export default function UploadPage() {
         if (!selectedFile) return;
         const pass = await showPrompt("أدخل الرقم السري لعملية الرصد والرفع:", 'password');
         if (pass === '123mosa') {
-            processFile(selectedFile);
+            processFile(selectedFile, isIT1);
         } else if (pass !== null) {
             toast.error("الرقم السري غير صحيح");
         }
@@ -285,6 +288,19 @@ export default function UploadPage() {
                         ) : (
                             <div style={{ marginTop: '16px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px', zIndex: 10, position: 'relative' }}>
                                 <p className="upload-title" style={{ color: '#22c55e', margin: 0 }}>تم اختيار الملف: {selectedFile.name}</p>
+
+                                <label style={{ display: 'flex', alignItems: 'center', gap: '12px', background: 'rgba(99, 102, 241, 0.1)', padding: '10px 20px', borderRadius: '12px', border: '1px solid var(--clr-primary)', cursor: 'pointer', transition: 'all 0.2s' }}>
+                                    <input
+                                        type="checkbox"
+                                        checked={isIT1}
+                                        onChange={e => setIsIT1(e.target.checked)}
+                                        style={{ width: '20px', height: '20px', cursor: 'pointer' }}
+                                    />
+                                    <span style={{ fontWeight: 600, fontSize: '1rem', color: 'var(--clr-text-1)' }}>
+                                        رفع لطلاب IT الفرقة الأولى (قسمي) 🎓
+                                    </span>
+                                </label>
+
                                 <div style={{ display: 'flex', gap: '12px' }}>
                                     <button
                                         className="btn btn-primary"

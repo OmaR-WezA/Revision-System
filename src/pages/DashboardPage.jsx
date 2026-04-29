@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { useDashboardData } from '../hooks/useDeliveries';
@@ -6,6 +6,8 @@ import StatsCards from '../components/StatsCards';
 import FilterBar from '../components/FilterBar';
 import DeliveryTable from '../components/DeliveryTable';
 import { validateDelegateCode } from '../services/supabaseService';
+import * as XLSX from 'xlsx';
+import { Download } from 'lucide-react';
 
 function DelegateHistoryCard({ allDeliveries, delegateId, isAdmin, showAll = false }) {
     const [showAllLocal, setShowAllLocal] = useState(false);
@@ -136,7 +138,7 @@ function AdminHistoryCard({ allDeliveries, showAll = false }) {
 // Full History Page (New Component)
 // ─────────────────────────────────────────────
 export function HistoryPage() {
-    const { allDeliveries, loading } = useDashboardData({});
+    const { allDeliveries, loading } = useDashboardData({}, { excludeIT: true });
 
     if (loading) return <div className="card">جاري تحميل السجل...</div>;
 
@@ -268,15 +270,79 @@ export default function DashboardPage({ isAdmin }) {
         subjectName: '',
         status: isAdmin ? 'ready' : '',
         searchId: '',
-        delegateId: isAdmin ? '' : (localStorage.getItem('delegateLogin') || '')
+        delegateId: isAdmin ? '' : (localStorage.getItem('delegateLogin') || ''),
+        sectionFilter: '' // Added
     });
 
     // Delegate auth state
     const [delegateInput, setDelegateInput] = useState('');
     const [isVerifying, setIsVerifying] = useState(false);
+    const [isAutoAssigning, setIsAutoAssigning] = useState(false);
 
     // Single hook fetches everything once
-    const { deliveries, allDeliveries, subjects, delegateCodes, stats, loading, updateLocalDelivery, massAssignLocalDeliveries } = useDashboardData(filters);
+    const { deliveries, allDeliveries, subjects, delegatesList, sectionsMap, stats, loading, updateLocalDelivery, massAssignLocalDeliveries } = useDashboardData(filters, { excludeIT: !filters.delegateId });
+
+    const activeDelegate = useMemo(() => {
+        if (!filters.delegateId) return null;
+        return delegatesList.find(d => String(d.code) === String(filters.delegateId));
+    }, [filters.delegateId, delegatesList]);
+
+    const isITDelegate = activeDelegate?.is_it || (activeDelegate?.department && sectionsMap[activeDelegate.department]);
+
+    // Orphan Detection: students in sections with no delegate
+    const orphanedIds = useMemo(() => {
+        const set = new Set();
+        // Identify sections that DO have a delegate registered
+        const delegateSections = new Set(delegatesList.map(d => d.department?.toUpperCase()));
+
+        deliveries.forEach(d => {
+            if (d.status === 'ready') {
+                const uidNum = parseInt(d.universityId, 10);
+                let foundKey = null;
+                for (const [key, val] of Object.entries(sectionsMap)) {
+                    if (val.students.includes(uidNum)) {
+                        foundKey = key.toUpperCase();
+                        break;
+                    }
+                }
+                // If student has a section but NO delegate is registered for it
+                if (foundKey && !delegateSections.has(foundKey)) {
+                    set.add(d.id);
+                }
+            }
+        });
+        return set;
+    }, [deliveries, delegatesList]); // sectionsMap is static JSON
+
+    const handleExportUndelivered = () => {
+        const undelivered = deliveries.filter(d => d.status !== 'delivered');
+        if (undelivered.length === 0) {
+            toast.error('لا يوجد طلاب لم يستلموا لتصديرهم!');
+            return;
+        }
+
+        const data = undelivered.map(d => {
+            const uidNum = parseInt(d.universityId, 10);
+            let section = "غير محدد";
+            for (const [key, val] of Object.entries(sectionsMap)) {
+                if (val.students.includes(uidNum)) {
+                    section = key;
+                    break;
+                }
+            }
+            return {
+                'اسم الطالب': d.studentName,
+                'الرقم الأكاديمي': d.universityId,
+                'السكشن': section
+            };
+        });
+
+        const ws = XLSX.utils.json_to_sheet(data);
+        const wb = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(wb, ws, "المتأخرين");
+        XLSX.writeFile(wb, `undelivered_${activeDelegate?.name || 'delegate'}_${new Date().toISOString().split('T')[0]}.xlsx`);
+        toast.success('تم تصدير كشف المتأخرين بنجاح!');
+    };
 
     const handleDelegateLogin = async () => {
         const code = delegateInput.trim();
@@ -296,7 +362,9 @@ export default function DashboardPage({ isAdmin }) {
             }
 
             // 2. Check if they have assigned deliveries (Warning but don't block)
-            if (!delegateCodes.includes(code)) {
+            // Using delegatesList from hook to check for active IDs
+            const activeDelegateCodes = allDeliveries.map(d => String(d.delegateId)).filter(Boolean);
+            if (!activeDelegateCodes.includes(code)) {
                 toast.error(`تنبيه: الكود صحيح ولكن لا توجد ملازم مخصصة لك حالياً في الجدول.`);
             }
 
@@ -318,13 +386,89 @@ export default function DashboardPage({ isAdmin }) {
         setFilters(f => ({ ...f, delegateId: '' }));
     };
 
+    // ── Auto Assignment Logic ──
+    const handleAutoAssign = async () => {
+        if (!isAdmin) return;
+
+        // Filter only 'ready' items from current filtered view
+        const readyItems = deliveries.filter(d => d.status === 'ready');
+        if (readyItems.length === 0) {
+            toast.error('لا يوجد طلاب بحالة "جاهز للاستلام" في البحث الحالي لتوزيعهم.');
+            return;
+        }
+
+        if (!confirm(`هل أنت متأكد من رغبتك في توزيع ${readyItems.length} ملزمة آلياً على المناديب بناءً على السكاشن؟`)) return;
+
+        setIsAutoAssigning(true);
+
+        try {
+            const assignmentGroups = {}; // { delegateCode: [docIds] }
+            let skippedCount = 0;
+
+            // Pre-process delegates to find matching tags
+            // We search for GX CY in the department string
+            const delegateMap = {}; // { sectionKey: delegateCode }
+            Object.keys(sectionsMap).forEach(sectionKey => {
+                const match = delegatesList.find(d =>
+                    d.department && d.department.toUpperCase().includes(sectionKey.toUpperCase())
+                );
+                if (match) {
+                    delegateMap[sectionKey] = match.code;
+                }
+            });
+
+            // Map each student to a delegate
+            readyItems.forEach(item => {
+                const uid = parseInt(item.universityId, 10);
+                // Find which section this student belongs to
+                let foundSection = null;
+                for (const [sectionKey, sectionData] of Object.entries(sectionsMap)) {
+                    if (sectionData.students.includes(uid)) {
+                        foundSection = sectionKey;
+                        break;
+                    }
+                }
+
+                if (foundSection && delegateMap[foundSection]) {
+                    const delegateCode = delegateMap[foundSection];
+                    if (!assignmentGroups[delegateCode]) assignmentGroups[delegateCode] = [];
+                    assignmentGroups[delegateCode].push(item.id);
+                } else {
+                    skippedCount++;
+                }
+            });
+
+            // Execute batch assignments
+            const assignPromises = Object.entries(assignmentGroups).map(([code, ids]) => {
+                return assignToDelegate(ids, code);
+            });
+
+            await Promise.all(assignPromises);
+
+            // Optimistically update local UI
+            Object.entries(assignmentGroups).forEach(([code, ids]) => {
+                massAssignLocalDeliveries(ids, code);
+            });
+
+            toast.success(`تم التوزيع بنجاح! 
+                توزيع: ${readyItems.length - skippedCount} طالب.
+                لم يتم إيجاد سكشن/مندوب لـ: ${skippedCount} طالب.`);
+
+        } catch (err) {
+            console.error(err);
+            toast.error('حدث خطأ أثناء التوزيع الآلي');
+        } finally {
+            setIsAutoAssigning(false);
+        }
+    };
+
     return (
         <div>
-            {/* ── Page Header ── */}
             {/* ── Page Header ── */}
             <div className="page-header">
                 <h1 className="page-title">{isAdmin ? 'لوحة تحكم الإدارة' : 'استعلام استلام الملازم'}</h1>
                 <p className="page-subtitle">نظرة عامة على حالة وتسليم الملازم للطلاب</p>
+
             </div>
 
             {/* ── Public Access Control: Security Wall ── */}
@@ -342,7 +486,7 @@ export default function DashboardPage({ isAdmin }) {
                             <input
                                 type="text"
                                 className="input"
-                                placeholder="أدخل كود المندوب هنا..."
+                                placeholder="أدخل كود المندوب أو اسم السكشن (مثل G1 C1)..."
                                 value={delegateInput}
                                 onChange={e => setDelegateInput(e.target.value)}
                                 style={{ padding: '12px', fontSize: '1.1rem' }}
@@ -368,12 +512,24 @@ export default function DashboardPage({ isAdmin }) {
                     {!isAdmin && filters.delegateId && (
                         <div className="card" style={{ marginBottom: '16px', display: 'flex', gap: '16px', alignItems: 'center', border: '1px solid var(--clr-warning)' }}>
                             <span style={{ fontWeight: 600 }}>جلسة نشطة للمندوب:</span>
-                            <span style={{ flex: 1, fontSize: '1.1rem', fontFamily: 'monospace', color: 'var(--clr-warning)' }}>{filters.delegateId}</span>
+                            <span style={{ flex: 1, fontSize: '1.1rem', fontFamily: 'monospace', color: 'var(--clr-warning)' }}>{activeDelegate?.name || filters.delegateId} ({activeDelegate?.department})</span>
+
+                            {isITDelegate && (
+                                <button
+                                    onClick={handleExportUndelivered}
+                                    className="btn btn-primary"
+                                    style={{ border: 'none', background: 'rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.9rem' }}
+                                >
+                                    <Download size={16} />
+                                    تصدير كشف المتأخرين (Excel)
+                                </button>
+                            )}
+
                             <button className="btn btn-ghost" onClick={handleDelegateLogout}>تسجيل الخروج</button>
                         </div>
                     )}
 
-                    <StatsCards stats={stats} isAdmin={isAdmin} delegateCodesCount={delegateCodes?.length || 0} />
+                    <StatsCards stats={stats} isAdmin={isAdmin} delegateCodesCount={delegatesList?.length || 0} />
 
                     {isAdmin && !filters.delegateId && <DelegateManager />}
                     {isAdmin && !filters.delegateId && <AdminHistoryCard allDeliveries={allDeliveries} />}
@@ -381,7 +537,8 @@ export default function DashboardPage({ isAdmin }) {
 
                     <FilterBar
                         subjects={subjects}
-                        delegateCodes={delegateCodes}
+                        delegatesList={delegatesList}
+                        sectionsMap={sectionsMap}
                         isAdmin={isAdmin}
                         filters={filters}
                         onChange={setFilters}
@@ -395,9 +552,13 @@ export default function DashboardPage({ isAdmin }) {
                         massAssignLocalDeliveries={massAssignLocalDeliveries}
                         isAdmin={isAdmin}
                         isSectionDelegate={!!filters.delegateId && !isAdmin}
+                        orphanedIds={orphanedIds}
                     />
                 </>
             )}
         </div>
     );
 }
+
+// Ensure assignToDelegate is imported if it's used directly or wrap it in a service call
+import { upsertDelegate, assignToDelegate } from '../services/supabaseService';

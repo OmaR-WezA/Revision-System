@@ -6,3 +6,7 @@ dist
 *.local
 /sheets_db/
 migrate.js
+export_report.js
+sections_delegates_report.xlsx
+migrate_sections.js
+list.txt

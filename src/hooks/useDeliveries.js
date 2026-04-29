@@ -4,19 +4,28 @@
 //   → Handles subscription cleanup automatically (memory-safe).
 
 import { useEffect, useState, useMemo, useCallback } from 'react';
-import { fetchDeliveries } from '../services/supabaseService';
+import { fetchDeliveries, fetchDelegates, fetchSectionsMap } from '../services/supabaseService';
 
-export function useDashboardData(filters) {
+export function useDashboardData(filters = {}, options = {}) {
+    const { itOnly = false, excludeIT = false } = options;
     const [allData, setAllData] = useState([]);
+    const [delegatesList, setDelegatesList] = useState([]);
+    const [sectionsMap, setSectionsMap] = useState({}); // Dynamic now
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         let active = true;
 
         async function load() {
-            const data = await fetchDeliveries();
+            const [data, delegates, secMap] = await Promise.all([
+                fetchDeliveries(),
+                fetchDelegates(),
+                fetchSectionsMap()
+            ]);
             if (!active) return;
             setAllData(data);
+            setDelegatesList(delegates);
+            setSectionsMap(secMap);
             setLoading(false);
         }
 
@@ -33,6 +42,15 @@ export function useDashboardData(filters) {
     // 1. Derive filtered array
     const filteredDeliveries = useMemo(() => {
         let filtered = [...allData];
+
+        // Apply Department Logic
+        // NEW: If a delegateId is present, we DISREGARD excludeIT so they can see their assigned booklets (IT or not)
+        if (itOnly) {
+            filtered = filtered.filter(d => d.subjectName?.includes('(IT-1)') || d.department === 'IT-1');
+        } else if (excludeIT && !filters?.delegateId) {
+            filtered = filtered.filter(d => !d.subjectName?.includes('(IT-1)') && d.department !== 'IT-1');
+        }
+
         if (filters?.subjectName) {
             filtered = filtered.filter(d => d.subjectName === filters.subjectName);
         }
@@ -42,35 +60,91 @@ export function useDashboardData(filters) {
         if (filters?.delegateId) {
             filtered = filtered.filter(d => String(d.delegateId || '').trim() === String(filters.delegateId).trim());
         }
+        if (filters?.sectionFilter && sectionsMap[filters.sectionFilter]) {
+            const allowedIds = new Set(sectionsMap[filters.sectionFilter].students.map(id => String(id)));
+            filtered = filtered.filter(d => allowedIds.has(String(d.universityId)));
+        }
         if (filters?.searchId) {
             const query = filters.searchId.toLowerCase().trim();
             filtered = filtered.filter(d => String(d.universityId).toLowerCase().includes(query));
         }
+
+        // NEW: "Special Filters" (No Section / No Delegate)
+        if (filters?.specialFilter === 'no_section') {
+            filtered = filtered.filter(d => {
+                const uidNum = parseInt(d.universityId, 10);
+                return !Object.values(sectionsMap).some(s => s.students.includes(uidNum));
+            });
+        } else if (filters?.specialFilter === 'no_delegate') {
+            const delegateSections = new Set(delegatesList.map(d => d.department?.toUpperCase().trim()));
+            filtered = filtered.filter(d => {
+                const uidNum = parseInt(d.universityId, 10);
+                let foundSection = null;
+                for (const [key, val] of Object.entries(sectionsMap)) {
+                    if (val.students.includes(uidNum)) {
+                        foundSection = key.toUpperCase().trim();
+                        break;
+                    }
+                }
+                // Must have a section but NO delegate
+                return (foundSection && !delegateSections.has(foundSection));
+            });
+        }
         // Sort newest first
         filtered.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
         return filtered;
-    }, [allData, filters?.subjectName, filters?.status, filters?.searchId, filters?.delegateId]);
+    }, [allData, filters?.subjectName, filters?.status, filters?.searchId, filters?.delegateId, filters?.sectionFilter, filters?.specialFilter, delegatesList, itOnly, excludeIT]);
 
     // 2. Derive distinct subjects
     const subjects = useMemo(() => {
-        return [...new Set(allData.map(d => d.subjectName))].filter(Boolean).sort();
-    }, [allData]);
+        let list = allData;
+        // NEW: If a delegate is logged in, only show subjects they are actually in
+        if (filters?.delegateId) {
+            list = allData.filter(d => String(d.delegateId || '').trim() === String(filters.delegateId).trim());
+        } else if (itOnly) {
+            list = allData.filter(d => d.subjectName?.includes('(IT-1)') || d.department === 'IT-1');
+        } else if (excludeIT) {
+            list = allData.filter(d => !d.subjectName?.includes('(IT-1)') && d.department !== 'IT-1');
+        }
+        return [...new Set(list.map(d => d.subjectName))].filter(Boolean).sort();
+    }, [allData, itOnly, excludeIT, filters?.delegateId]);
 
-    // Derived Delegate Codes
-    const delegateCodes = useMemo(() => {
-        return [...new Set(allData.map(d => String(d.delegateId || '').trim()))].filter(Boolean).sort();
-    }, [allData]);
+    // Derived Delegate Codes (from actual data) - keeping for backwards compatibility or display
+    const activeDelegateCodes = useMemo(() => {
+        let list = allData;
+        if (itOnly) {
+            list = allData.filter(d => d.subjectName?.includes('(IT-1)') || d.department === 'IT-1');
+        } else if (excludeIT) {
+            list = allData.filter(d => !d.subjectName?.includes('(IT-1)') && d.department !== 'IT-1');
+        }
+        return [...new Set(list.map(d => String(d.delegateId || '').trim()))].filter(Boolean).sort();
+    }, [allData, itOnly, excludeIT]);
 
     // 3. Derived stats
     const stats = useMemo(() => {
-        const total = allData.length;
-        const delivered = allData.filter(d => d.status === 'delivered').length;
-        const pending = allData.filter(d => d.status === 'ready').length;
-        const withDelegate = allData.filter(d => d.status === 'with_delegate').length;
+        let list = allData;
+        if (filters?.delegateId) {
+            list = allData.filter(d => String(d.delegateId || '').trim() === String(filters.delegateId).trim());
+        } else if (itOnly) {
+            list = allData.filter(d => d.subjectName?.includes('(IT-1)') || d.department === 'IT-1');
+        } else if (excludeIT) {
+            list = allData.filter(d => !d.subjectName?.includes('(IT-1)') && d.department !== 'IT-1');
+        }
+
+        const total = list.length;
+        const delivered = list.filter(d => d.status === 'delivered').length;
+        const pending = list.filter(d => d.status === 'ready').length;
+        const withDelegate = list.filter(d => d.status === 'with_delegate').length;
 
         let delegateTotal = 0, delegateDelivered = 0, delegatePending = 0;
-        if (filters?.delegateId) {
-            const delData = allData.filter(d => String(d.delegateId || '').trim() === String(filters.delegateId).trim());
+        if (filters?.delegateId && !itOnly && !excludeIT) {
+            // If we are already filtered by delegateId above, we don't need to re-filter for "delegate stats" sub-view
+            // But usually this hook is used with a specific delegateId in the filters.
+            delegateTotal = total;
+            delegateDelivered = delivered;
+            delegatePending = pending + withDelegate;
+        } else if (filters?.delegateId) {
+            const delData = list.filter(d => String(d.delegateId || '').trim() === String(filters.delegateId).trim());
             delegateTotal = delData.length;
             delegateDelivered = delData.filter(d => d.status === 'delivered').length;
             delegatePending = delData.filter(d => d.status !== 'delivered').length;
@@ -80,7 +154,17 @@ export function useDashboardData(filters) {
             total, delivered, pending, withDelegate,
             delegateTotal, delegateDelivered, delegatePending
         };
-    }, [allData, filters?.delegateId]);
+    }, [allData, filters?.delegateId, itOnly, excludeIT]);
+
+    // Resulting Delegates List (Filtered)
+    const filteredDelegates = useMemo(() => {
+        if (itOnly) {
+            return delegatesList.filter(d => d.is_it || (d.department && sectionsMap[d.department]));
+        } else if (excludeIT) {
+            return delegatesList.filter(d => !d.is_it && (!d.department || !sectionsMap[d.department]));
+        }
+        return delegatesList;
+    }, [delegatesList, itOnly, excludeIT]);
 
     // Optimistic Update Function
     const updateLocalDelivery = useCallback((id, newStatus, resetDelegate = false) => {
@@ -115,7 +199,9 @@ export function useDashboardData(filters) {
         deliveries: filteredDeliveries,
         allDeliveries: allData,
         subjects,
-        delegateCodes,
+        delegateCodes: activeDelegateCodes,
+        delegatesList: filteredDelegates,
+        sectionsMap,
         stats,
         loading,
         updateLocalDelivery,

@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, NavLink, Outlet, useLocation } from 'react-router-dom';
 import { Toaster, toast } from 'react-hot-toast';
-import { LayoutDashboard, Upload, BookOpen, Lock, Timer } from 'lucide-react';
+import { LayoutDashboard, Upload, BookOpen, Lock, Timer, ShieldCheck } from 'lucide-react';
 import DashboardPage, { HistoryPage } from './pages/DashboardPage';
 import UploadPage from './pages/UploadPage';
+import ITDashboardPage from './pages/ITDashboardPage';
 import { getSystemPass } from './services/supabaseService';
 
 function AdminGuard({ children, configKey, authKey, title }) {
@@ -149,6 +150,19 @@ function Sidebar() {
             <Upload size={18} />
             لوحة الرفع
           </NavLink>
+
+          <div style={{ margin: '16px 0 8px', fontSize: '0.75rem', fontWeight: 600, color: 'var(--clr-primary)', paddingRight: '12px' }}>
+            القسم الخاص بي
+          </div>
+          <NavLink
+            to="/it-dashboard"
+            end
+            className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+            style={{ background: 'rgba(99, 102, 241, 0.1)', border: '1px solid rgba(99, 102, 241, 0.2)' }}
+          >
+            <ShieldCheck size={18} />
+            IT Dashboard 🎓
+          </NavLink>
         </>
       )}
 
@@ -209,6 +223,7 @@ export default function App() {
                 </AdminGuard>
               }
             />
+            <Route path="/it-dashboard" element={<ITDashboardPage />} />
           </Routes>
         </main>
       </div>

@@ -41,7 +41,7 @@ function getBatchColor(batchId, subjectName) {
     return `hsla(${hue}, 65%, 35%, 0.25)`;
 }
 
-function DeliveryRow({ delivery, index, globalActionLoading, setGlobalActionLoading, updateLocalDelivery, isAdmin, isSectionDelegate, isSelected, toggleSelection }) {
+function DeliveryRow({ delivery, index, globalActionLoading, setGlobalActionLoading, updateLocalDelivery, isAdmin, isSectionDelegate, isSelected, toggleSelection, isOrphan }) {
     const [loading, setLoading] = useState(false);
 
     async function handleMarkDelivered() {
@@ -67,7 +67,6 @@ function DeliveryRow({ delivery, index, globalActionLoading, setGlobalActionLoad
     }
 
     async function handleUndoDelivery() {
-        // Only Admins can Undo! Section Delegates cannot.
         const pass = window.prompt("أدخل الرقم السري للإدارة لإلغاء التسليم:");
         if (!pass) return;
 
@@ -81,7 +80,7 @@ function DeliveryRow({ delivery, index, globalActionLoading, setGlobalActionLoad
             // Immediate UI update!
             if (updateLocalDelivery) {
                 const newStatus = delivery.delegateId ? 'with_delegate' : 'ready';
-                updateLocalDelivery(delivery.id, newStatus, false); // false = do not clear delegate info
+                updateLocalDelivery(delivery.id, newStatus, false);
             }
         } catch (err) {
             toast.error(err.message || 'خطأ في إلغاء التسليم');
@@ -91,13 +90,20 @@ function DeliveryRow({ delivery, index, globalActionLoading, setGlobalActionLoad
         }
     }
 
-    // Color the row green if locally delivered to make it ultra obvious
+    // Color the row based on status and orphan state
     let rowColor = getBatchColor(delivery.uploadBatch, delivery.subjectName);
-    if (delivery.status === 'delivered') rowColor = 'rgba(34, 197, 94, 0.1)';
-    else if (delivery.status === 'with_delegate') rowColor = 'rgba(245, 158, 11, 0.1)'; // Warning color
+    if (delivery.status === 'delivered') {
+        rowColor = 'rgba(34, 197, 94, 0.1)';
+    } else if (delivery.status === 'with_delegate') {
+        rowColor = 'rgba(245, 158, 11, 0.1)';
+    }
 
     return (
-        <tr style={{ backgroundColor: rowColor, transition: 'background-color 0.3s ease' }}>
+        <tr style={{
+            backgroundColor: rowColor,
+            transition: 'background-color 0.3s ease',
+            borderRight: isOrphan ? '4px solid var(--clr-danger)' : 'none'
+        }}>
             {isAdmin && (
                 <td style={{ textAlign: 'center' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px', justifyContent: 'center' }}>
@@ -162,7 +168,7 @@ function DeliveryRow({ delivery, index, globalActionLoading, setGlobalActionLoad
     );
 }
 
-export default function DeliveryTable({ deliveries, loading, updateLocalDelivery, massAssignLocalDeliveries, isAdmin, isSectionDelegate }) {
+export default function DeliveryTable({ deliveries, loading, updateLocalDelivery, massAssignLocalDeliveries, isAdmin, isSectionDelegate, orphanedIds = new Set() }) {
     const [globalActionLoading, setGlobalActionLoading] = useState(false);
     const [selectedIds, setSelectedIds] = useState(new Set());
     const [assigning, setAssigning] = useState(false);
@@ -458,6 +464,7 @@ export default function DeliveryTable({ deliveries, loading, updateLocalDelivery
                             isSectionDelegate={isSectionDelegate}
                             isSelected={selectedIds.has(d.id)}
                             toggleSelection={toggleSelection}
+                            isOrphan={orphanedIds.has(d.id)}
                         />
                     ))}
                 </tbody>

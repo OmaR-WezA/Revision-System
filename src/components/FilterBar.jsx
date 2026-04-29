@@ -1,16 +1,16 @@
 // ─────────────────────────────────────────────
 // 🔍 Filter Bar — Subject + Status dropdowns
-// WHY controlled component?
-//   → Parent (DashboardPage) owns filter state.
-//   → Filter changes trigger new Firestore query.
-// ─────────────────────────────────────────────
-import { Filter, Search, X } from 'lucide-react';
+import { Filter, Search, X, Users, MapPin } from 'lucide-react';
 
-export default function FilterBar({ subjects, delegateCodes, isAdmin, filters, onChange, resultCount }) {
-    const hasFilters = filters.subjectName || filters.status || filters.searchId || filters.delegateId;
+export default function FilterBar({ subjects, delegatesList, sectionsMap, isAdmin, filters, onChange, resultCount, isITContext = false }) {
+    const hasFilters = filters.subjectName || filters.status || filters.searchId || filters.delegateId || filters.sectionFilter || filters.specialFilter;
+
+    // Filter delegateList to only show those who have active assignments if needed, 
+    // but usually, we want to show all registered delegates for filtering.
+    const sections = Object.keys(sectionsMap || {}).sort();
 
     return (
-        <div className="filter-bar">
+        <div className="filter-bar" style={{ flexWrap: 'wrap', gap: '12px' }}>
             {resultCount !== undefined && (
                 <span style={{ fontWeight: 600, color: 'var(--clr-primary)', background: 'var(--clr-primary-dim)', padding: '4px 10px', borderRadius: '12px', fontSize: '0.85rem', flexShrink: 0 }}>
                     متاح {resultCount} نتيجة
@@ -51,6 +51,20 @@ export default function FilterBar({ subjects, delegateCodes, isAdmin, filters, o
                 ))}
             </select>
 
+            {/* Section filter (New) */}
+            <select
+                id="filter-section"
+                value={filters.sectionFilter || ''}
+                onChange={(e) => onChange({ ...filters, sectionFilter: e.target.value })}
+                aria-label="فلتر السكشن"
+                style={{ border: filters.sectionFilter ? '1px solid var(--clr-primary)' : '1px solid var(--clr-border)' }}
+            >
+                <option value="">🗺️ كل السكاشن</option>
+                {sections.map((s) => (
+                    <option key={s} value={s}>{s} ({sectionsMap[s].name})</option>
+                ))}
+            </select>
+
             {/* Status filter */}
             <select
                 id="filter-status"
@@ -64,15 +78,34 @@ export default function FilterBar({ subjects, delegateCodes, isAdmin, filters, o
                 <option value="delivered">✅ تم التسليم</option>
             </select>
 
+            {/* Special Filters (No Section / No Delegate) - Redesigned as dropdown */}
+            {isITContext && (
+                <select
+                    id="filter-special"
+                    value={filters.specialFilter || ''}
+                    onChange={(e) => onChange({ ...filters, specialFilter: e.target.value })}
+                    aria-label="حالات خاصة"
+                    style={{ border: filters.specialFilter ? '1px solid #ef4444' : '1px solid var(--clr-border)' }}
+                >
+                    <option value="">⚙️ حالات خاصة</option>
+                    <option value="no_section">❌ بدون سكشن</option>
+                    <option value="no_delegate">👨‍💼 بدون مندوب</option>
+                </select>
+            )}
+
             {/* Delegate filter (Admin only) */}
-            {isAdmin && delegateCodes && delegateCodes.length > 0 && (
+            {isAdmin && delegatesList && delegatesList.length > 0 && (
                 <select
                     id="filter-delegate"
                     value={filters.delegateId || ''}
                     onChange={(e) => onChange({ ...filters, delegateId: e.target.value })}
                 >
                     <option value="">👨‍💼 كل المناديب</option>
-                    {delegateCodes.map(c => <option key={c} value={c}>مندوب: {c}</option>)}
+                    {delegatesList.map(d => (
+                        <option key={d.code} value={d.code}>
+                            {d.name} ({d.code})
+                        </option>
+                    ))}
                 </select>
             )}
 
@@ -80,7 +113,7 @@ export default function FilterBar({ subjects, delegateCodes, isAdmin, filters, o
             {hasFilters && (
                 <button
                     className="btn btn-ghost"
-                    onClick={() => onChange({ subjectName: '', status: '', searchId: '' })}
+                    onClick={() => onChange({ subjectName: '', status: '', searchId: '', delegateId: '', sectionFilter: '', specialFilter: '' })}
                     aria-label="مسح الفلاتر"
                 >
                     <X size={14} />

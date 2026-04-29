@@ -67,9 +67,12 @@ export async function fetchRejectedDuplicates() {
 // ─────────────────────────────────────────────
 // 📤 Batch Upload (Excel)
 // ─────────────────────────────────────────────
-export async function uploadDeliveries(newRows, subjectNameRaw) {
+export async function uploadDeliveries(newRows, subjectNameRaw, isIT = false) {
     try {
-        const subjectName = subjectNameRaw.trim();
+        let subjectName = subjectNameRaw.trim();
+        if (isIT) {
+            subjectName += ' (IT-1)';
+        }
         const subjectSlug = slugify(subjectName);
         const uploadBatch = String(Date.now());
 
@@ -118,7 +121,8 @@ export async function uploadDeliveries(newRows, subjectNameRaw) {
             const name = String(row.studentName || '').trim();
             if (!uid || !name) { internalDuplicateCount++; continue; }
 
-            const id = `${uid}_${subjectSlug}`;
+            // Use it1_ prefix for IT IDs to ensure total separation
+            const id = isIT ? `it1_${uid}_${subjectSlug}` : `${uid}_${subjectSlug}`;
 
             // If same UID appears twice in this Excel file → log second, keep first
             if (seenInBatch.has(id)) {
@@ -377,30 +381,27 @@ export async function deleteLastBatch(password) {
 // 🔑 Auth & Config Helpers
 // ─────────────────────────────────────────────
 export async function fetchDelegates() {
-    try {
-        const { data, error } = await supabase
-            .from('delegates')
-            .select('*')
-            .order('name', { ascending: true });
-
-        if (error) throw error;
-        return data || [];
-    } catch (err) {
-        console.error('Fetch Delegates Error:', err);
-        return [];
-    }
-}
-
-export async function validateDelegateCode(code) {
-    if (!code) return null;
     const { data, error } = await supabase
         .from('delegates')
         .select('*')
-        .eq('code', code)
-        .single();
+        .order('name');
 
-    if (error || !data) return null;
-    return data; // Returns { name, department, code }
+    if (error) throw error;
+    return data || [];
+}
+
+export async function validateDelegateCode(input) {
+    if (!input) return null;
+    const cleanInput = input.trim();
+
+    // 1. Try matching by CODE (Main method)
+    const { data: byCode, error } = await supabase
+        .from('delegates')
+        .select('*')
+        .eq('code', cleanInput)
+        .maybeSingle();
+
+    return byCode;
 }
 
 export async function upsertDelegate(code, name, department = '') {
@@ -427,5 +428,104 @@ export async function getSystemPass(key) {
         return data.value;
     } catch (err) {
         return key === 'admin_pass' ? '123mosa' : 'leader';
+    }
+}
+
+// ─────────────────────────────────────────────
+// 🔄 Migrate Subject to IT
+// ─────────────────────────────────────────────
+export async function migrateSubjectToIT(oldName) {
+    const newName = `${oldName} (IT-1)`;
+    const newSlug = slugify(newName);
+
+    // 1. Fetch all rows for the old subject
+    const { data: rows, error: fetchError } = await supabase
+        .from('deliveries')
+        .select('*')
+        .eq('subjectName', oldName);
+
+    if (fetchError) throw fetchError;
+    if (!rows || rows.length === 0) return { success: true, count: 0 };
+
+    // 2. Prepare new rows with it1_ prefix and new subject name
+    const newRows = rows.map(row => {
+        const uid = row.universityId;
+        const newId = `it1_${uid}_${newSlug}`;
+        return {
+            ...row,
+            id: newId,
+            subjectName: newName
+        };
+    });
+
+    // 3. Upsert new rows
+    const { error: insertError } = await supabase.from('deliveries').upsert(newRows);
+    if (insertError) throw insertError;
+
+    // 4. Delete old rows
+    const { error: deleteError } = await supabase
+        .from('deliveries')
+        .delete()
+        .eq('subjectName', oldName);
+
+    if (deleteError) throw deleteError;
+
+    return { success: true, count: rows.length };
+}
+
+// ─────────────────────────────────────────────
+// 🗺️ Sections & Student Mappings
+// ─────────────────────────────────────────────
+
+export async function fetchSectionsMap() {
+    try {
+        // 1. Fetch all sections metadata
+        const { data: sections, error: secErr } = await supabase
+            .from('sections')
+            .select('*');
+
+        if (secErr) throw secErr;
+
+        // 2. Fetch all student mappings (pagination might be needed if > 1000)
+        let allMappings = [];
+        let from = 0;
+        let to = 999;
+        let finished = false;
+
+        while (!finished) {
+            const { data, error } = await supabase
+                .from('student_sections')
+                .select('*')
+                .range(from, to);
+
+            if (error) throw error;
+            if (data && data.length > 0) {
+                allMappings = [...allMappings, ...data];
+                if (data.length < 1000) finished = true;
+                else { from += 1000; to += 1000; }
+            } else {
+                finished = true;
+            }
+        }
+
+        // 3. Reconstruct the JSON structure
+        const result = {};
+        sections.forEach(s => {
+            result[s.section_key] = {
+                name: s.name,
+                students: []
+            };
+        });
+
+        allMappings.forEach(m => {
+            if (result[m.section_key]) {
+                result[m.section_key].students.push(parseInt(m.university_id, 10));
+            }
+        });
+
+        return result;
+    } catch (err) {
+        console.error('Error fetching sectionsMap:', err);
+        return {};
     }
 }
