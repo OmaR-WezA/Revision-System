@@ -229,9 +229,12 @@ function MobileDeliveryCard({ delivery, isOrphan, isAdmin, isSectionDelegate, gl
                 <span className="mobile-card-name">{delivery.studentName}</span>
                 <span className="mobile-card-id">{delivery.universityId}</span>
             </div>
-            <div className="mobile-card-row" style={{ fontSize: '0.8rem', opacity: 0.8 }}>
+            <div className="mobile-card-row">
+                <span className="mobile-card-subject" style={{ fontSize: '0.85rem', color: 'var(--clr-primary)', fontWeight: 600 }}>{delivery.subjectName}</span>
+                <StatusBadge status={delivery.status} delegateId={delivery.delegateId} />
+            </div>
+            <div className="mobile-card-row" style={{ fontSize: '0.8rem', opacity: 0.8, marginTop: '4px', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '4px' }}>
                 <span>{delegateInfo.label} ({delegateInfo.sub})</span>
-                <span style={{ fontSize: '0.7rem' }}>{formatDate(delivery.createdAt)}</span>
             </div>
             {(isAdmin || isSectionDelegate) && (
                 <div style={{ marginTop: '4px' }}>

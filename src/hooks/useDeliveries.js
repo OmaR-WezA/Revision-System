@@ -134,16 +134,22 @@ export function useDashboardData(filters = {}, options = {}) {
     // 2. Derive distinct subjects
     const subjects = useMemo(() => {
         let list = allData;
-        // NEW: If a delegate is logged in, only show subjects they are actually in
         if (filters?.delegateId) {
-            list = allData.filter(d => String(d.delegateId || '').trim() === String(filters.delegateId).trim());
+            const activeDel = delegatesList.find(d => String(d.code).trim() === String(filters.delegateId).trim());
+            const delDept = activeDel?.department?.toUpperCase().trim();
+            list = allData.filter(d => {
+                const isExplicitlyAssigned = String(d.delegateId || '').trim() === String(filters.delegateId).trim();
+                const studentSection = studentSectionMap.get(parseInt(d.universityId, 10));
+                const isSectionMatch = studentSection && delDept && studentSection === delDept;
+                return isExplicitlyAssigned || (isSectionMatch && d.status !== 'ready');
+            });
         } else if (itOnly) {
             list = allData.filter(d => d.subjectName?.includes('(IT-1)') || d.department === 'IT-1');
         } else if (excludeIT) {
             list = allData.filter(d => !d.subjectName?.includes('(IT-1)') && d.department !== 'IT-1');
         }
         return [...new Set(list.map(d => d.subjectName))].filter(Boolean).sort();
-    }, [allData, itOnly, excludeIT, filters?.delegateId]);
+    }, [allData, itOnly, excludeIT, filters?.delegateId, delegatesList, studentSectionMap]);
 
     // Derived Delegate Codes (from actual data) - keeping for backwards compatibility or display
     const activeDelegateCodes = useMemo(() => {
