@@ -26,7 +26,7 @@ export default function StatsCards({ stats, isAdmin, delegateCodesCount }) {
     if (cards.length === 0) return null;
 
     return (
-        <div className="stats-grid" style={{ gridTemplateColumns: isAdmin ? 'repeat(auto-fit, minmax(140px, 1fr))' : 'repeat(auto-fit, minmax(180px, 1fr))' }}>
+        <div className={`stats-grid ${isAdmin ? 'admin-stats' : ''}`}>
             {cards.map((c) => (
                 <div key={c.label} className="stat-card">
                     <div className="stat-icon" style={{ background: c.bg }}>

@@ -168,6 +168,75 @@ function DeliveryRow({ delivery, index, globalActionLoading, setGlobalActionLoad
     );
 }
 
+function MobileDeliveryCard({ delivery, isOrphan, isAdmin, isSectionDelegate, globalActionLoading, setGlobalActionLoading, updateLocalDelivery }) {
+    const [loading, setLoading] = useState(false);
+
+    async function handleMarkDelivered() {
+        if (delivery.status === 'delivered') return;
+        setLoading(true); setGlobalActionLoading(true);
+        try {
+            await markDelivered(delivery.id);
+            await new Promise(r => setTimeout(r, 1500));
+            toast.success(`✅ تم تسليم الكتاب لـ ${delivery.studentName}`);
+            if (updateLocalDelivery) updateLocalDelivery(delivery.id, 'delivered');
+        } catch { toast.error('حدث خطأ'); }
+        finally { setLoading(false); setGlobalActionLoading(false); }
+    }
+
+    async function handleUndoDelivery() {
+        const pass = window.prompt('أدخل الرقم السري لإلغاء التسليم:');
+        if (!pass) return;
+        setLoading(true); setGlobalActionLoading(true);
+        try {
+            await undoDelivery(delivery.id, pass);
+            await new Promise(r => setTimeout(r, 1500));
+            toast.success(`تم التراجع`);
+            if (updateLocalDelivery) updateLocalDelivery(delivery.id, delivery.delegateId ? 'with_delegate' : 'ready', false);
+        } catch (err) { toast.error(err.message || 'خطأ'); }
+        finally { setLoading(false); setGlobalActionLoading(false); }
+    }
+
+    return (
+        <div className="mobile-delivery-card" style={{ borderRight: isOrphan ? '4px solid var(--clr-danger)' : '' }}>
+            <div className="mobile-card-row">
+                <span className="mobile-card-name">{delivery.studentName}</span>
+                <span className="mobile-card-id">{delivery.universityId}</span>
+            </div>
+            <div className="mobile-card-row">
+                <span className="mobile-card-subject">{delivery.subjectName}</span>
+                <StatusBadge status={delivery.status} delegateId={delivery.delegateId} />
+            </div>
+            {(isAdmin || isSectionDelegate) && (
+                <div style={{ marginTop: '4px' }}>
+                    {(delivery.status === 'ready' || delivery.status === 'with_delegate') ? (
+                        <button
+                            className="btn btn-success mobile-card-action"
+                            onClick={handleMarkDelivered}
+                            disabled={globalActionLoading || loading}
+                        >
+                            {loading ? <><Loader size={14} className="spin" /> جاري...</> : <><CheckCircle size={14} /> تسليم للطالب</>}
+                        </button>
+                    ) : (
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                            <span style={{ fontSize: '0.78rem', color: 'var(--clr-text-3)', textAlign: 'center' }}>{formatDate(delivery.deliveredAt)}</span>
+                            {isAdmin && (
+                                <button
+                                    className="btn btn-ghost mobile-card-action"
+                                    style={{ color: 'var(--clr-danger)', fontSize: '0.85rem' }}
+                                    onClick={handleUndoDelivery}
+                                    disabled={globalActionLoading || loading}
+                                >
+                                    {loading ? <Loader size={12} className="spin" /> : <><RotateCcw size={12} /> تراجع للإدارة</>}
+                                </button>
+                            )}
+                        </div>
+                    )}
+                </div>
+            )}
+        </div>
+    );
+}
+
 export default function DeliveryTable({ deliveries, loading, updateLocalDelivery, massAssignLocalDeliveries, isAdmin, isSectionDelegate, orphanedIds = new Set() }) {
     const [globalActionLoading, setGlobalActionLoading] = useState(false);
     const [selectedIds, setSelectedIds] = useState(new Set());
@@ -469,6 +538,25 @@ export default function DeliveryTable({ deliveries, loading, updateLocalDelivery
                     ))}
                 </tbody>
             </table>
+
+            {/* ── Mobile Card List (shown on small screens via CSS) ── */}
+            <div className="mobile-card-list">
+                {paginatedDeliveries.map((d) => {
+                    const isOrphan = orphanedIds.has(d.id);
+                    return (
+                        <MobileDeliveryCard
+                            key={d.id}
+                            delivery={d}
+                            isOrphan={isOrphan}
+                            isAdmin={isAdmin}
+                            isSectionDelegate={isSectionDelegate}
+                            globalActionLoading={globalActionLoading}
+                            setGlobalActionLoading={setGlobalActionLoading}
+                            updateLocalDelivery={updateLocalDelivery}
+                        />
+                    );
+                })}
+            </div>
 
             {/* Pagination Controls */}
             {totalPages > 1 && (

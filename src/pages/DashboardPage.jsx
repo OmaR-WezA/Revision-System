@@ -280,7 +280,8 @@ export default function DashboardPage({ isAdmin }) {
     const [isAutoAssigning, setIsAutoAssigning] = useState(false);
 
     // Single hook fetches everything once
-    const { deliveries, allDeliveries, subjects, delegatesList, sectionsMap, stats, loading, updateLocalDelivery, massAssignLocalDeliveries } = useDashboardData(filters, { excludeIT: !filters.delegateId });
+    // Single hook fetches everything once
+    const { deliveries, allDeliveries, subjects, delegatesList, sectionsMap, studentSectionMap, stats, loading, updateLocalDelivery, massAssignLocalDeliveries } = useDashboardData(filters, { excludeIT: !filters.delegateId });
 
     const activeDelegate = useMemo(() => {
         if (!filters.delegateId) return null;
@@ -292,19 +293,14 @@ export default function DashboardPage({ isAdmin }) {
     // Orphan Detection: students in sections with no delegate
     const orphanedIds = useMemo(() => {
         const set = new Set();
-        // Identify sections that DO have a delegate registered
-        const delegateSections = new Set(delegatesList.map(d => d.department?.toUpperCase()));
+        // Identify sections that DO have a delegate registered (UPPERCASE for consistent comparison)
+        const delegateSections = new Set(delegatesList.map(d => d.department?.toUpperCase().trim()));
 
         deliveries.forEach(d => {
             if (d.status === 'ready') {
                 const uidNum = parseInt(d.universityId, 10);
-                let foundKey = null;
-                for (const [key, val] of Object.entries(sectionsMap)) {
-                    if (val.students.includes(uidNum)) {
-                        foundKey = key.toUpperCase();
-                        break;
-                    }
-                }
+                const foundKey = studentSectionMap.get(uidNum);
+
                 // If student has a section but NO delegate is registered for it
                 if (foundKey && !delegateSections.has(foundKey)) {
                     set.add(d.id);
@@ -312,7 +308,7 @@ export default function DashboardPage({ isAdmin }) {
             }
         });
         return set;
-    }, [deliveries, delegatesList]); // sectionsMap is static JSON
+    }, [deliveries, delegatesList, studentSectionMap]);
 
     const handleExportUndelivered = () => {
         const undelivered = deliveries.filter(d => d.status !== 'delivered');
@@ -323,13 +319,7 @@ export default function DashboardPage({ isAdmin }) {
 
         const data = undelivered.map(d => {
             const uidNum = parseInt(d.universityId, 10);
-            let section = "غير محدد";
-            for (const [key, val] of Object.entries(sectionsMap)) {
-                if (val.students.includes(uidNum)) {
-                    section = key;
-                    break;
-                }
-            }
+            const section = studentSectionMap.get(uidNum) || "غير محدد";
             return {
                 'اسم الطالب': d.studentName,
                 'الرقم الأكاديمي': d.universityId,
@@ -421,13 +411,7 @@ export default function DashboardPage({ isAdmin }) {
             readyItems.forEach(item => {
                 const uid = parseInt(item.universityId, 10);
                 // Find which section this student belongs to
-                let foundSection = null;
-                for (const [sectionKey, sectionData] of Object.entries(sectionsMap)) {
-                    if (sectionData.students.includes(uid)) {
-                        foundSection = sectionKey;
-                        break;
-                    }
-                }
+                const foundSection = studentSectionMap.get(uid);
 
                 if (foundSection && delegateMap[foundSection]) {
                     const delegateCode = delegateMap[foundSection];
@@ -481,25 +465,23 @@ export default function DashboardPage({ isAdmin }) {
                         يجب تسجيل الدخول باستخدام **كود مندوب السكشن** للوصول لقاعدة البيانات.
                     </p>
 
-                    <div style={{ maxWidth: '500px', margin: '0 auto', display: 'flex', gap: '12px', alignItems: 'center', background: 'rgba(255,255,255,0.03)', padding: '20px', borderRadius: '12px' }}>
-                        <div style={{ flex: 1 }}>
-                            <input
-                                type="text"
-                                className="input"
-                                placeholder="أدخل كود المندوب أو اسم السكشن (مثل G1 C1)..."
-                                value={delegateInput}
-                                onChange={e => setDelegateInput(e.target.value)}
-                                style={{ padding: '12px', fontSize: '1.1rem' }}
-                                onKeyDown={e => e.key === 'Enter' && handleDelegateLogin()}
-                            />
-                        </div>
+                    <div style={{ maxWidth: '500px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '12px', background: 'rgba(255,255,255,0.03)', padding: '20px', borderRadius: '12px' }}>
+                        <input
+                            type="text"
+                            className="input"
+                            placeholder="أدخل كود المندوب..."
+                            value={delegateInput}
+                            onChange={e => setDelegateInput(e.target.value)}
+                            style={{ padding: '14px', fontSize: '1.1rem', width: '100%' }}
+                            onKeyDown={e => e.key === 'Enter' && handleDelegateLogin()}
+                        />
                         <button
                             className="btn btn-primary"
-                            style={{ height: '48px', padding: '0 24px' }}
+                            style={{ width: '100%', padding: '14px', fontSize: '1rem', justifyContent: 'center' }}
                             onClick={handleDelegateLogin}
                             disabled={isVerifying}
                         >
-                            {isVerifying ? 'جاري التحقق...' : 'دخول'}
+                            {isVerifying ? 'جاري التحقق...' : '🔑 دخول'}
                         </button>
                     </div>
                 </div>
@@ -510,22 +492,27 @@ export default function DashboardPage({ isAdmin }) {
                 <>
                     {/* ── Logout Bar (For Delegates only) ── */}
                     {!isAdmin && filters.delegateId && (
-                        <div className="card" style={{ marginBottom: '16px', display: 'flex', gap: '16px', alignItems: 'center', border: '1px solid var(--clr-warning)' }}>
-                            <span style={{ fontWeight: 600 }}>جلسة نشطة للمندوب:</span>
-                            <span style={{ flex: 1, fontSize: '1.1rem', fontFamily: 'monospace', color: 'var(--clr-warning)' }}>{activeDelegate?.name || filters.delegateId} ({activeDelegate?.department})</span>
-
-                            {isITDelegate && (
-                                <button
-                                    onClick={handleExportUndelivered}
-                                    className="btn btn-primary"
-                                    style={{ border: 'none', background: 'rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.9rem' }}
-                                >
-                                    <Download size={16} />
-                                    تصدير كشف المتأخرين (Excel)
-                                </button>
-                            )}
-
-                            <button className="btn btn-ghost" onClick={handleDelegateLogout}>تسجيل الخروج</button>
+                        <div className="card" style={{ marginBottom: '16px', display: 'flex', flexWrap: 'wrap', gap: '12px', alignItems: 'center', border: '1px solid var(--clr-warning)' }}>
+                            <div style={{ flex: 1, minWidth: '0' }}>
+                                <div style={{ fontSize: '0.8rem', color: 'var(--clr-text-2)', marginBottom: '2px' }}>جلسة نشطة للمندوب</div>
+                                <div style={{ fontWeight: 700, color: 'var(--clr-warning)', fontSize: '1rem', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                                    {activeDelegate?.name || filters.delegateId} <span style={{ opacity: 0.7, fontSize: '0.85rem' }}>({activeDelegate?.department})</span>
+                                </div>
+                            </div>
+                            <div style={{ display: 'flex', gap: '8px', flexShrink: 0 }}>
+                                {isITDelegate && (
+                                    <button
+                                        onClick={handleExportUndelivered}
+                                        className="btn btn-ghost"
+                                        style={{ fontSize: '0.85rem' }}
+                                    >
+                                        <Download size={14} />
+                                        <span className="desktop-only">تصدير المتأخرين</span>
+                                        <span className="mobile-only">Excel</span>
+                                    </button>
+                                )}
+                                <button className="btn btn-ghost" onClick={handleDelegateLogout} style={{ fontSize: '0.85rem' }}>خروج</button>
+                            </div>
                         </div>
                     )}
 

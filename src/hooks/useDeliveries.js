@@ -17,16 +17,34 @@ export function useDashboardData(filters = {}, options = {}) {
         let active = true;
 
         async function load() {
-            const [data, delegates, secMap] = await Promise.all([
-                fetchDeliveries(),
-                fetchDelegates(),
-                fetchSectionsMap()
-            ]);
-            if (!active) return;
-            setAllData(data);
-            setDelegatesList(delegates);
-            setSectionsMap(secMap);
-            setLoading(false);
+            // Check cache first for "Instant" feel
+            const cache = sessionStorage.getItem('dashboard_cache');
+            if (cache && allData.length === 0) {
+                const parsed = JSON.parse(cache);
+                setAllData(parsed.data);
+                setDelegatesList(parsed.delegates);
+                setSectionsMap(parsed.secMap);
+                setLoading(false);
+            }
+
+            try {
+                const [data, delegates, secMap] = await Promise.all([
+                    fetchDeliveries(),
+                    fetchDelegates(),
+                    fetchSectionsMap()
+                ]);
+                if (!active) return;
+
+                setAllData(data);
+                setDelegatesList(delegates);
+                setSectionsMap(secMap);
+                setLoading(false);
+
+                // Update cache
+                sessionStorage.setItem('dashboard_cache', JSON.stringify({ data, delegates, secMap, ts: Date.now() }));
+            } catch (err) {
+                console.error("Load failed", err);
+            }
         }
 
         load();
@@ -38,6 +56,16 @@ export function useDashboardData(filters = {}, options = {}) {
             clearInterval(interval);
         };
     }, []); // Run only on mount
+
+    // ─── OPTIMIZATION: Reverse map for O(1) section lookups ───
+    const studentSectionMap = useMemo(() => {
+        const map = new Map();
+        for (const [key, val] of Object.entries(sectionsMap || {})) {
+            const sectionKey = key.toUpperCase().trim();
+            val.students.forEach(id => map.set(parseInt(id, 10), sectionKey));
+        }
+        return map;
+    }, [sectionsMap]);
 
     // 1. Derive filtered array
     const filteredDeliveries = useMemo(() => {
@@ -73,19 +101,13 @@ export function useDashboardData(filters = {}, options = {}) {
         if (filters?.specialFilter === 'no_section') {
             filtered = filtered.filter(d => {
                 const uidNum = parseInt(d.universityId, 10);
-                return !Object.values(sectionsMap).some(s => s.students.includes(uidNum));
+                return !studentSectionMap.has(uidNum);
             });
         } else if (filters?.specialFilter === 'no_delegate') {
             const delegateSections = new Set(delegatesList.map(d => d.department?.toUpperCase().trim()));
             filtered = filtered.filter(d => {
                 const uidNum = parseInt(d.universityId, 10);
-                let foundSection = null;
-                for (const [key, val] of Object.entries(sectionsMap)) {
-                    if (val.students.includes(uidNum)) {
-                        foundSection = key.toUpperCase().trim();
-                        break;
-                    }
-                }
+                const foundSection = studentSectionMap.get(uidNum);
                 // Must have a section but NO delegate
                 return (foundSection && !delegateSections.has(foundSection));
             });
@@ -93,7 +115,7 @@ export function useDashboardData(filters = {}, options = {}) {
         // Sort newest first
         filtered.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
         return filtered;
-    }, [allData, filters?.subjectName, filters?.status, filters?.searchId, filters?.delegateId, filters?.sectionFilter, filters?.specialFilter, delegatesList, itOnly, excludeIT]);
+    }, [allData, filters?.subjectName, filters?.status, filters?.searchId, filters?.delegateId, filters?.sectionFilter, filters?.specialFilter, delegatesList, itOnly, excludeIT, studentSectionMap]);
 
     // 2. Derive distinct subjects
     const subjects = useMemo(() => {
@@ -202,6 +224,7 @@ export function useDashboardData(filters = {}, options = {}) {
         delegateCodes: activeDelegateCodes,
         delegatesList: filteredDelegates,
         sectionsMap,
+        studentSectionMap,
         stats,
         loading,
         updateLocalDelivery,

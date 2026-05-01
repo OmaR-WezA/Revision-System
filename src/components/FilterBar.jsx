@@ -10,7 +10,7 @@ export default function FilterBar({ subjects, delegatesList, sectionsMap, isAdmi
     const sections = Object.keys(sectionsMap || {}).sort();
 
     return (
-        <div className="filter-bar" style={{ flexWrap: 'wrap', gap: '12px' }}>
+        <div className="filter-bar">
             {resultCount !== undefined && (
                 <span style={{ fontWeight: 600, color: 'var(--clr-primary)', background: 'var(--clr-primary-dim)', padding: '4px 10px', borderRadius: '12px', fontSize: '0.85rem', flexShrink: 0 }}>
                     متاح {resultCount} نتيجة
