@@ -86,7 +86,21 @@ export function useDashboardData(filters = {}, options = {}) {
             filtered = filtered.filter(d => d.status === filters.status);
         }
         if (filters?.delegateId) {
-            filtered = filtered.filter(d => String(d.delegateId || '').trim() === String(filters.delegateId).trim());
+            const activeDel = delegatesList.find(d => String(d.code).trim() === String(filters.delegateId).trim());
+            const delDept = activeDel?.department?.toUpperCase().trim();
+
+            filtered = filtered.filter(d => {
+                const isExplicitlyAssigned = String(d.delegateId || '').trim() === String(filters.delegateId).trim();
+                const studentSection = studentSectionMap.get(parseInt(d.universityId, 10));
+                const isSectionMatch = studentSection && delDept && studentSection === delDept;
+
+                // User requirement: See all section items that are NOT with administration
+                if (isSectionMatch) {
+                    return d.status !== 'ready';
+                }
+
+                return isExplicitlyAssigned;
+            });
         }
         if (filters?.sectionFilter && sectionsMap[filters.sectionFilter]) {
             const allowedIds = new Set(sectionsMap[filters.sectionFilter].students.map(id => String(id)));
@@ -222,7 +236,8 @@ export function useDashboardData(filters = {}, options = {}) {
         allDeliveries: allData,
         subjects,
         delegateCodes: activeDelegateCodes,
-        delegatesList: filteredDelegates,
+        delegatesList: filteredDelegates, // Still useful for filter dropdowns
+        allDelegates: delegatesList,       // NEW: For lookups
         sectionsMap,
         studentSectionMap,
         stats,

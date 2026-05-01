@@ -281,7 +281,8 @@ export default function DashboardPage({ isAdmin }) {
 
     // Single hook fetches everything once
     // Single hook fetches everything once
-    const { deliveries, allDeliveries, subjects, delegatesList, sectionsMap, studentSectionMap, stats, loading, updateLocalDelivery, massAssignLocalDeliveries } = useDashboardData(filters, { excludeIT: !filters.delegateId });
+    // Single hook fetches everything once
+    const { deliveries, allDeliveries, subjects, delegatesList, allDelegates, sectionsMap, studentSectionMap, stats, loading, updateLocalDelivery, massAssignLocalDeliveries } = useDashboardData(filters, { excludeIT: !filters.delegateId });
 
     const activeDelegate = useMemo(() => {
         if (!filters.delegateId) return null;
@@ -351,12 +352,7 @@ export default function DashboardPage({ isAdmin }) {
                 return;
             }
 
-            // 2. Check if they have assigned deliveries (Warning but don't block)
-            // Using delegatesList from hook to check for active IDs
-            const activeDelegateCodes = allDeliveries.map(d => String(d.delegateId)).filter(Boolean);
-            if (!activeDelegateCodes.includes(code)) {
-                toast.error(`تنبيه: الكود صحيح ولكن لا توجد ملازم مخصصة لك حالياً في الجدول.`);
-            }
+            toast.success(`مرحباً مندوب سيكشن: ${delegateData.name}`);
 
             toast.success(`مرحباً مندوب سيكشن: ${delegateData.name}`);
             if (!isAdmin) {
@@ -540,6 +536,8 @@ export default function DashboardPage({ isAdmin }) {
                         isAdmin={isAdmin}
                         isSectionDelegate={!!filters.delegateId && !isAdmin}
                         orphanedIds={orphanedIds}
+                        delegatesList={allDelegates}
+                        studentSectionMap={studentSectionMap}
                     />
                 </>
             )}

@@ -1,7 +1,7 @@
 // ─────────────────────────────────────────────
 // 📋 Delivery Table with "Mark as Delivered"
 // ─────────────────────────────────────────────
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { CheckCircle, Loader, RotateCcw, Link, Undo2 } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { markDelivered, undoDelivery, assignToDelegate, undoLastAssignmentBatch, upsertDelegate, fetchDelegates } from '../services/supabaseService';
@@ -41,8 +41,20 @@ function getBatchColor(batchId, subjectName) {
     return `hsla(${hue}, 65%, 35%, 0.25)`;
 }
 
-function DeliveryRow({ delivery, index, globalActionLoading, setGlobalActionLoading, updateLocalDelivery, isAdmin, isSectionDelegate, isSelected, toggleSelection, isOrphan }) {
+function DeliveryRow({ delivery, index, globalActionLoading, setGlobalActionLoading, updateLocalDelivery, isAdmin, isSectionDelegate, isSelected, toggleSelection, isOrphan, delegatesList, studentSectionMap }) {
     const [loading, setLoading] = useState(false);
+
+    const delegateInfo = useMemo(() => {
+        if (delivery.status === 'ready') {
+            const section = studentSectionMap.get(parseInt(delivery.universityId, 10)) || 'بدون سكشن';
+            return { label: section, sub: '📦 مع الإدارة' };
+        }
+        const del = delegatesList.find(d => String(d.code).trim() === String(delivery.delegateId || '').trim());
+        if (del) {
+            return { label: del.name, sub: `👤 ${del.department} (${del.code})` };
+        }
+        return { label: 'مندوب سابق', sub: `👤 ${delivery.delegateId || '—'}` };
+    }, [delivery.status, delivery.delegateId, delivery.universityId, delegatesList, studentSectionMap]);
 
     async function handleMarkDelivered() {
         if (delivery.status === 'delivered') return;
@@ -124,8 +136,11 @@ function DeliveryRow({ delivery, index, globalActionLoading, setGlobalActionLoad
             <td style={{ fontWeight: 600 }}>{delivery.studentName}</td>
             <td style={{ color: 'var(--clr-text-2)' }}>{delivery.subjectName}</td>
             <td><StatusBadge status={delivery.status} delegateId={delivery.delegateId} /></td>
-            <td style={{ color: 'var(--clr-text-3)', fontSize: '0.8rem' }}>
-                {formatDate(delivery.createdAt)}
+            <td style={{ color: 'var(--clr-text-2)', fontSize: '0.85rem', fontWeight: 600 }}>
+                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                    <span>{delegateInfo.label}</span>
+                    <span style={{ fontSize: '0.75rem', opacity: 0.7, fontWeight: 400 }}>{delegateInfo.sub}</span>
+                </div>
             </td>
             {(isAdmin || isSectionDelegate) && (
                 <td>
@@ -168,8 +183,20 @@ function DeliveryRow({ delivery, index, globalActionLoading, setGlobalActionLoad
     );
 }
 
-function MobileDeliveryCard({ delivery, isOrphan, isAdmin, isSectionDelegate, globalActionLoading, setGlobalActionLoading, updateLocalDelivery }) {
+function MobileDeliveryCard({ delivery, isOrphan, isAdmin, isSectionDelegate, globalActionLoading, setGlobalActionLoading, updateLocalDelivery, delegatesList, studentSectionMap }) {
     const [loading, setLoading] = useState(false);
+
+    const delegateInfo = useMemo(() => {
+        if (delivery.status === 'ready') {
+            const section = studentSectionMap.get(parseInt(delivery.universityId, 10)) || 'بدون سكشن';
+            return { label: section, sub: '📦 مع الإدارة' };
+        }
+        const del = delegatesList.find(d => String(d.code).trim() === String(delivery.delegateId || '').trim());
+        if (del) {
+            return { label: del.name, sub: `${del.department} (${del.code})` };
+        }
+        return { label: 'مندوب سابق', sub: delivery.delegateId || '—' };
+    }, [delivery.status, delivery.delegateId, delivery.universityId, delegatesList, studentSectionMap]);
 
     async function handleMarkDelivered() {
         if (delivery.status === 'delivered') return;
@@ -202,9 +229,9 @@ function MobileDeliveryCard({ delivery, isOrphan, isAdmin, isSectionDelegate, gl
                 <span className="mobile-card-name">{delivery.studentName}</span>
                 <span className="mobile-card-id">{delivery.universityId}</span>
             </div>
-            <div className="mobile-card-row">
-                <span className="mobile-card-subject">{delivery.subjectName}</span>
-                <StatusBadge status={delivery.status} delegateId={delivery.delegateId} />
+            <div className="mobile-card-row" style={{ fontSize: '0.8rem', opacity: 0.8 }}>
+                <span>{delegateInfo.label} ({delegateInfo.sub})</span>
+                <span style={{ fontSize: '0.7rem' }}>{formatDate(delivery.createdAt)}</span>
             </div>
             {(isAdmin || isSectionDelegate) && (
                 <div style={{ marginTop: '4px' }}>
@@ -237,7 +264,7 @@ function MobileDeliveryCard({ delivery, isOrphan, isAdmin, isSectionDelegate, gl
     );
 }
 
-export default function DeliveryTable({ deliveries, loading, updateLocalDelivery, massAssignLocalDeliveries, isAdmin, isSectionDelegate, orphanedIds = new Set() }) {
+export default function DeliveryTable({ deliveries, loading, updateLocalDelivery, massAssignLocalDeliveries, isAdmin, isSectionDelegate, orphanedIds = new Set(), delegatesList = [], studentSectionMap = new Map() }) {
     const [globalActionLoading, setGlobalActionLoading] = useState(false);
     const [selectedIds, setSelectedIds] = useState(new Set());
     const [assigning, setAssigning] = useState(false);
@@ -516,7 +543,7 @@ export default function DeliveryTable({ deliveries, loading, updateLocalDelivery
                         <th>اسم الطالب</th>
                         <th>المادة</th>
                         <th>الحالة</th>
-                        <th>تاريخ الإضافة</th>
+                        <th>المندوب / القسم</th>
                         {(isAdmin || isSectionDelegate) && <th>الإجراء</th>}
                     </tr>
                 </thead>
@@ -534,6 +561,8 @@ export default function DeliveryTable({ deliveries, loading, updateLocalDelivery
                             isSelected={selectedIds.has(d.id)}
                             toggleSelection={toggleSelection}
                             isOrphan={orphanedIds.has(d.id)}
+                            delegatesList={delegatesList}
+                            studentSectionMap={studentSectionMap}
                         />
                     ))}
                 </tbody>
@@ -553,6 +582,8 @@ export default function DeliveryTable({ deliveries, loading, updateLocalDelivery
                             globalActionLoading={globalActionLoading}
                             setGlobalActionLoading={setGlobalActionLoading}
                             updateLocalDelivery={updateLocalDelivery}
+                            delegatesList={delegatesList}
+                            studentSectionMap={studentSectionMap}
                         />
                     );
                 })}
