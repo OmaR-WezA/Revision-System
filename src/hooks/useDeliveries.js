@@ -116,13 +116,8 @@ export function useDashboardData(filters = {}, options = {}) {
         }
         if (filters?.searchId) {
             const query = filters.searchId.toLowerCase().trim();
-            // Intelligent Search: Prioritize exact match if it exists, otherwise use partial match
-            const exactMatches = filtered.filter(d => String(d.universityId).toLowerCase().trim() === query);
-            if (exactMatches.length > 0) {
-                filtered = exactMatches;
-            } else {
-                filtered = filtered.filter(d => String(d.universityId).toLowerCase().includes(query));
-            }
+            // Always exact match - never show partial if full ID is typed
+            filtered = filtered.filter(d => String(d.universityId).toLowerCase().trim().startsWith(query));
         }
 
         // NEW: "Special Filters" (No Section / No Delegate)

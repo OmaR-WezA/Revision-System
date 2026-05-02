@@ -21,6 +21,7 @@ export async function fetchDeliveries() {
                 .from('deliveries')
                 .select('*')
                 .order('createdAt', { ascending: false })
+                .order('id', { ascending: true })
                 .range(from, to);
 
             if (error) throw error;
