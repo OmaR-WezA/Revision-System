@@ -1,7 +1,7 @@
 // ─────────────────────────────────────────────
 // 📋 Delivery Table with "Mark as Delivered"
 // ─────────────────────────────────────────────
-import { useState, useMemo } from 'react';
+import { useState, useMemo, memo } from 'react';
 import { CheckCircle, Loader, RotateCcw, Link, Undo2 } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { markDelivered, undoDelivery, assignToDelegate, undoLastAssignmentBatch, upsertDelegate, fetchDelegates } from '../services/supabaseService';
@@ -41,7 +41,7 @@ function getBatchColor(batchId, subjectName) {
     return `hsla(${hue}, 65%, 35%, 0.25)`;
 }
 
-function DeliveryRow({ delivery, index, globalActionLoading, setGlobalActionLoading, updateLocalDelivery, isAdmin, isSectionDelegate, isSelected, toggleSelection, isOrphan, delegatesList, studentSectionMap }) {
+const DeliveryRow = memo(function DeliveryRow({ delivery, index, globalActionLoading, setGlobalActionLoading, updateLocalDelivery, isAdmin, isSectionDelegate, isSelected, toggleSelection, isOrphan, delegatesList, studentSectionMap }) {
     const [loading, setLoading] = useState(false);
 
     const delegateInfo = useMemo(() => {
@@ -181,9 +181,9 @@ function DeliveryRow({ delivery, index, globalActionLoading, setGlobalActionLoad
             )}
         </tr>
     );
-}
+});
 
-function MobileDeliveryCard({ delivery, isOrphan, isAdmin, isSectionDelegate, globalActionLoading, setGlobalActionLoading, updateLocalDelivery, delegatesList, studentSectionMap }) {
+const MobileDeliveryCard = memo(function MobileDeliveryCard({ delivery, isOrphan, isAdmin, isSectionDelegate, globalActionLoading, setGlobalActionLoading, updateLocalDelivery, delegatesList, studentSectionMap }) {
     const [loading, setLoading] = useState(false);
 
     const delegateInfo = useMemo(() => {
@@ -265,7 +265,7 @@ function MobileDeliveryCard({ delivery, isOrphan, isAdmin, isSectionDelegate, gl
             )}
         </div>
     );
-}
+});
 
 export default function DeliveryTable({ deliveries, loading, updateLocalDelivery, massAssignLocalDeliveries, isAdmin, isSectionDelegate, orphanedIds = new Set(), delegatesList = [], studentSectionMap = new Map() }) {
     const [globalActionLoading, setGlobalActionLoading] = useState(false);

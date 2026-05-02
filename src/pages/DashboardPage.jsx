@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useCallback } from 'react';
+import { useState, useEffect, useMemo, useCallback, memo } from 'react';
 import { Link } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { useDashboardData } from '../hooks/useDeliveries';
@@ -9,36 +9,40 @@ import { validateDelegateCode } from '../services/supabaseService';
 import * as XLSX from 'xlsx';
 import { Download } from 'lucide-react';
 
-function DelegateHistoryCard({ allDeliveries, delegateId, isAdmin, showAll = false }) {
+const DelegateHistoryCard = memo(function DelegateHistoryCard({ allDeliveries, delegateId, isAdmin, showAll = false }) {
+    const history = useMemo(() => {
+        if (!delegateId) return {};
+        const groups = {};
+        for (const d of allDeliveries) {
+            if (d.delegateId === delegateId && d.assignBatchId) {
+                const date = new Date(d.assignedAt || d.createdAt).toLocaleDateString('ar-EG', { month: 'short', day: 'numeric' });
+                const key = `${date}_${d.subjectName}_${d.assignBatchId}`;
+                if (!groups[key]) {
+                    groups[key] = {
+                        date,
+                        subjectName: d.subjectName,
+                        count: 0,
+                        minId: null,
+                        maxId: null,
+                        timestamp: Number(d.assignBatchId || 0)
+                    };
+                }
+                groups[key].count++;
+
+                const uid = parseInt(d.universityId, 10);
+                if (!isNaN(uid)) {
+                    if (!groups[key].minId || uid < groups[key].minId) groups[key].minId = uid;
+                    if (!groups[key].maxId || uid > groups[key].maxId) groups[key].maxId = uid;
+                }
+            }
+        }
+        return groups;
+    }, [allDeliveries, delegateId]);
+
     const [showAllLocal, setShowAllLocal] = useState(false);
     if (!delegateId) return null;
 
-    const history = {};
-    for (const d of allDeliveries) {
-        if (d.delegateId === delegateId && d.assignBatchId) {
-            const date = new Date(d.assignedAt || d.createdAt).toLocaleDateString('ar-EG', { month: 'short', day: 'numeric' });
-            const key = `${date}_${d.subjectName}_${d.assignBatchId}`;
-            if (!history[key]) {
-                history[key] = {
-                    date,
-                    subjectName: d.subjectName,
-                    count: 0,
-                    minId: null,
-                    maxId: null,
-                    timestamp: Number(d.assignBatchId || 0)
-                };
-            }
-            history[key].count++;
-
-            const uid = parseInt(d.universityId, 10);
-            if (!isNaN(uid)) {
-                if (!history[key].minId || uid < history[key].minId) history[key].minId = uid;
-                if (!history[key].maxId || uid > history[key].maxId) history[key].maxId = uid;
-            }
-        }
-    }
-
-    const allEntries = Object.values(history).sort((a, b) => b.timestamp - a.timestamp);
+    const allEntries = useMemo(() => Object.values(history).sort((a, b) => b.timestamp - a.timestamp), [history]);
     const entries = (showAll || showAllLocal) ? allEntries : allEntries.slice(0, 2);
 
     if (allEntries.length === 0) return null;
@@ -78,36 +82,38 @@ function DelegateHistoryCard({ allDeliveries, delegateId, isAdmin, showAll = fal
             </ul>
         </div>
     );
-}
+});
 
-function AdminHistoryCard({ allDeliveries, showAll = false }) {
-    const history = {};
-    for (const d of allDeliveries) {
-        if (d.uploadBatch || d.createdAt) {
-            const date = new Date(d.createdAt).toLocaleDateString('ar-EG', { month: 'short', day: 'numeric' });
-            const key = `${date}_${d.subjectName}_${d.uploadBatch || 'legacy'}`;
-            if (!history[key]) {
-                history[key] = {
-                    date,
-                    subjectName: d.subjectName,
-                    count: 0,
-                    minId: null,
-                    maxId: null,
-                    timestamp: d.uploadBatch ? Number(d.uploadBatch) : new Date(d.createdAt).getTime()
-                };
-            }
-            history[key].count++;
+const AdminHistoryCard = memo(function AdminHistoryCard({ allDeliveries, showAll = false }) {
+    const history = useMemo(() => {
+        const groups = {};
+        for (const d of allDeliveries) {
+            if (d.uploadBatch || d.createdAt) {
+                const date = new Date(d.createdAt).toLocaleDateString('ar-EG', { month: 'short', day: 'numeric' });
+                const key = `${date}_${d.subjectName}_${d.uploadBatch || 'legacy'}`;
+                if (!groups[key]) {
+                    groups[key] = {
+                        date,
+                        subjectName: d.subjectName,
+                        count: 0,
+                        minId: null,
+                        maxId: null,
+                        timestamp: d.uploadBatch ? Number(d.uploadBatch) : new Date(d.createdAt).getTime()
+                    };
+                }
+                groups[key].count++;
 
-            const uid = parseInt(d.universityId, 10);
-            if (!isNaN(uid)) {
-                if (!history[key].minId || uid < history[key].minId) history[key].minId = uid;
-                if (!history[key].maxId || uid > history[key].maxId) history[key].maxId = uid;
+                const uid = parseInt(d.universityId, 10);
+                if (!isNaN(uid)) {
+                    if (!groups[key].minId || uid < groups[key].minId) groups[key].minId = uid;
+                    if (!groups[key].maxId || uid > groups[key].maxId) groups[key].maxId = uid;
+                }
             }
         }
-    }
+        return groups;
+    }, [allDeliveries]);
 
-    // Sort by timestamp descending so newest batches are always first
-    const allEntries = Object.values(history).sort((a, b) => b.timestamp - a.timestamp);
+    const allEntries = useMemo(() => Object.values(history).sort((a, b) => b.timestamp - a.timestamp), [history]);
     const entries = showAll ? allEntries : allEntries.slice(0, 2);
 
     if (allEntries.length === 0) return null;
@@ -132,7 +138,7 @@ function AdminHistoryCard({ allDeliveries, showAll = false }) {
             </ul>
         </div>
     );
-}
+});
 
 // ─────────────────────────────────────────────
 // Full History Page (New Component)
@@ -278,6 +284,15 @@ export default function DashboardPage({ isAdmin }) {
     const [delegateInput, setDelegateInput] = useState('');
     const [isVerifying, setIsVerifying] = useState(false);
     const [isAutoAssigning, setIsAutoAssigning] = useState(false);
+    const [localSearch, setLocalSearch] = useState(filters.searchId);
+
+    // Debounce search input to prevent UI lag on large datasets
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setFilters(prev => ({ ...prev, searchId: localSearch }));
+        }, 350);
+        return () => clearTimeout(timer);
+    }, [localSearch]);
 
     // Single hook fetches everything once
     // Single hook fetches everything once
@@ -523,8 +538,14 @@ export default function DashboardPage({ isAdmin }) {
                         delegatesList={delegatesList}
                         sectionsMap={sectionsMap}
                         isAdmin={isAdmin}
-                        filters={filters}
-                        onChange={setFilters}
+                        filters={{ ...filters, searchId: localSearch }}
+                        onChange={(newFilters) => {
+                            // Intercept search updates to apply local state first
+                            if (newFilters.searchId !== localSearch) {
+                                setLocalSearch(newFilters.searchId);
+                            }
+                            setFilters(newFilters);
+                        }}
                         resultCount={deliveries.length}
                     />
 

@@ -31,6 +31,7 @@ const rawData = [
     { name: 'كيرمينا هاني انور', code: '2520712', section: 'G2 C3' },
     { name: 'عمر محمود بصيلي السيد', code: '2520654', section: 'G2 C2' },
     { name: 'محمد عبد النعيم عبد اللطيف', code: '2520813', section: 'G2 C4' },
+    { name: 'هاجر احمد علي عبدالمجيد', code: '2521075', section: 'G3 C2' },
 ];
 
 async function run() {
