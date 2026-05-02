@@ -540,11 +540,14 @@ export default function DashboardPage({ isAdmin }) {
                         isAdmin={isAdmin}
                         filters={{ ...filters, searchId: localSearch }}
                         onChange={(newFilters) => {
-                            // Intercept search updates to apply local state first
+                            // Intercept search updates: 
+                            // 1. If it's a searchId change, ONLY update localSearch (don't touch global filters yet)
                             if (newFilters.searchId !== localSearch) {
                                 setLocalSearch(newFilters.searchId);
+                            } else {
+                                // 2. If it's any other filter (subject, status), update global filters normally
+                                setFilters(newFilters);
                             }
-                            setFilters(newFilters);
                         }}
                         resultCount={deliveries.length}
                     />

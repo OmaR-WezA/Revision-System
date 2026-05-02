@@ -618,20 +618,41 @@ select option,
   /* Filter bar: flexible side-by-side on mobile */
   .filter-bar {
     display: flex;
-    flex-direction: row;
+    gap: 12px;
+    align-items: center;
     flex-wrap: wrap;
-    gap: var(--space-sm);
-    margin-bottom: var(--space-md);
+    background: var(--clr-surface);
+    padding: 16px;
+    border-radius: var(--radius);
+    border: 1px solid var(--clr-border);
+    margin-bottom: 20px;
+    box-shadow: var(--shadow-sm);
   }
 
   .filter-bar select,
-  .filter-bar input,
-  .filter-bar .search-input-wrapper,
-  .input {
-    flex: 1 1 calc(50% - 10px);
-    width: auto;
-    font-size: 0.95rem;
-    padding: 10px;
+  .filter-bar input {
+    min-width: 140px;
+    flex: 1 1 auto;
+  }
+
+  .result-count-badge {
+    background: var(--clr-primary-dim);
+    color: var(--clr-primary);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap;
+    order: -1;
+    /* Keep it at the start on mobile/tablet */
+  }
+
+  @media (min-width: 768px) {
+    .result-count-badge {
+      order: 0;
+      margin-right: auto;
+      /* Push search to the left, logic to the right */
+    }
   }
 
   .filter-bar .search-input-wrapper {

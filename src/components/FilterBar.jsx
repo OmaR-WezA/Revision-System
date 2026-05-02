@@ -12,9 +12,9 @@ export default function FilterBar({ subjects, delegatesList, sectionsMap, isAdmi
     return (
         <div className="filter-bar">
             {resultCount !== undefined && (
-                <span style={{ fontWeight: 600, color: 'var(--clr-primary)', background: 'var(--clr-primary-dim)', padding: '4px 10px', borderRadius: '12px', fontSize: '0.85rem', flexShrink: 0 }}>
+                <div className="result-count-badge">
                     متاح {resultCount} نتيجة
-                </span>
+                </div>
             )}
 
             {/* Search by ID filter */}

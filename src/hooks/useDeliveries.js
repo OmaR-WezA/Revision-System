@@ -116,7 +116,12 @@ export function useDashboardData(filters = {}, options = {}) {
         }
         if (filters?.searchId) {
             const query = filters.searchId.toLowerCase().trim();
-            filtered = filtered.filter(d => String(d.universityId).toLowerCase().includes(query));
+            // If it's a full university ID (7 digits), use exact match to avoid similar IDs
+            if (query.length === 7) {
+                filtered = filtered.filter(d => String(d.universityId).toLowerCase().trim() === query);
+            } else {
+                filtered = filtered.filter(d => String(d.universityId).toLowerCase().includes(query));
+            }
         }
 
         // NEW: "Special Filters" (No Section / No Delegate)
