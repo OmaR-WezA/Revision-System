@@ -104,6 +104,16 @@ export default function ITDashboardPage() {
         specialFilter: '' // 'no_section' or 'no_delegate'
     });
 
+    const [localSearch, setLocalSearch] = useState(filters.searchId);
+
+    // Debounce search input to prevent UI lag on large datasets
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setFilters(prev => ({ ...prev, searchId: localSearch }));
+        }, 350);
+        return () => clearTimeout(timer);
+    }, [localSearch]);
+
     const handleLogin = (e) => {
         e.preventDefault();
         const itPass = import.meta.env.VITE_IT_PASSWORD || 'wfi';
@@ -515,8 +525,17 @@ export default function ITDashboardPage() {
                 delegatesList={delegatesList}
                 sectionsMap={sectionsMap}
                 isAdmin={true}
-                filters={filters}
-                onChange={setFilters}
+                filters={{ ...filters, searchId: localSearch }}
+                onChange={(newFilters) => {
+                    // Intercept search updates: 
+                    // 1. If it's a searchId change, ONLY update localSearch (don't touch global filters yet)
+                    if (newFilters.searchId !== localSearch) {
+                        setLocalSearch(newFilters.searchId);
+                    } else {
+                        // 2. If it's any other filter (subject, status), update global filters normally
+                        setFilters(newFilters);
+                    }
+                }}
                 resultCount={deliveries.length}
                 isITContext={true}
             />

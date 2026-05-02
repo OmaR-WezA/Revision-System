@@ -116,9 +116,10 @@ export function useDashboardData(filters = {}, options = {}) {
         }
         if (filters?.searchId) {
             const query = filters.searchId.toLowerCase().trim();
-            // If it's a full university ID (7 digits), use exact match to avoid similar IDs
-            if (query.length === 7) {
-                filtered = filtered.filter(d => String(d.universityId).toLowerCase().trim() === query);
+            // Intelligent Search: Prioritize exact match if it exists, otherwise use partial match
+            const exactMatches = filtered.filter(d => String(d.universityId).toLowerCase().trim() === query);
+            if (exactMatches.length > 0) {
+                filtered = exactMatches;
             } else {
                 filtered = filtered.filter(d => String(d.universityId).toLowerCase().includes(query));
             }
