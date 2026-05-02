@@ -73,11 +73,18 @@ export function useDashboardData(filters = {}, options = {}) {
 
         // Apply Department Logic
         // NEW: If a delegateId is present, we DISREGARD excludeIT so they can see their assigned booklets (IT or not)
-        // Apply Department Logic: Section-Based (More reliable than subject-name string matching)
+        // Apply Department Logic: Unified IT-1 Check (Section Map or Record Metadata or Subject Name)
         if (itOnly) {
-            filtered = filtered.filter(d => studentSectionMap.get(parseInt(d.universityId, 10)) === 'IT-1');
+            filtered = filtered.filter(d => {
+                const mapSection = studentSectionMap.get(parseInt(d.universityId, 10));
+                return mapSection === 'IT-1' || d.department === 'IT-1' || d.subjectName?.includes('(IT-1)');
+            });
         } else if (excludeIT && !filters?.delegateId) {
-            filtered = filtered.filter(d => studentSectionMap.get(parseInt(d.universityId, 10)) !== 'IT-1');
+            filtered = filtered.filter(d => {
+                const mapSection = studentSectionMap.get(parseInt(d.universityId, 10));
+                if (mapSection === 'IT-1' || d.department === 'IT-1' || d.subjectName?.includes('(IT-1)')) return false;
+                return true;
+            });
         }
 
         if (filters?.subjectName) {
@@ -145,9 +152,15 @@ export function useDashboardData(filters = {}, options = {}) {
                 return isExplicitlyAssigned || (isSectionMatch && d.status !== 'ready');
             });
         } else if (itOnly) {
-            list = allData.filter(d => studentSectionMap.get(parseInt(d.universityId, 10)) === 'IT-1');
+            list = allData.filter(d => {
+                const mapSection = studentSectionMap.get(parseInt(d.universityId, 10));
+                return mapSection === 'IT-1' || d.department === 'IT-1' || d.subjectName?.includes('(IT-1)');
+            });
         } else if (excludeIT) {
-            list = allData.filter(d => studentSectionMap.get(parseInt(d.universityId, 10)) !== 'IT-1');
+            list = allData.filter(d => {
+                const mapSection = studentSectionMap.get(parseInt(d.universityId, 10));
+                return mapSection !== 'IT-1' && d.department !== 'IT-1' && !d.subjectName?.includes('(IT-1)');
+            });
         }
         return [...new Set(list.map(d => d.subjectName))].filter(Boolean).sort();
     }, [allData, itOnly, excludeIT, filters?.delegateId, delegatesList, studentSectionMap]);
@@ -169,9 +182,15 @@ export function useDashboardData(filters = {}, options = {}) {
         if (filters?.delegateId) {
             list = allData.filter(d => String(d.delegateId || '').trim() === String(filters.delegateId).trim());
         } else if (itOnly) {
-            list = allData.filter(d => d.subjectName?.includes('(IT-1)') || d.department === 'IT-1');
+            list = allData.filter(d => {
+                const mapSection = studentSectionMap.get(parseInt(d.universityId, 10));
+                return mapSection === 'IT-1' || d.department === 'IT-1' || d.subjectName?.includes('(IT-1)');
+            });
         } else if (excludeIT) {
-            list = allData.filter(d => !d.subjectName?.includes('(IT-1)') && d.department !== 'IT-1');
+            list = allData.filter(d => {
+                const mapSection = studentSectionMap.get(parseInt(d.universityId, 10));
+                return mapSection !== 'IT-1' && d.department !== 'IT-1' && !d.subjectName?.includes('(IT-1)');
+            });
         }
 
         const total = list.length;
