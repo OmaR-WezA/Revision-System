@@ -200,14 +200,19 @@ export function useDashboardData(filters = {}, options = {}) {
         const withDelegate = list.filter(d => d.status === 'with_delegate').length;
 
         let delegateTotal = 0, delegateDelivered = 0, delegatePending = 0;
-        if (filters?.delegateId && !itOnly && !excludeIT) {
-            // If we are already filtered by delegateId above, we don't need to re-filter for "delegate stats" sub-view
-            // But usually this hook is used with a specific delegateId in the filters.
-            delegateTotal = total;
-            delegateDelivered = delivered;
-            delegatePending = pending + withDelegate;
-        } else if (filters?.delegateId) {
-            const delData = list.filter(d => String(d.delegateId || '').trim() === String(filters.delegateId).trim());
+        if (filters?.delegateId) {
+            const activeDel = delegatesList.find(d => String(d.code).trim() === String(filters.delegateId).trim());
+            const delDept = activeDel?.department?.toUpperCase().trim();
+
+            // Use the SAME logic as the display filter (explicitly assigned OR section-matched, status != ready)
+            const delData = allData.filter(d => {
+                const isExplicitlyAssigned = String(d.delegateId || '').trim() === String(filters.delegateId).trim();
+                const studentSection = studentSectionMap.get(parseInt(d.universityId, 10));
+                const isSectionMatch = studentSection && delDept && studentSection === delDept;
+                if (isSectionMatch) return d.status !== 'ready';
+                return isExplicitlyAssigned;
+            });
+
             delegateTotal = delData.length;
             delegateDelivered = delData.filter(d => d.status === 'delivered').length;
             delegatePending = delData.filter(d => d.status !== 'delivered').length;
